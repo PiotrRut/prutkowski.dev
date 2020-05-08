@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-tailwind",
-  "description": "Gatsby starter styled with Tailwind",
-  "version": "4.0.0",
-  "author": "Taylor Bryant <taylor@bryant.io>",
+  "name": "prutkowski.tech",
+  "description": "Piotr Rutkowski",
+  "version": "1.0.0",
+  "author": "Piotr Rutkowski",
   "dependencies": {
     "gatsby": "2.21.17",
     "gatsby-plugin-manifest": "2.4.2",
@@ -49,12 +49,5 @@
     "gatsby-plugin-eslint": "2.0.8",
     "prettier": "2.0.5",
     "tailwindcss": "1.4.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind"
-  },
-  "bugs": {
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind/issues"
   }
 }
