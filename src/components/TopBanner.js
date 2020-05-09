@@ -24,8 +24,8 @@ const data = useStaticQuery(graphql`
 
 return (
 <section id="top-banner" className="min-h-screen flex items-center container">
-  <Grid direction="column" justify="center" align-content="center" alignItems="center" container spacing={5}>
-    <Grid item lg={7} xl={5}>
+  <Grid direction="column" justify="center" align-content="center" alignItems="center" container spacing={2}>
+    <Grid item lg={7} xl={5} xs={12} >
       <Image {...data.photo.childImageSharp} />
     </Grid>
     <Grid item className="List" lg={7} xl={5}>
@@ -42,13 +42,11 @@ return (
       </Typist>
     </Grid>
     <Grid item className="h-6" lg={6} xl={5} sm={9}>
-      { showArrow && 
         <IconButton edge="end" aria-label="comments"
           onClick={() => scrollTo('#about-me')}
         >
           <KeyboardArrowDownIcon className="wow fadeIn" fontSize="large" style={{color: 'white'}}/> 
         </IconButton>  
-      }
     </Grid>
   </Grid>
 </section>

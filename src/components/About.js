@@ -4,8 +4,8 @@ import Grid from '@material-ui/core/Grid'
 const About = () => {
   return (
     <section id="about-me">
-      <Grid direction="column" align-content="center" justify="center" alignItems="center" container spacing={3}>
-        <Grid item lg={5} xl={3}>
+      <Grid direction="column" align-content="center" justify="flex-start" alignItems="center" container spacing={2}>
+        <Grid item lg={5} xl={7}>
           <h2 className="text-gray-400 text-center wow fadeIn">About me</h2>
         </Grid>
         <Grid item lg={9} xl={3}>

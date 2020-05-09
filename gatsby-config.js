@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Piotr Rutkowski`,
     description: `Piotr Rutkowski`,
-    author: `@taylorbryant`,
+    author: `Piotr Rutkowski`,
   },
   plugins: [
     `gatsby-plugin-eslint`,

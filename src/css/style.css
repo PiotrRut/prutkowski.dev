@@ -10,6 +10,8 @@ body {
   font-size: 14px;
   font-family: "Fira Sans", sans-serif;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
