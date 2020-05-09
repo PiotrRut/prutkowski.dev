@@ -12,10 +12,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-}
-
-ul {
-  list-style-type: circle;
+  width: 100vw;
 }
 
 h1 {

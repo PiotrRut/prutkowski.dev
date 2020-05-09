@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   if (typeof window !== 'undefined') {
     useEffect(() => {
       const WOW = require("wowjs");
-      window.wow = new WOW.WOW({ live: false, mobile: false }).init();
+      window.wow = new WOW.WOW({ live: false }).init();
     }, []);
   } 
 
