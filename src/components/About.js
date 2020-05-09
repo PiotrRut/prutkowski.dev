@@ -8,7 +8,7 @@ const About = () => {
         <Grid item lg={5} xl={7}>
           <h2 className="text-gray-400 text-center wow fadeIn">About me</h2>
         </Grid>
-        <Grid item lg={9} xl={3}>
+        <Grid item lg={9} xl={12}>
           <h5 className="text-gray-400 text-left wow fadeIn">
             I am a 20 year old programmer and second year student at City, University of London, 
             where I study BSc Computer Science. I was originally born in Poland, but for the majority 

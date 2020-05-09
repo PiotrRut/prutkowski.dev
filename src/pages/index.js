@@ -11,7 +11,7 @@ function IndexPage() {
       <div className="container grid grid-cols-1">
         <Grid direction="column" justify="space-between" alignItems="center" container spacing={4}>
             <TopBanner/>
-          <Grid item lg={12} xs={12}>
+          <Grid item xl={12} lg={12} xs={12}>
             <About/>
           </Grid>
         </Grid>
