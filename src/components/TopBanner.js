@@ -28,7 +28,7 @@ return (
     <Grid item lg={7} xl={5} xs={12} >
       <Image {...data.photo.childImageSharp} />
     </Grid>
-    <Grid item className="List" lg={7} xl={5}>
+    <Grid item className="List" lg={7} xl={5} xs={12}>
     <br/>
       <h1 className="text-gray-200 text-center wow fadeIn">Piotr Rutkowski</h1>
       <Typist cursor={{ show: false }} onTypingDone={() => setShowArrow(true)} className="my-2 flex">
