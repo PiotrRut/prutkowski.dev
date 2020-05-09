@@ -1,10 +1,14 @@
-// See https://tailwindcss.com/docs/configuration for details
+const { colors } = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  purge: [
-    './src/**/*.js',
-  ],
-  theme: {},
-  variants: {},
-  // https://github.com/tailwindcss/custom-forms
-  plugins: [require("@tailwindcss/custom-forms")],
+  theme: {
+    container: {
+      center: true,
+    },
+    extend: {
+      colors: {
+        primary: colors.teal
+      },
+    },
+  },
 };

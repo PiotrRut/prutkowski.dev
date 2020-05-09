@@ -12,3 +12,79 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+h5 {
+  @apply text-lg;
+}
+
+h6 {
+  @apply text-base;
+}
+
+a {
+  @apply font-semibold;
+}
+
+a:hover {
+  @apply underline;
+}
+
+p {
+  @apply leading-relaxed pb-4;
+}
+
+.transition-default {
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+section .heading {
+  color: inherit;
+  @apply transition-default;
+}
+
+section:hover .heading {
+  color: theme("colors.primary.500");
+  @apply transition-default;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.grayscale {
+  filter: contrast(0%) grayscale(100%);
+  @apply transition-default;
+}
+
+.grayscale:hover {
+  filter: contrast(100%) grayscale(0%);
+  @apply transition-default;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply opacity-50;
+}
+
+@screen md {
+  html,
+  body {
+    font-size: 16px;
+  }
+}

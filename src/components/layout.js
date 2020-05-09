@@ -1,21 +1,30 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useEffect } from "react";
+import SEO from './seo'
+import WOW from 'wow.js'
 
 
-function Layout({ children }) {
+const Layout = ({ children }) => {
+
+  useEffect(() => {
+    var wow = new WOW({ live: false, mobile: false })
+    wow.init();
+  }, []);
+
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900">
+    <div>
+      <SEO
+        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        title="Home"
+      />
 
-      <main className="flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16">
+      <div className="mx-8 lg:mx-16 xl:mx-0">
         {children}
-      </main>
+      </div>
 
-      <footer className="bg-blue-700">
-       
-      </footer>
     </div>
   );
-}
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
