@@ -1,22 +1,35 @@
 import React, { useState } from "react";
-import ProfileImg from '../images/ProfileImg.png'
+import { graphql, useStaticQuery } from "gatsby";
 import Typist from 'react-typist'
 import Grid from '@material-ui/core/Grid'
+import Image from 'gatsby-image'
+import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-
-
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 function TopBanner() {
 
 const [showArrow, setShowArrow] = useState(false);
+const data = useStaticQuery(graphql`
+    {
+      photo: file(relativePath: { eq: "ProfileImg.png" }) {
+        childImageSharp {
+          fixed(width: 350, height: 350) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
 
 return (
 <section id="top-banner" className="min-h-screen flex items-center container">
   <Grid direction="column" justify="center" align-content="center" alignItems="center" container spacing={5}>
-    <Grid item className="List" lg={6} xl={5}>
-      <img src={`${ProfileImg}`} height="400" width="400"/>
+    <Grid item lg={7} xl={5}>
+      <Image {...data.photo.childImageSharp} />
     </Grid>
-    <Grid item className="List" lg={6} xl={5}>
+    <Grid item className="List" lg={7} xl={5}>
+    <br/>
       <h1 className="text-gray-200 text-center wow fadeIn">Piotr Rutkowski</h1>
       <Typist cursor={{ show: false }} onTypingDone={() => setShowArrow(true)} className="my-2 flex">
         <code>
@@ -28,8 +41,14 @@ return (
         </code>
       </Typist>
     </Grid>
-    <Grid item className="w-full md:w-auto h-6 my-6">
-      { showArrow && <KeyboardArrowDownIcon className="wow fadeIn" fontSize="large" style={{color: 'white'}}/> }
+    <Grid item className="h-6" lg={6} xl={5} sm={9}>
+      { showArrow && 
+        <IconButton edge="end" aria-label="comments"
+          onClick={() => scrollTo('#about-me')}
+        >
+          <KeyboardArrowDownIcon className="wow fadeIn" fontSize="large" style={{color: 'white'}}/> 
+        </IconButton>  
+      }
     </Grid>
   </Grid>
 </section>

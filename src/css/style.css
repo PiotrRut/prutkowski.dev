@@ -9,8 +9,11 @@ body {
   background-color: #121212;
   font-size: 14px;
   font-family: "Fira Sans", sans-serif;
-  overflow-x: hidden;
   position: relative;
+}
+
+ul {
+  list-style-type: circle;
 }
 
 h1 {
