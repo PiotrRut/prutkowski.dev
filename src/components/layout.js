@@ -5,11 +5,13 @@ import WOW from 'wow.js'
 
 
 const Layout = ({ children }) => {
-
-  useEffect(() => {
-    var wow = new WOW({ live: false, mobile: false })
-    wow.init();
-  }, []);
+  
+  if (typeof window !== 'undefined') {
+    useEffect(() => {
+      var wow = new WOW({ live: false, mobile: false })
+      wow.init();
+    }, []);
+  } 
 
   return (
     <div>
