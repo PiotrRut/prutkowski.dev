@@ -1,0 +1,47 @@
+[
+    {
+      "icon": "../images/icons/web.png",
+      "category": "Fundamental Web Development",
+      "name": "HTML/CSS/Vanilla JS"
+    },
+    {
+      "icon": "../images/icons/react.png",
+      "category": "Frontend Web Development",
+      "name": "ReactJS"
+    },
+    {
+      "icon": "../images/icons/nodejs.png",
+      "category": "Backend Wev Development",
+      "name": "Mongoose/ExpressJS/NodeJS"
+    },
+    {
+      "icon": "../images/icons/python.png",
+      "category": "Software Development",
+      "name": "Python 3"
+    },
+    {
+      "icon": "../images/icons/java.png",
+      "category": "Software Development",
+      "name": "Java"
+    },
+    {
+      "icon": "../images/icons/cpp.png",
+      "category": "Software Development",
+      "name": "C++"
+    },
+    {
+      "icon": "../images/icons/database.png",
+      "category": "Database Management System",
+      "name": "MongoDB/MySQL"
+    },
+    {
+      "icon": "../images/icons/swift.png",
+      "category": "iOS App Development",
+      "name": "Swift 5.1"
+    },
+    {
+      "icon": "../images/icons/adobecc.png",
+      "category": "UI Design & Photo Manipulation",
+      "name": "Adobe CC"
+    }
+  ]
