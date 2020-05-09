@@ -6,7 +6,7 @@ const fullConfig = resolveConfig(tailwindConfig);
 module.exports = {
   siteMetadata: {
     title: `Piotr Rutkowski`,
-    description: `Gatsby starter styled with Tailwind`,
+    description: `Piotr Rutkowski`,
     author: `@taylorbryant`,
   },
   plugins: [
