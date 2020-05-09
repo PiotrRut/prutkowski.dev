@@ -42,10 +42,10 @@ return (
       </Typist>  
     </Grid>
     <Grid item>
-    <IconButton aria-label="comments"
+    <IconButton aria-label="comments" className="scrollArrow bounce"
           onClick={() => scrollTo('#about-me')}
         >
-          <KeyboardArrowDownIcon className="wow fadeIn" fontSize="large" style={{color: 'white'}}/> 
+          <KeyboardArrowDownIcon fontSize="large" style={{color: 'white'}}/> 
       </IconButton>
     </Grid>
   </Grid>

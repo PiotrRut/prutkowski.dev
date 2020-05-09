@@ -26,6 +26,7 @@ const Skills = () => {
       }
     }
   `);
+  
   return (
     <section id="skills">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
