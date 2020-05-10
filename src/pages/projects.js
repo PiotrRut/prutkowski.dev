@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
+import { Link } from "gatsby"
 import Paper from '@material-ui/core/Paper'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
@@ -26,7 +26,7 @@ function Projects() {
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
           <Grid Grid item lg={12} xs={12} xl={12}>
             <b><h2 className="text-gray-400 text-center wow fadeIn">Projects</h2></b>
-            <a href="/"><h6 className="text-center wow fadeIn">Return home</h6></a>
+            <Link to="/"><h6 className="text-center wow fadeIn">Return home</h6></Link>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
             <p className="text-gray-400 text-center wow fadeIn">

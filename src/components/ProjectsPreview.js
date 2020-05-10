@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
+import { Link } from "gatsby"
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
@@ -26,7 +27,7 @@ return (
         <Grid item md={12} lg={12} xl={12}>
           <p className="text-gray-400 text-center wow fadeIn">
             Below you can only see three of my latest projects. To see more, click the link down below ;)
-            <a href="/projects"><h6 className="text-center wow fadeIn">Press here for all of them!</h6></a>
+            <Link to="/projects"><h6>Press here for all of them!</h6></Link>
           </p>
         </Grid>
         {repos.slice(0, 3).map((repo, index) => (
