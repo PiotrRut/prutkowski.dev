@@ -32,7 +32,7 @@ const Skills = () => {
     <section id="skills">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
       <Grid item lg={12} xs={12} xl={12}>
-          <b><h2 className="text-gray-400 text-center wow fadeIn">Skills</h2></b>
+        <b><h3 className="text-gray-400 text-center wow fadeIn">Some of the things I know...</h3></b>
         </Grid>
         {data.allSkillsJson.edges.map(({ node }, index) => (
           <Grid item

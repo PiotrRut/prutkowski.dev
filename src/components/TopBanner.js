@@ -6,6 +6,7 @@ import Image from 'gatsby-image'
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import Typography from '@material-ui/core/Typography'
 
 // The top banner with profile pic, name, and some animated text
 function TopBanner() {
@@ -25,19 +26,19 @@ const data = useStaticQuery(graphql`
 
 return (
 <section id="top-banner" className="min-h-screen flex items-center container">
-  <Grid direction="column" justify="center" alignItems="center" container spacing={2}>
+  <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
     <Grid item lg={12} xl={12} xs={12} >
       <Image {...data.photo.childImageSharp} />
     </Grid>
       <h1 className="text-gray-200 text-center wow fadeIn">Piotr Rutkowski</h1> 
     <Grid item lg={12} xl={12} xs={12}>
-      <Typist cursor={{ show: false }} onTypingDone={() => setShowArrow(true)}>
+      <Typist cursor={{ show: false }} className="text-center items-center">
           <code>
-            <span className="text-gray-400 text-center">console</span>
-            <span className="text-blue-600 text-center">.log</span>
-            <span className="text-gray-400 text-center">(</span>
-            <span className="text-green-600 text-center">&#39;Welcome to my website&#39;</span>
-            <span className="text-gray-400 text-center">)</span>
+            <span className="text-gray-400">console</span>
+            <span className="text-blue-600">.log</span>
+            <span className="text-gray-400">(</span>
+            <span className="text-green-600">&#39;Welcome to my website&#39;</span>
+            <span className="text-gray-400">)</span>
           </code>
       </Typist> 
     </Grid>

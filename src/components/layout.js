@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import SEO from './seo'
+import WOW from 'wow.js'
 
 
 const Layout = ({ children }) => {
 
   if (typeof window !== 'undefined') {
     useEffect(() => {
-      const WOW = require("wowjs");
-      window.wow = new WOW.WOW({ live: false }).init();
+      new WOW().init();
     }, []);
   } 
 

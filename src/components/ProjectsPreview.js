@@ -25,16 +25,16 @@ return (
     <section id="proj-preview">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
-          <b><h2 className="text-gray-400 text-center wow fadeIn">Projects</h2></b>
+          <b><h3 className="text-gray-400 text-center wow fadeIn">Projects</h3></b>
           <br/>
-          <a href="/"><h6 className="text-gray-400 text-center wow fadeIn">Press here for more!</h6></a>
+          <a href="/"><h6 className="text-center wow fadeIn">{">"} Press here for more! {"<"}</h6></a>
         </Grid>
         {repos.slice(0, 3).map((repo, index) => (
           <Grid item
             className="wow fadeIn"
             key={repo.id}
             style={{
-              animationDelay: `${index * 300 + 300}ms`,
+              animationDelay: `${index * 200 + 200}ms`,
             }}
           >
             <Paper elevation={3} style={{width: '300px', maxHeight: '8vh', padding: '15px', background: '#212121',}}>

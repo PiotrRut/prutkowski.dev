@@ -57,6 +57,7 @@ h6 {
 
 a {
   @apply font-semibold;
+  color: orange;
 }
 
 a:hover {
@@ -106,3 +107,15 @@ textarea::placeholder {
     font-size: 16px;
   }
 }
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+      h1 {
+        @apply text-5xl;
+      }
+      span { 
+        font-size: .9em; 
+      }
+    }

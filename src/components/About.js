@@ -8,13 +8,13 @@ const About = () => {
   // Automatically update my age every year on my birthday
   var bday = moment(new Date('1999/8/24'));
   var now = moment(Date.now());
-  var age = bday.diff(now, 'years') 
+  var age = now.diff(bday, 'years') 
 
   return (
     <section id="about-me">
       <Grid direction="column" align-content="center" justify="flex-start" alignItems="center" container spacing={2}>
         <Grid item lg={5} xl={7}>
-          <b><h2 className="text-gray-400 text-center wow fadeIn">A few words about me...</h2></b>
+          <b><h3 className="text-gray-400 text-center wow fadeIn">A few words about me...</h3></b>
         </Grid>
         <Grid item lg={9} xl={12}>
           <h5 className="text-gray-400 text-left wow fadeIn">
