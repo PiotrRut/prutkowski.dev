@@ -1,16 +1,24 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid'
+import moment from 'moment'
 
+// About me section
 const About = () => {
+
+  // Automatically update my age every year on my birthday
+  var bday = moment(new Date('1999/8/24'));
+  var now = moment(Date.now());
+  var age = bday.diff(now, 'years') 
+
   return (
     <section id="about-me">
       <Grid direction="column" align-content="center" justify="flex-start" alignItems="center" container spacing={2}>
         <Grid item lg={5} xl={7}>
-          <h2 className="text-gray-400 text-center wow fadeIn">About me</h2>
+          <b><h2 className="text-gray-400 text-center wow fadeIn">A few words about me...</h2></b>
         </Grid>
         <Grid item lg={9} xl={12}>
           <h5 className="text-gray-400 text-left wow fadeIn">
-            I am a 20 year old programmer and second year student at City, University of London, 
+            I am a {age} year old programmer and second year student at City, University of London, 
             where I study BSc Computer Science. I was originally born in Poland, but for the majority 
             of my life I&#39;ve been living in Norway. In september 2018 I moved to London to study. 
             Before I came to the UK, I graduated high school with a diploma in general studies, 

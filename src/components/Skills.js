@@ -1,10 +1,11 @@
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import Img from "gatsby-image";
 import React from "react";
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography';
 
+// Sections with my skills displayed
 const Skills = () => {
   const data = useStaticQuery(graphql`
     {
@@ -26,12 +27,12 @@ const Skills = () => {
       }
     }
   `);
-  
+
   return (
     <section id="skills">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
       <Grid item lg={12} xs={12} xl={12}>
-          <h2 className="text-gray-400 text-center wow fadeIn">Skills</h2>
+          <b><h2 className="text-gray-400 text-center wow fadeIn">Skills</h2></b>
         </Grid>
         {data.allSkillsJson.edges.map(({ node }, index) => (
           <Grid item
@@ -43,7 +44,7 @@ const Skills = () => {
           >
             <Paper elevation={3} style={{width: '300px', maxHeight: '8vh', padding: '15px', background: '#212121',}}>
               <Grid container spacing={2}>
-                <Grid item><GatsbyImage {...node.icon.childImageSharp}/></Grid>
+                <Grid item><Img {...node.icon.childImageSharp}/></Grid>
                 <Grid item><p className="text-gray-400">{node.name}</p></Grid>
               </Grid>
             </Paper>
