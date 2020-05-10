@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
 
   if (typeof window !== 'undefined') {
     useEffect(() => {
-      new WOW().init();
+      window.wow = new WOW().init();
     }, []);
   } 
 
