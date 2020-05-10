@@ -14,10 +14,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Home"
-      />
+
 
       <div className="mx-8 lg:mx-16 xl:mx-0">
         {children}

@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import { Link } from "gatsby"
 import Paper from '@material-ui/core/Paper'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import SEO from '../components/seo'
 
 import Layout from "../components/layout";
 
@@ -21,6 +22,7 @@ function Projects() {
 
   return (
     <Layout>
+      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]} title="Projects"/>
       <div>
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>

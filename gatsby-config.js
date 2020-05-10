@@ -10,6 +10,17 @@ module.exports = {
     author: `Piotr Rutkowski`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: `UA-154333467-2`,
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // IP Anonymisation in analytics
+        anonymize: true,
+      },
+    },
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
