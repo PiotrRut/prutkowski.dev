@@ -3,6 +3,7 @@ import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 import Layout from "../components/layout";
 
@@ -27,7 +28,7 @@ function Projects() {
             <b><h2 className="text-gray-400 text-center wow fadeIn">Projects</h2></b>
             <a href="/"><h6 className="text-center wow fadeIn">Return home</h6></a>
           </Grid>
-          <Grid item lg={12} xl={12}>
+          <Grid item md={12} lg={12} xl={12}>
             <p className="text-gray-400 text-center wow fadeIn">
               Below you can see all my public repositories, fetched through calls to the GitHub API. 
             </p>
@@ -54,11 +55,12 @@ function Projects() {
                 </Grid>
                 <Grid item>
                   <h6 className="text-gray-400">
-                    {repo.stargazers_count === 1 ?
-                      `${repo.stargazers_count} Star` :
-                      `${repo.stargazers_count} Stars`
-                    }
-                    &nbsp; / {repo.language} 
+                    <FiberManualRecordIcon className={repo.language} fontSize="small" style={{paddingBottom: '3px'}}/> {repo.language}
+                    &nbsp;/&nbsp;
+                      {repo.stargazers_count === 1 ?
+                        `${repo.stargazers_count} Star` :
+                        `${repo.stargazers_count} Stars`
+                      }
                   </h6>
                 </Grid>
               </Grid>

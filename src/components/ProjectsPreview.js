@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
-import Typist from 'react-typist'
 import Grid from '@material-ui/core/Grid'
-import Image from 'gatsby-image'
-import IconButton from '@material-ui/core/IconButton';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import scrollTo from 'gatsby-plugin-smoothscroll';
 import Paper from '@material-ui/core/Paper'
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 // The top banner with profile pic, name, and some animated text
 function ProjectsPreview() {
@@ -27,10 +23,10 @@ return (
         <Grid item lg={12} xs={12} xl={12}>
           <b><h3 className="text-gray-400 text-center wow fadeIn">Projects</h3></b>
         </Grid>
-        <Grid item lg={12} xl={12}>
+        <Grid item md={12} lg={12} xl={12}>
           <p className="text-gray-400 text-center wow fadeIn">
             Below you can only see three of my latest projects. To see more, click the link down below ;)
-            <a href="/projects"><h6 className="text-center wow fadeIn">{">"} Press here for more! {"<"}</h6></a>
+            <a href="/projects"><h6 className="text-center wow fadeIn">Press here for all of them!</h6></a>
           </p>
         </Grid>
         {repos.slice(0, 3).map((repo, index) => (
@@ -52,11 +48,12 @@ return (
                 </Grid>
                 <Grid item>
                   <h6 className="text-gray-400">
-                    {repo.stargazers_count === 1 ?
-                      `${repo.stargazers_count} Star` :
-                      `${repo.stargazers_count} Stars`
-                    }
-                    &nbsp; / {repo.language} 
+                    <FiberManualRecordIcon className={repo.language} fontSize="small" style={{paddingBottom: '3px'}}/> {repo.language}
+                    &nbsp;/&nbsp;
+                      {repo.stargazers_count === 1 ?
+                        `${repo.stargazers_count} Star` :
+                        `${repo.stargazers_count} Stars`
+                      }
                   </h6>
                 </Grid>
               </Grid>
