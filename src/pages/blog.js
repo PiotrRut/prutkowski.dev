@@ -36,7 +36,7 @@ function Blog() {
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
           <Grid Grid item lg={12} xs={12} xl={12}>
-            <b><h2 className="text-gray-400 text-center wow fadeIn">Piotr&#39;s Blog</h2></b>
+            <b><h2 className="text-gray-400 text-center wow fadeIn"><span>📝</span> Piotr&#39;s Blog</h2></b>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
             <p className="text-gray-400 text-center wow fadeIn">
@@ -55,8 +55,8 @@ function Blog() {
               <Grid container direction="column" spacing={2}>
                 <Grid item>
                   <h6 className="text-gray-400">
-                    <Link to={node.frontmatter.path}>
-                      {node.frontmatter.title}
+                    <Link to={node.frontmatter.path} className="text-gray-400">
+                      <i>{node.frontmatter.title}</i>
                     </Link>
                   </h6>
                   <h6 className="text-gray-600">{node.frontmatter.date}</h6>

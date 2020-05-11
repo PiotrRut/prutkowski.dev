@@ -2,7 +2,7 @@
     {
       "icon": "../images/icons/web.png",
       "category": "Fundamental Web Development",
-      "name": "HTML/CSS/Vanilla JS"
+      "name": "HTML • CSS • Vanilla JS"
     },
     {
       "icon": "../images/icons/react.png",
@@ -12,7 +12,7 @@
     {
       "icon": "../images/icons/nodejs.png",
       "category": "Backend Web Development",
-      "name": "Mongoose/ExpressJS/NodeJS"
+      "name": "NodeJS • Mongoose • ExpressJS"
     },
     {
       "icon": "../images/icons/python.png",
@@ -37,7 +37,7 @@
     {
       "icon": "../images/icons/swift5.png",
       "category": "iOS App Development",
-      "name": "Swift 5.1"
+      "name": "Swift 5.2"
     },
     {
       "icon": "../images/icons/adobecc.png",

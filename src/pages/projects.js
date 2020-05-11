@@ -28,15 +28,15 @@ function Projects() {
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
           <Grid Grid item lg={12} xs={12} xl={12}>
-            <b><h2 className="text-gray-400 text-center wow fadeIn">My Projects</h2></b>
+            <b><h2 className="text-gray-400 text-center wow fadeIn"><span>⚙️</span> My Projects</h2></b>
             <Link to="/"><h6 className="text-center wow fadeIn">Return home</h6></Link>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
             <p className="text-gray-400 text-center wow fadeIn">
-              Below you can see all <b>{repos.length}</b> of my public repositories, fetched through calls to the GitHub API. 
+              Below you can see all <b>{repos.length}</b> of my public repositories, updated automatically via the GitHub API. 
             </p>
             <p className="text-gray-400 text-center wow fadeIn">
-              To visit the repository page for any of them, click the project name. 
+              To visit the GitHub page for any of them, click the project name. 
             </p>
           </Grid>
           {repos.map((repo, index) => (

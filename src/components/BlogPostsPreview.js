@@ -28,7 +28,7 @@ const BlogPostsPreview = () => {
     <section id="blog-prev">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
       <Grid item lg={12} xs={12} xl={12}>
-        <b><h3 className="text-gray-400 text-center wow fadeIn">What am I thinking about?</h3></b>
+        <b><h3 className="text-gray-400 text-center wow fadeIn">What is on my mind?</h3></b>
         </Grid>
         <Grid item md={12} lg={12} xl={12}>
           <p className="text-gray-400 text-center wow fadeIn">

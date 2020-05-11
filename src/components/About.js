@@ -1,6 +1,42 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid'
 import moment from 'moment'
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
+import IconButton from '@material-ui/core/IconButton'
+
+
+const socials =
+[
+  {
+    name: "GitHub",
+    path: "https://github.com/PiotrRut",
+    icon: FaGithub,
+    color: "#fff" 
+  },
+  {
+    name: "LinkedIn",
+    path: "https://www.linkedin.com/in/piotr-rutkowski-7082a917a/",
+    icon: FaLinkedinIn,
+    color: "#0e76a8"
+  },
+  {
+    name: "Twitter",
+    path: "https://twitter.com/PiotrRut99",
+    icon: FaTwitter,
+    color: "#00acee"
+  },
+  {
+    name: "Instagram",
+    path: "https://www.instagram.com/prutkowskii/",
+    icon: FaInstagram,
+    color: "#C13584"
+  },
+];
 
 // About me section
 const About = () => {
@@ -44,9 +80,28 @@ const About = () => {
           </h5>
           <br/>
           <h5 className="text-gray-400 text-left wow fadeIn">
-            I hope you enjoy this website as much as I&#39;ve enjoyed making it! <span>😁</span>
+            I hope you enjoy this website as much as I&#39;ve enjoyed making it, and don&#39;t forget to
+            check out my socials! <span>😁</span>
           </h5>
           <br/>
+          <Grid container item direction="row" justify="center" alignItems="center" spacing={4}>
+            {socials.map((social, index) => {
+              const Icon = social.icon;
+              return (
+              <Grid item
+               className="wow fadeIn"
+               key={social.name}
+               style={{
+                 animationDelay: `${index * 100 + 100}ms`,
+                 marginLeft: "-8px"
+               }}>
+                <IconButton style={{color: `${social.color}`}} href={social.path} target="_blank" rel="noopener">
+                   <Icon/>
+                </IconButton>
+              </Grid>
+              );
+            })}
+          </Grid>
           <br/>
         </Grid>
       </Grid>
