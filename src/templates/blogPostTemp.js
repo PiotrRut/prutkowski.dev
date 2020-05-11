@@ -22,8 +22,8 @@ export default function Template({
         <br/>
         <Grid direction="column" justify="center" alignItems="center" container spacing={8}>
           <Grid Grid item lg={12} xs={12} xl={12}>
-            <b><h2 className="text-gray-400 text-center wow fadeIn">{frontmatter.title}</h2></b>
-            <i><h6 className="text-gray-400 text-center wow fadeIn"> Created at: {frontmatter.date}</h6></i>
+            <b><h2 className="text-gray-400 text-center">{frontmatter.title}</h2></b>
+            <i><h6 className="text-gray-400 text-center"> Published at: {frontmatter.date}</h6></i>
           </Grid>
           <Grid Grid item lg={9} xs={12} xl={12}>
             <h5 className="text-gray-400 text-left wow fadeIn" dangerouslySetInnerHTML={{ __html: html }}/>
