@@ -42,7 +42,7 @@ const Skills = () => {
                 animationDelay: `${index * 100 + 100}ms`,
               }}
             >
-              <Paper elevation={3} style={{width: '300px', maxHeight: '13vh', padding: '15px', background: '#212121',}}>
+              <Paper elevation={3} style={{width: '300px', maxHeight: '20vh', padding: '15px', background: '#212121',}}>
                 <Grid container direction="column" spacing={2}>
                   <Grid item>
                     <Img {...node.icon.childImageSharp}/>

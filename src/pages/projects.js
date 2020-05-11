@@ -27,11 +27,11 @@ function Projects() {
   return (
     <Layout>
       <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `projects`, `github`]} title="Projects"/>
-      <div>
+      <div className="container grid">
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
           <Grid Grid item lg={12} xs={12} xl={12}>
-            <b><h2 className="text-gray-400 text-center wow fadeIn"><span>⚙️</span> My Projects</h2></b>
+            <b><h2 className="text-gray-400 text-center wow fadeIn"><span>🛠</span> My Projects</h2></b>
             <Link to="/"><h6 className="text-center wow fadeIn">Return home</h6></Link>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
