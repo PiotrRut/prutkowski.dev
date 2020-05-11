@@ -4,6 +4,7 @@ import About from '../components/About'
 import Grid from '@material-ui/core/Grid'
 import Skills from '../components/Skills'
 import ProjectsPreview from '../components/ProjectsPreview'
+import BlogPostsPreview from '../components/BlogPostsPreview'
 import SEO from '../components/seo'
 
 import Layout from "../components/layout";
@@ -25,6 +26,9 @@ function IndexPage() {
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
             <ProjectsPreview/>
+          </Grid>
+          <Grid item xl={9} lg={9} xs={12}>
+            <BlogPostsPreview/>
           </Grid>
         </Grid>
       </div>

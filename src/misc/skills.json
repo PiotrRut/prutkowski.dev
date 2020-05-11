@@ -11,7 +11,7 @@
     },
     {
       "icon": "../images/icons/nodejs.png",
-      "category": "Backend Wev Development",
+      "category": "Backend Web Development",
       "name": "Mongoose/ExpressJS/NodeJS"
     },
     {
@@ -25,7 +25,7 @@
       "name": "Java"
     },
     {
-      "icon": "../images/icons/cpp.png",
+      "icon": "../images/icons/cpplus.png",
       "category": "Software Development",
       "name": "C++"
     },
@@ -35,7 +35,7 @@
       "name": "MongoDB/MySQL"
     },
     {
-      "icon": "../images/icons/swift.png",
+      "icon": "../images/icons/swift5.png",
       "category": "iOS App Development",
       "name": "Swift 5.1"
     },

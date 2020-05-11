@@ -4,6 +4,7 @@
 /*! purgecss end ignore */
 @tailwind utilities;
 
+
 html,
 body {
   background-color: #121212;

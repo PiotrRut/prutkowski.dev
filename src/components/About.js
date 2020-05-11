@@ -14,12 +14,13 @@ const About = () => {
     <section id="about-me">
       <Grid direction="column" align-content="center" justify="flex-start" alignItems="center" container spacing={2}>
         <Grid item lg={5} xl={7}>
-          <b><h3 className="text-gray-400 text-center wow fadeIn">A few words about me...</h3></b>
+          <b><h3 className="text-gray-400 text-center wow fadeIn">Who am I?</h3></b>
         </Grid>
         <Grid item lg={9} xl={12}>
           <h5 className="text-gray-400 text-left wow fadeIn">
-            I am a {age} year old programmer and second year student at City, University of London, 
-            where I study BSc Computer Science. I was originally born in Poland, but for the majority 
+            Great question! My name is Piotr, although people mostly call me Peter, and I am a {age} year old programmer 
+            and second year BSc Computer Science student at City, University of London, 
+            I was originally born in Poland, but for the majority 
             of my life I&#39;ve been living in Norway. In september 2018 I moved to London to study. 
             Before I came to the UK, I graduated high school with a diploma in general studies, 
             as well as electronical and electric engineering.
@@ -40,6 +41,10 @@ const About = () => {
             vast it really is, and how much you can do with even a slight
             knowledge of it. I am learning more and more every single day, both in University
             and in my spare time, through various side-projects.
+          </h5>
+          <br/>
+          <h5 className="text-gray-400 text-left wow fadeIn">
+            I hope you enjoy this website as much as I&#39;ve enjoyed making it! <span>😁</span>
           </h5>
           <br/>
           <br/>

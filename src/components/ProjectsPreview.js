@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
-// The top banner with profile pic, name, and some animated text
+// The projects section on the main page, with three latest
 function ProjectsPreview() {
     const [repos, setRepos] = useState([])
 
@@ -22,12 +22,12 @@ return (
     <section id="proj-preview">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
-          <b><h3 className="text-gray-400 text-center wow fadeIn">Projects</h3></b>
+          <b><h3 className="text-gray-400 text-center wow fadeIn">...and some that I&#39;ve done.</h3></b>
         </Grid>
         <Grid item md={12} lg={12} xl={12}>
           <p className="text-gray-400 text-center wow fadeIn">
-            Below you can only see three of my latest projects. To see more, click the link down below ;)
-            <Link to="/projects"><h6>Press here for all of them!</h6></Link>
+            Below you can only see three of my latest projects.
+            <Link to="/projects"><h6>Press here to see all of them!</h6></Link>
           </p>
         </Grid>
         {repos.slice(0, 3).map((repo, index) => (
@@ -44,11 +44,6 @@ return (
                 <Grid item><h6 className="text-gray-400">{repo.description}</h6></Grid>
                 <Grid item>
                   <h6 className="text-gray-400">
-                    &oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;
-                  </h6>
-                </Grid>
-                <Grid item>
-                  <h6 className="text-gray-400">
                     <FiberManualRecordIcon className={repo.language} fontSize="small" style={{paddingBottom: '3px'}}/> {repo.language}
                     &nbsp;/&nbsp;
                       {repo.stargazers_count === 1 ?
@@ -62,6 +57,8 @@ return (
           </Grid>
         ))}
       </Grid>
+      <br/>
+      <br/>
     </section>
   );
 }

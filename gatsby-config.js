@@ -48,6 +48,13 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+          path: `${__dirname}/src/blogposts`,
+          name: 'blogposts'
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -62,6 +69,18 @@ module.exports = {
         path: path.join(__dirname, `src`, `misc`),
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {},
+          },
+        ],
+      },
+    },
+
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-smoothscroll`

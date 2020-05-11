@@ -32,7 +32,7 @@ const Skills = () => {
     <section id="skills">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
       <Grid item lg={12} xs={12} xl={12}>
-        <b><h3 className="text-gray-400 text-center wow fadeIn">Some of the things I know...</h3></b>
+        <b><h3 className="text-gray-400 text-center wow fadeIn">Here are some things I know...</h3></b>
         </Grid>
         {data.allSkillsJson.edges.map(({ node }, index) => (
           <Grid item
@@ -42,15 +42,20 @@ const Skills = () => {
               animationDelay: `${index * 100 + 100}ms`,
             }}
           >
-            <Paper elevation={3} style={{width: '300px', maxHeight: '8vh', padding: '15px', background: '#212121',}}>
-              <Grid container spacing={2}>
-                <Grid item><Img {...node.icon.childImageSharp}/></Grid>
-                <Grid item><p className="text-gray-400">{node.name}</p></Grid>
+            <Paper elevation={3} style={{width: '300px', maxHeight: '13vh', padding: '15px', background: '#212121',}}>
+              <Grid container direction="column" spacing={2}>
+                <Grid item>
+                  <Img {...node.icon.childImageSharp}/>
+                  <h6 className="text-gray-400">{node.name}</h6>
+                  <h6 className="text-gray-600">{node.category}</h6>
+                </Grid>
               </Grid>
             </Paper>
           </Grid>
         ))}
       </Grid>
+      <br/>
+      <br/>
     </section>
   );
 };
