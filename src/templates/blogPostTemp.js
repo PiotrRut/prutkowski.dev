@@ -19,7 +19,7 @@ export default function Template({
     <Layout>
       <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]} title="Blog"/>
       <div>
-        <br/>
+        <br/><br/>
         <Grid direction="column" justify="center" alignItems="center" container spacing={8}>
           <Grid Grid item lg={12} xs={12} xl={12}>
             <b><h2 className="text-gray-400 text-center">{frontmatter.title}</h2></b>
@@ -36,7 +36,7 @@ export default function Template({
             </Link>
           </Grid>
         </Grid>
-        <br/><br/><br/>
+        <br/><br/>
       </div>
     </Layout>
   );
@@ -51,7 +51,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "D MMMM, YYYY")
         path
         title
       }

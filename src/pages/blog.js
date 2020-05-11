@@ -16,7 +16,7 @@ function Blog() {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
-            excerpt
+            excerpt(pruneLength: 60)
             frontmatter {
               date(formatString: "D MMMM YYYY")
               title
@@ -51,18 +51,20 @@ function Blog() {
               animationDelay: `${index * 100 + 100}ms`,
             }}
           >
-            <Paper elevation={3} style={{width: '300px', maxHeight: '13vh', padding: '15px', background: '#212121',}}>
+            <Link to={node.frontmatter.path} className="font-normal">
+            <Paper elevation={3} style={{width: '300px', maxHeight: '22vh', padding: '15px', background: '#212121',}}>
               <Grid container direction="column" spacing={2}>
                 <Grid item>
-                  <h6 className="text-gray-400">
-                    <Link to={node.frontmatter.path} className="text-gray-400">
-                      <i>{node.frontmatter.title}</i>
-                    </Link>
+                  <h6 className="text-gray-400 font-semibold">
+                      <i>{node.frontmatter.title}</i>  
                   </h6>
                   <h6 className="text-gray-600">{node.frontmatter.date}</h6>
+                  <br/>
+                  <h6 className="text-gray-700">{node.excerpt}</h6>
                 </Grid>
               </Grid>
             </Paper>
+            </Link>
           </Grid>
           ))}
         </Grid>

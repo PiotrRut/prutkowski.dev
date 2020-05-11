@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'gatsby'
 import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
-import { Link } from "gatsby"
 import Paper from '@material-ui/core/Paper'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import SEO from '../components/seo'
+import GradeIcon from '@material-ui/icons/Grade';
+import Button from '@material-ui/core/Button'
+import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
 import Layout from "../components/layout";
 
@@ -53,16 +56,15 @@ function Projects() {
                 <Grid item><h6 className="text-gray-400">{repo.description}</h6></Grid>
                 <Grid item>
                   <h6 className="text-gray-400">
-                    &oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;&oline;
-                  </h6>
-                </Grid>
-                <Grid item>
-                  <h6 className="text-gray-400">
-                    <FiberManualRecordIcon className={repo.language} fontSize="small" style={{paddingBottom: '3px'}}/> {repo.language}
-                    &nbsp;/&nbsp;
-                      {repo.stargazers_count === 1 ?
-                        `${repo.stargazers_count} Star` :
-                        `${repo.stargazers_count} Stars`
+                    <FiberManualRecordIcon 
+                      className={repo.language} 
+                      fontSize="small" 
+                      style={{paddingBottom: '3px'}}
+                    /> 
+                    {repo.language}
+                    &nbsp;
+                      {repo.stargazers_count >= 1 &&
+                        <span><GradeIcon fontSize="small" style={{paddingBottom: '3px'}}/>{repo.stargazers_count}</span>
                       }
                   </h6>
                 </Grid>
@@ -70,6 +72,16 @@ function Projects() {
             </Paper>
           </Grid>
         ))}
+        </Grid>
+        <br/>
+        <Grid container direction="column" justify="center" alignItems="center" spacing={10}>
+          <Grid item lg={12} xs={12} xl={12}>
+            <Link className="no-underline text-black" to="/">
+            <Button className="wow fadeIn" variant="contained" color="inherit" startIcon={<KeyboardBackspaceIcon/>}>
+              Return home
+            </Button>
+            </Link>
+          </Grid>
         </Grid>
         <br/><br/><br/>
       </div>

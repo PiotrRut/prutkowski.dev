@@ -60,9 +60,6 @@ a {
   color: orange;
 }
 
-a:hover {
-  @apply underline;
-}
 
 p {
   @apply leading-relaxed pb-4;

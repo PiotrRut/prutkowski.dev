@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import GradeIcon from '@material-ui/icons/Grade';
 
 // The projects section on the main page, with three latest
 function ProjectsPreview() {
@@ -45,10 +46,9 @@ return (
                 <Grid item>
                   <h6 className="text-gray-400">
                     <FiberManualRecordIcon className={repo.language} fontSize="small" style={{paddingBottom: '3px'}}/> {repo.language}
-                    &nbsp;/&nbsp;
-                      {repo.stargazers_count === 1 ?
-                        `${repo.stargazers_count} Star` :
-                        `${repo.stargazers_count} Stars`
+                    &nbsp;
+                      {repo.stargazers_count >= 1 &&
+                        <span><GradeIcon fontSize="medium" style={{paddingBottom: '3px'}}/>{repo.stargazers_count}</span>
                       }
                   </h6>
                 </Grid>
