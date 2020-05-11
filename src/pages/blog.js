@@ -31,7 +31,7 @@ function Blog() {
 
   return (
     <Layout>
-      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]} title="Blog"/>
+      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`, `blog`]} title="Blog"/>
       <div>
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
