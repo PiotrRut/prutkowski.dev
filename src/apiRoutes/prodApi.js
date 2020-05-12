@@ -1,0 +1,1 @@
+export default "https://prutkowski-backend.herokuapp.com";

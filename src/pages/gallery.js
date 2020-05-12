@@ -6,13 +6,14 @@ import SEO from '../components/seo'
 import Button from '@material-ui/core/Button'
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
-import BACKEND_URL from '../misc/backend'
-
+import devApi from '../apiRoutes/devApi'
+import prodApi from '../apiRoutes/prodApi'
 import Layout from "../components/layout";
 
 // The Gallery page
 function Gallery() {
   const [images, setImgs] = useState([])
+  const BACKEND_URL = process.env.NODE_ENV === 'production' ? prodApi : devApi
 
   // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
