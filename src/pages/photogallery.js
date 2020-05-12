@@ -11,7 +11,7 @@ import prodApi from '../apiRoutes/prodApi'
 import Layout from "../components/layout";
 
 // The Gallery page
-function Gallery() {
+function PhotoGallery() {
   const [images, setImgs] = useState([])
   const BACKEND_URL = process.env.NODE_ENV === 'production' ? prodApi : devApi
 
@@ -28,7 +28,7 @@ function Gallery() {
 
   return (
     <Layout>
-      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `photography`, `gallery`]} title="Gallery"/>
+      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `photography`, `gallery`, `pictures`]} title="Photo Gallery"/>
       <div className="container grid">
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
@@ -72,4 +72,4 @@ function Gallery() {
   );
 }
 
-export default Gallery;
+export default PhotoGallery;
