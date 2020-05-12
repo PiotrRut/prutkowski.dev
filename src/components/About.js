@@ -92,8 +92,7 @@ const About = () => {
                className="wow fadeIn"
                key={social.name}
                style={{
-                 animationDelay: `${index * 100 + 100}ms`,
-                 marginLeft: "-8px"
+                 animationDelay: `${index * 150 + 150}ms`,
                }}>
                 <IconButton style={{color: `${social.color}`}} href={social.path} target="_blank" rel="noopener">
                    <Icon/>

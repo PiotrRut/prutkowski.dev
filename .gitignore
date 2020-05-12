@@ -12,3 +12,6 @@ yarn-error.log
 
 # deployment-specific configs
 now.json
+
+#env variables
+.env.*
