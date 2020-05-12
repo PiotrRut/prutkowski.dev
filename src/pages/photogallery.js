@@ -51,7 +51,7 @@ function PhotoGallery() {
                   animationDelay: `${index * 100 + 100}ms`,
                 }}
               >
-                <img src={image.URL} height="200" width="200"/>
+                <img src={image.lowRes} height="200" width="200"/>
               </Grid>
             ))
           }
