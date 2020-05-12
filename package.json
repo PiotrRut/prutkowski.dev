@@ -3,11 +3,6 @@
   "description": "Piotr Rutkowski",
   "version": "1.0.0",
   "author": "Piotr Rutkowski",
-  "browserslist": [
-    "last 1 Edge version",
-    "last 1 Chrome version",
-    "last 1 Firefox version"
-  ], 
   "dependencies": {
     "@azure/storage-blob": "^12.1.1",
     "@material-ui/core": "^4.9.13",
@@ -57,7 +52,7 @@
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write \"**/*.{css,js,jsx,json,md}\"",
     "fix": "npm run fix:lint && npm run fix:prettier",
-    "build": "NODE_ENV=production gatsby build",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "dev": "npm run develop",
     "start": "gatsby develop -H 0.0.0.0",
