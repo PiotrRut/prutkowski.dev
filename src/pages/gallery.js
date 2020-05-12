@@ -18,11 +18,11 @@ const Gallery = () => {
   const [images, setImgs] = useState([])
 
   // MS Azure Blob Service connection string
-  const blobSasUrl = `https://${process.env.AZURE_SPACE}.blob.core.windows.net/?${process.env.AZURE_TOKEN}`
+  const blobSasUrl = `https://${process.env.REACT_APP_AZURE_SPACE}.blob.core.windows.net/?${process.env.REACT_APP_AZURE_TOKEN}`
   // Connect to a new BlobServiceClient
   const blobServiceClient = new BlobServiceClient(blobSasUrl);
   // Get a container client from the BlobServiceClient
-  const containerClient = blobServiceClient.getContainerClient(process.env.AZURE_CONTAINER);
+  const containerClient = blobServiceClient.getContainerClient(process.env.REACT_APP_AZURE_CONTAINER);
 
   // On component mount list all blobs inside the connected container, and return their name
   useEffect(() => {
