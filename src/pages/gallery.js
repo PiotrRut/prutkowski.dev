@@ -2,43 +2,32 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'gatsby'
 import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import SEO from '../components/seo'
-import GradeIcon from '@material-ui/icons/Grade';
 import Button from '@material-ui/core/Button'
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
-import convert from 'xml-js'
-const { BlobServiceClient } = require("@azure/storage-blob");
+
+import BACKEND_URL from '../misc/backend'
 
 import Layout from "../components/layout";
 
 // The Gallery page
-const Gallery = () => {
+function Gallery() {
   const [images, setImgs] = useState([])
 
-  // MS Azure Blob Service connection string
-  const blobSasUrl = `https://${process.env.REACT_APP_AZURE_SPACE}.blob.core.windows.net/?${process.env.REACT_APP_AZURE_TOKEN}`
-  // Connect to a new BlobServiceClient
-  const blobServiceClient = new BlobServiceClient(blobSasUrl);
-  // Get a container client from the BlobServiceClient
-  const containerClient = blobServiceClient.getContainerClient(process.env.REACT_APP_AZURE_CONTAINER);
-
-  // On component mount list all blobs inside the connected container, and return their name
+  // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
-    const fetchBlobs = async () => {  
-      for await (const blob of containerClient.listBlobsFlat()) {
-        setImgs(images => images.concat(blob.name))
-      }
-    };
-    fetchBlobs();
-    console.log(images)
+      const fetchData = async () => {
+        const response = await axios.get(`${BACKEND_URL}/blobs`);
+        setImgs(response.data);
+    }
+    fetchData();
   }, []);
+  console.log(images)
   
 
   return (
     <Layout>
-      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `projects`, `github`]} title="Gallery"/>
+      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `photography`, `gallery`]} title="Gallery"/>
       <div className="container grid">
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
@@ -58,12 +47,12 @@ const Gallery = () => {
             images.map((image, index) => (
               <Grid item
                 className="wow fadeIn"
-                key={image}
+                key={image.URL}
                 style={{
                   animationDelay: `${index * 100 + 100}ms`,
                 }}
               >
-                <h6 className="text-gray-400">{image}</h6>
+                <img src={image.URL} height="200" width="200"/>
               </Grid>
             ))
           }

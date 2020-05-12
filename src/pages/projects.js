@@ -13,16 +13,16 @@ import Layout from "../components/layout";
 
 // The projects page, with all of my projects fetched through the GitHub API
 function Projects() {
-    const [repos, setRepos] = useState([])
+  const [repos, setRepos] = useState([])
 
-    useEffect(() => {
-        const fetchData = async () => {
-          const response = await axios.get(`https://api.github.com/users/PiotrRut/repos?sort=created`);
-          setRepos(response.data);
-      }
-      fetchData();
-    }, []);
-    console.log(repos)
+  useEffect(() => {
+      const fetchData = async () => {
+        const response = await axios.get(`https://api.github.com/users/PiotrRut/repos?sort=created`);
+        setRepos(response.data);
+    }
+    fetchData();
+  }, []);
+  console.log(repos)
 
   return (
     <Layout>
