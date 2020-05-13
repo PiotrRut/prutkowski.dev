@@ -4,7 +4,11 @@
 
 My old personal website, which I made back in 2019, was well overdue for a redesign. I therefore finally decided to sit down and do it, and that is exactly how this website was created. 
 
-It is written entirely from scratch using React and Gatsby. It is mostly a single page web app, with the few exceptions of my blog, projects' list and the photography portfolio being on separate pages.
+It is written entirely from scratch using React and Gatsby. It is mostly a single page web app, with a few exceptions:
+
+* __Projects__: This page holds a list of all my public GitHub repositories, automatically updated via the GitHub API
+* __Blog__: Hold a list of all my blog posts, written in markdown.
+* __Gallery__: Displays a chosen selection of photographs I've recently taken. It retrieves the pictures through a remote Heroku dyno from my Microsoft Azure storage, so please allow a few seconds for the server to spin up, as it sleeps after a while of inactivity.
 
 ## :open_file_folder: Frameworks and libraries used
 
