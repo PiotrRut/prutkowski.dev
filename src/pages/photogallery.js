@@ -5,31 +5,31 @@ import Grid from '@material-ui/core/Grid'
 import SEO from '../components/seo'
 import Button from '@material-ui/core/Button'
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
-import Fade from '@material-ui/core/Fade';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
 import { makeStyles } from '@material-ui/core/styles';
-import devApi from '../apiRoutes/devApi'
-import prodApi from '../apiRoutes/prodApi'
+import BACKEND_URL from '../apiRoutes/backend'
 import Layout from "../components/layout";
 import Dialog from '@material-ui/core/Dialog'
 import Paper from '@material-ui/core/Paper'
-
 import Snackbar from '@material-ui/core/Snackbar';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
 
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  root: { 
+    // position the dialog properly and add black bg
     margin: -35,
     padding: theme.spacing(5),
     backgroundColor: '#212121'
   },
-  paper: { // set colour of the paper dialog
+  paper: { 
+    // set colour of the paper dialog
     backgroundColor: '#212121',
-    color: 'white'
-  }
+  },
+  snackbar: { 
+    // pull the snackbar up from the bottom on smaller screens
+    [theme.breakpoints.down('xs')]: {
+      bottom: 90,
+    },
+  },
 }));
 
 
@@ -41,7 +41,6 @@ function PhotoGallery() {
   const [openSnack, setOpenSnack] = React.useState(false)
   const classes = useStyles();
 
-  const BACKEND_URL = process.env.NODE_ENV === 'production' ? prodApi : devApi
   // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
       const fetchData = async () => {
@@ -160,6 +159,7 @@ function PhotoGallery() {
           open={openSnack}
           onClose={closeSnackBar}
           message="View full version"
+          className={classes.snackbar}
           action={
             <React.Fragment>
               <Button color="secondary" rel="noopener noreferrer" target="_blank" size="small" href={selectedURLS.highRes}>
@@ -168,7 +168,6 @@ function PhotoGallery() {
             </React.Fragment>
         }
         />
-        
         <br/><br/><br/>
       </div>
     </Layout>

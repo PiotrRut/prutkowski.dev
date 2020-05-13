@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
-import SEO from './seo'
 
 
 const Layout = ({ children }) => {

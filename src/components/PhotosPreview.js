@@ -2,22 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'gatsby'
 import axios from 'axios'
 import Grid from '@material-ui/core/Grid'
-import SEO from '../components/seo'
-import Button from '@material-ui/core/Button'
-import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
-import Fade from '@material-ui/core/Fade';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
 import { makeStyles } from '@material-ui/core/styles';
-import devApi from '../apiRoutes/devApi'
-import prodApi from '../apiRoutes/prodApi'
-import Layout from "../components/layout";
+import BACKEND_URL from '../apiRoutes/backend'
 import Dialog from '@material-ui/core/Dialog'
-import DialogActions from '@material-ui/core/DialogActions';
 import Paper from '@material-ui/core/Paper'
-import Snackbar from '@material-ui/core/Snackbar';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,7 +26,6 @@ const PhotosPreview = () => {
   const [open, setOpen] = React.useState(false);
   const classes = useStyles();
 
-  const BACKEND_URL = process.env.NODE_ENV === 'production' ? prodApi : devApi
   // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
       const fetchData = async () => {
