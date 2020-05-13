@@ -45,7 +45,7 @@ function PhotoGallery() {
   useEffect(() => {
       const fetchData = async () => {
         const response = await axios.get(`${BACKEND_URL}/blobs`);
-        setImgs(response.data);
+        setImgs(response.data.reverse());
     }
     fetchData();
   }, []);
@@ -94,7 +94,7 @@ function PhotoGallery() {
             </h6>
           </Grid>
           {
-            images.reverse().map((image, index) => (
+            images.map((image, index) => (
               <Grid item
                 className="wow fadeIn"
                 key={image.lowRes}
