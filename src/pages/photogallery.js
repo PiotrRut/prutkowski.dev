@@ -13,12 +13,18 @@ import devApi from '../apiRoutes/devApi'
 import prodApi from '../apiRoutes/prodApi'
 import Layout from "../components/layout";
 import Dialog from '@material-ui/core/Dialog'
-import DialogActions from '@material-ui/core/DialogActions';
+import Paper from '@material-ui/core/Paper'
+
+import Snackbar from '@material-ui/core/Snackbar';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: 0,
+    margin: -35,
     padding: theme.spacing(5),
+    backgroundColor: '#212121'
   },
   paper: { // set colour of the paper dialog
     backgroundColor: '#212121',
@@ -31,10 +37,11 @@ const useStyles = makeStyles((theme) => ({
 function PhotoGallery() {
   const [images, setImgs] = useState([{lowRes: '', highRes: ''}])
   const [selectedURLS, setUrl] = useState([])
-  const BACKEND_URL = process.env.NODE_ENV === 'production' ? prodApi : devApi
   const [open, setOpen] = React.useState(false);
+  const [openSnack, setOpenSnack] = React.useState(false)
   const classes = useStyles();
 
+  const BACKEND_URL = process.env.NODE_ENV === 'production' ? prodApi : devApi
   // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
       const fetchData = async () => {
@@ -45,12 +52,22 @@ function PhotoGallery() {
   }, []);
   console.log(images)
 
+  // Open and close picture dialog
   const handleOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  // Open and close snack bar
+  const openSnackBar= () => {
+    setOpenSnack(true);
+  };
+
+  const closeSnackBar = () => {
+    setOpenSnack(false);
   };
   
 
@@ -59,7 +76,7 @@ function PhotoGallery() {
       <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `photography`, `gallery`, `pictures`]} title="Photo Gallery"/>
       <div className="container grid">
         <br/>
-        <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
+        <Grid direction="row" justify="center" alignItems="center" container spacing={4}>
           <Grid Grid item lg={12} xs={12} xl={12}>
             <br/>
             <b><h2 className="text-gray-400 text-center wow fadeIn"><span>📸</span> My Gallery</h2></b>
@@ -69,6 +86,10 @@ function PhotoGallery() {
             <p className="text-gray-400 text-center wow fadeIn">
               Here you can see some of the pictures I have taken over the last few months, and which I am 
               proud of!
+            </p>
+            <p className="text-gray-400 text-center wow fadeIn">
+              All images are stored on a remote server, which goes to sleep after some inactivity. Please allow
+              a few seconds for the server to spin up again! 
             </p>
           </Grid>
           {
@@ -80,13 +101,19 @@ function PhotoGallery() {
                   animationDelay: `${index * 100 + 100}ms`,
                 }}
               >
-              <a className="cursor-pointer">
-                <img 
-                  src={image.lowRes} 
-                  height="200" width="200" 
-                  onClick={() => { setUrl({lowRes: image.lowRes, highRes: image.highRes}); handleOpen();}}
-                />
-              </a>
+              <Paper elevation={3} style={{width: '200px', maxHeight: '110vh', padding: '15px', background: '#212121',}}>
+                <Grid direction="column" container spacing={2}>
+                  <Grid item>
+                    <a className="cursor-pointer">
+                      <img 
+                        src={image.lowRes} 
+                        height="200" width="200" 
+                        onClick={() => { setUrl({lowRes: image.lowRes, highRes: image.highRes}); handleOpen(); openSnackBar();}}
+                      />
+                    </a>
+                  </Grid>
+                </Grid>
+              </Paper>
               </Grid>
             ))
           }
@@ -104,18 +131,37 @@ function PhotoGallery() {
         </Grid>
 
         {/* Dialog with the selected picture for preview and button to full size version */}
-        <Dialog classes={classes} onClose={handleClose} aria-labelledby="customized-dialog-title" maxWidth="xs" open={open}>
+        <Dialog 
+          classes={classes} 
+          onClose={handleClose} 
+          aria-labelledby="customized-dialog-title" 
+          open={open}
+          scroll="body"
+          maxWidth="xs"
+        >
           <div className={classes.paper}>
-            <img src={selectedURLS.lowRes}/>
+            <img className="photoPreview" src={selectedURLS.lowRes}/>
           </div>
-          <DialogActions>
-            <a className="text-gray-400" href={selectedURLS.highRes} rel="noopener noreferrer" target="_blank">
-              <Button size="small" color="inherit">
-                Download full version
-              </Button>
-            </a>
-            </DialogActions>
+
         </Dialog>
+        
+        {/* Little snack bar with link to the full res version of each image*/}
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'center',
+          }}
+          open={openSnack}
+          onClose={closeSnackBar}
+          message="View full version"
+          action={
+            <React.Fragment>
+              <Button color="secondary" rel="noopener noreferrer" target="_blank" size="small" href={selectedURLS.highRes}>
+                CLICK HERE
+              </Button>
+            </React.Fragment>
+        }
+        />
 
         <br/><br/><br/>
       </div>
