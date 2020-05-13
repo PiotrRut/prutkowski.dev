@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-// The Gallery page
+// The Gallery page which displays my images stored in a MS Azure container
 function PhotoGallery() {
   const [images, setImgs] = useState([{lowRes: '', highRes: ''}])
   const [selectedURLS, setUrl] = useState([])
@@ -52,20 +52,20 @@ function PhotoGallery() {
   }, []);
   console.log(images)
 
-  // Open and close picture dialog
+  // Open picture dialog
   const handleOpen = () => {
     setOpen(true);
   };
-
+  // Close picture dialog
   const handleClose = () => {
     setOpen(false);
   };
 
-  // Open and close snack bar
+  // Open URL snack bar
   const openSnackBar= () => {
     setOpenSnack(true);
   };
-
+  // Close URL snack bar
   const closeSnackBar = () => {
     setOpenSnack(false);
   };
@@ -80,17 +80,23 @@ function PhotoGallery() {
           <Grid Grid item lg={12} xs={12} xl={12}>
             <br/>
             <b><h2 className="text-gray-400 text-center wow fadeIn"><span>📸</span> My Gallery</h2></b>
-            <Link to="/"><h6 className="text-center wow fadeIn">Return home</h6></Link>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
-            <p className="text-gray-400 text-center wow fadeIn">
+            <h6 className="text-gray-400 text-center wow fadeIn">
               Here you can see some of the pictures I have taken over the last few months, and which I am 
               proud of!
-            </p>
-            <p className="text-gray-400 text-center wow fadeIn">
+            </h6>
+            <h6 className="text-gray-400 text-center wow fadeIn">
               All images are stored on a remote server, which goes to sleep after some inactivity. Please allow
               a few seconds for the server to spin up again! 
-            </p>
+            </h6>
+            <br/>
+            <h6 className="text-gray-400 text-center wow fadeIn">
+              Want more? Visit my {" "}
+              <a className="text-gray-400" href="https://www.instagram.com/prutkowskii/" target="_blank" rel="noopener noreferrer">
+                Instagram
+              </a>.
+            </h6>
           </Grid>
           {
             images.map((image, index) => (
@@ -130,7 +136,7 @@ function PhotoGallery() {
           </Grid>
         </Grid>
 
-        {/* Dialog with the selected picture for preview and button to full size version */}
+        {/* Dialog with the selected picture for preview */}
         <Dialog 
           classes={classes} 
           onClose={handleClose} 
@@ -145,7 +151,7 @@ function PhotoGallery() {
 
         </Dialog>
         
-        {/* Little snack bar with link to the full res version of each image*/}
+        {/* Little snack bar with link to the full res version of each image */}
         <Snackbar
           anchorOrigin={{
             vertical: 'bottom',
@@ -162,7 +168,7 @@ function PhotoGallery() {
             </React.Fragment>
         }
         />
-
+        
         <br/><br/><br/>
       </div>
     </Layout>

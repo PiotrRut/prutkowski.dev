@@ -19,7 +19,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 
-// Blog posts preview on the main page, with the three latest blog posts
+// Show four pictures for gallery preview on main page
 const PhotosPreview = () => {
     const [images, setImgs] = useState([{lowRes: '', highRes: ''}])
   
@@ -36,9 +36,9 @@ const PhotosPreview = () => {
 
   return (
     <section id="photos-prev">
-      <Grid direction="row" justify="center" alignItems="center" container spacing={5}>
+      <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
       <Grid item lg={12} xs={12} xl={12}>
-        <b><h3 className="text-gray-400 text-center wow fadeIn">Photo Gallery</h3></b>
+        <b><h3 className="text-gray-400 text-center wow fadeIn">Did someone say cheese?</h3></b>
         </Grid>
         <Grid item md={12} xs={12} lg={12} xl={12}>
           <p className="text-gray-400 text-center wow fadeIn">
