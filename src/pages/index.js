@@ -13,7 +13,7 @@ function IndexPage() {
   return (
     <Layout>
     <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]} title="Home"/>
-      <div className="container grid grid-cols-1 row-gap-16">
+      <div className="container grid-cols-1 row-gap-16">
         <Grid direction="column" justify="center" alignItems="center" container spacing={5}>
           <Grid item xl={9} lg={5} xs={12}>
             <TopBanner/>

@@ -36,6 +36,7 @@ function Blog() {
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
           <Grid Grid item lg={12} xs={12} xl={12}>
+            <br/>
             <b><h2 className="text-gray-400 text-center wow fadeIn"><span>📝</span> Piotr&#39;s Blog</h2></b>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
@@ -71,6 +72,7 @@ function Blog() {
         <br/>
         <Grid container direction="column" justify="center" alignItems="center" spacing={10}>
           <Grid item lg={12} xs={12} xl={12}>
+            <br/>
             <Link className="no-underline text-black" to="/">
             <Button variant="contained" color="inherit" startIcon={<KeyboardBackspaceIcon/>}>
               Return home

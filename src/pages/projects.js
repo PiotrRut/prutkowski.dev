@@ -31,6 +31,7 @@ function Projects() {
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
           <Grid Grid item lg={12} xs={12} xl={12}>
+            <br/>
             <b><h2 className="text-gray-400 text-center wow fadeIn"><span>🛠</span> My Projects</h2></b>
             <Link to="/"><h6 className="text-center wow fadeIn">Return home</h6></Link>
           </Grid>
@@ -73,9 +74,10 @@ function Projects() {
           </Grid>
         ))}
         </Grid>
-        <br/>
+        <br/> 
         <Grid container direction="column" justify="center" alignItems="center" spacing={10}>
           <Grid item lg={12} xs={12} xl={12}>
+          <br/>
             <Link className="no-underline text-black" to="/">
             <Button className="wow fadeIn" variant="contained" color="inherit" startIcon={<KeyboardBackspaceIcon/>}>
               Return home
