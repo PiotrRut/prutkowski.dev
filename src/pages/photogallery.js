@@ -85,10 +85,6 @@ function PhotoGallery() {
               Here you can see some of the pictures I have taken over the last few months, and which I am 
               proud of!
             </h6>
-            <h6 className="text-gray-400 text-center wow fadeIn">
-              All images are stored on a remote server, which goes to sleep after some inactivity. Please allow
-              a few seconds for the server to spin up again! 
-            </h6>
             <br/>
             <h6 className="text-gray-400 text-center wow fadeIn">
               Want more? Visit my {" "}

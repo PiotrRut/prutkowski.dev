@@ -8,7 +8,7 @@ It is written entirely from scratch using React with hooks and Gatsby. It is mos
 
 * __Projects__: This page holds a list of all my public GitHub repositories, automatically updated via the GitHub API
 * __Blog__: Hold a list of all my blog posts, written in markdown.
-* __Gallery__: Displays a chosen selection of photographs I've recently taken. It retrieves the pictures through a remote Heroku dyno from my Microsoft Azure storage, so please allow a few seconds for the server to spin up, as it sleeps after a while of inactivity.
+* __Gallery__: Displays a chosen selection of photographs I've recently taken. It retrieves the pictures through a remote Heroku dyno from my Microsoft Azure storage.
 
 ## :open_file_folder: Frameworks and libraries used
 
