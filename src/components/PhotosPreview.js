@@ -57,7 +57,7 @@ const PhotosPreview = () => {
             <Link to="/photogallery"><h6>Press here to see all of them!</h6></Link>
           </p>
         </Grid>
-        {images.slice(0, 4).map((image, index) => (
+        {images.reverse().slice(0, 4).map((image, index) => (
           <Grid item
             className="wow fadeIn"
             key={image.lowRes}

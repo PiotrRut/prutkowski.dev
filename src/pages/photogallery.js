@@ -94,7 +94,7 @@ function PhotoGallery() {
             </h6>
           </Grid>
           {
-            images.map((image, index) => (
+            images.reverse().map((image, index) => (
               <Grid item
                 className="wow fadeIn"
                 key={image.lowRes}
