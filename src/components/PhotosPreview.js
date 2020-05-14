@@ -29,7 +29,7 @@ function PhotosPreview() {
   // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
       const fetchData = async () => {
-        const response = await axios.get(`${BACKEND_URL}/blobs`);
+        const response = await axios.get(`${BACKEND_URL}/getAllImages`);
         setImgs(response.data.reverse());
     }
     fetchData();
