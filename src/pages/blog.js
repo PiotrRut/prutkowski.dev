@@ -32,7 +32,7 @@ function Blog() {
   return (
     <Layout>
       <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`, `blog`]} title="Blog"/>
-      <div className="container grid">
+      <div className="container grid-cols-1 row-gap-16">
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
           <Grid Grid item lg={12} xs={12} xl={12}>
@@ -70,7 +70,7 @@ function Blog() {
           ))}
         </Grid>
         <br/>
-        <Grid container direction="column" justify="center" alignItems="center" spacing={10}>
+        <Grid container direction="column" justify="center" alignItems="center">
           <Grid item lg={12} xs={12} xl={12}>
             <br/>
             <Link className="no-underline text-black" to="/">

@@ -73,7 +73,7 @@ function PhotoGallery() {
   return (
     <Layout>
       <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `photography`, `gallery`, `pictures`]} title="Photo Gallery"/>
-      <div className="container grid">
+      <div className="container grid-cols-1 row-gap-16">
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={4}>
           <Grid Grid item lg={12} xs={12} xl={12}>
@@ -81,10 +81,14 @@ function PhotoGallery() {
             <b><h2 className="text-gray-400 text-center wow fadeIn"><span>📸</span> My Gallery</h2></b>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
-            <h6 className="text-gray-400 text-center wow fadeIn">
-              Here you can see some of the pictures I have taken over the last few months, and which I am 
-              proud of!
-            </h6>
+            <p className="text-gray-400 text-center wow fadeIn">
+              Here you can see some of the pictures I&#39;ve taken!
+            </p>
+            <p className="text-gray-400 text-center wow fadeIn">
+              These images are compressed to reduce load.
+              <br/>
+              Follow the link from within the preview for full-size!!
+            </p>
             <br/>
             <h6 className="text-gray-400 text-center wow fadeIn">
               Want more? Visit my {" "}
@@ -120,7 +124,7 @@ function PhotoGallery() {
           }
         </Grid>
         <br/>
-        <Grid container direction="column" justify="center" alignItems="center" spacing={10}>
+        <Grid container direction="column" justify="center" alignItems="center">
           <Grid item lg={12} xs={12} xl={12}>
             <br/>
             <Link className="no-underline text-black" to="/">
@@ -143,7 +147,6 @@ function PhotoGallery() {
           <div className={classes.paper}>
             <img className="photoPreview" src={selectedURLS.lowRes}/>
           </div>
-
         </Dialog>
         
         {/* Little snack bar with link to the full res version of each image */}

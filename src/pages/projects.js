@@ -27,10 +27,10 @@ function Projects() {
   return (
     <Layout>
       <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `projects`, `github`]} title="Projects"/>
-      <div className="container grid">
+      <div className="container grid-cols-1 row-gap-16">
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
-          <Grid Grid item lg={12} xs={12} xl={12}>
+          <Grid item lg={12} xs={12} xl={12}>
             <br/>
             <b><h2 className="text-gray-400 text-center wow fadeIn"><span>🛠</span> My Projects</h2></b>
             <Link to="/"><h6 className="text-center wow fadeIn">Return home</h6></Link>
@@ -75,11 +75,11 @@ function Projects() {
         ))}
         </Grid>
         <br/> 
-        <Grid container direction="column" justify="center" alignItems="center" spacing={10}>
+        <Grid container direction="column" justify="center" alignItems="center">
           <Grid item lg={12} xs={12} xl={12}>
-          <br/>
+            <br/>
             <Link className="no-underline text-black" to="/">
-            <Button className="wow fadeIn" variant="contained" color="inherit" startIcon={<KeyboardBackspaceIcon/>}>
+            <Button variant="contained" color="inherit" startIcon={<KeyboardBackspaceIcon/>}>
               Return home
             </Button>
             </Link>

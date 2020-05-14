@@ -9,9 +9,6 @@ body {
   background-color: #121212;
   font-size: 14px;
   font-family: "Fira Sans", sans-serif;
-  position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
 }
 
