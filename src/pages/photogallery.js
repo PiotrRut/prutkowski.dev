@@ -33,18 +33,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-// The Gallery page which displays my images stored in a MS Azure container
+// The Gallery page which displays my images stored in an MS Azure container
 function PhotoGallery() {
   const [images, setImgs] = useState([{lowRes: '', highRes: ''}])
   const [selectedURLS, setUrl] = useState([])
-  const [open, setOpen] = React.useState(false);
-  const [openSnack, setOpenSnack] = React.useState(false)
+  const [open, setOpen] = useState(false);
+  const [openSnack, setOpenSnack] = useState(false)
   const classes = useStyles();
 
   // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
       const fetchData = async () => {
-        const response = await axios.get(`${BACKEND_URL}/getAllImages`);
+        const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
         setImgs(response.data.reverse());
     }
     fetchData();

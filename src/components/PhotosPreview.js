@@ -23,13 +23,13 @@ const useStyles = makeStyles((theme) => ({
 function PhotosPreview() {
   const [images, setImgs] = useState([{lowRes: '', highRes: ''}])
   const [selectedURLS, setUrl] = useState([])
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const classes = useStyles();
 
   // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
       const fetchData = async () => {
-        const response = await axios.get(`${BACKEND_URL}/getAllImages`);
+        const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
         setImgs(response.data.reverse());
     }
     fetchData();
