@@ -45,7 +45,6 @@ function Skills() {
               <Paper elevation={3} style={{width: '300px', maxHeight: '20vh', padding: '15px', background: '#212121',}}>
                 <Grid container direction="column" spacing={2}>
                   <Grid item>
-                    
                     <h6 className="text-gray-400">
                       <Img style={{marginBottom: '-3px'}} {...node.icon.childImageSharp}/> &nbsp;{node.name}
                     </h6>

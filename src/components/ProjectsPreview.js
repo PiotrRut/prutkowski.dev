@@ -17,7 +17,6 @@ function ProjectsPreview() {
       }
       fetchData();
     }, []);
-    console.log(repos)
 
 return (
     <section id="proj-preview">
@@ -25,11 +24,11 @@ return (
         <Grid item lg={12} xs={12} xl={12}>
           <b><h3 className="text-gray-400 text-center wow fadeIn">...and some that I&#39;ve done.</h3></b>
         </Grid>
-        <Grid item md={12} lg={12} xl={12}>
-          <p className="text-gray-400 text-center wow fadeIn">
+        <Grid item md={12} lg={12} xl={12} xs={12}>
+          <h6 className="text-gray-400 text-center wow fadeIn">
             Below you can only see three of my latest projects.
             <Link to="/projects"><h6>Press here to see all of them!</h6></Link>
-          </p>
+          </h6>
         </Grid>
         {repos.slice(0, 3).map((repo, index) => (
           <Grid item
@@ -48,7 +47,7 @@ return (
                     <FiberManualRecordIcon className={repo.language} fontSize="small" style={{paddingBottom: '3px'}}/> {repo.language}
                     &nbsp;
                       {repo.stargazers_count >= 1 &&
-                        <span><GradeIcon fontSize="medium" style={{paddingBottom: '3px'}}/>{repo.stargazers_count}</span>
+                        <span><GradeIcon style={{paddingBottom: '3px', fontSize: 'large'}}/>{repo.stargazers_count}</span>
                       }
                   </h6>
                 </Grid>

@@ -34,7 +34,6 @@ function PhotosPreview() {
     }
     fetchData();
   }, []);
-  console.log(images)
 
   // Open picture preview dialog
   const handleOpen = () => {
@@ -52,10 +51,10 @@ function PhotosPreview() {
         <b><h3 className="text-gray-400 text-center wow fadeIn">Did someone say cheese?</h3></b>
         </Grid>
         <Grid item md={12} xs={12} lg={12} xl={12}>
-          <p className="text-gray-400 text-center wow fadeIn">
+          <h6 className="text-gray-400 text-center wow fadeIn">
             Below you can see some of my best shots!
             <Link to="/photogallery"><h6>Press here to see all of them!</h6></Link>
-          </p>
+          </h6>
         </Grid>
         {images.slice(0, 4).map((image, index) => (
           <Grid item
@@ -65,7 +64,7 @@ function PhotosPreview() {
               animationDelay: `${index * 200 + 200}ms`,
             }}
           >
-            <Paper elevation={3} style={{width: '200px', maxHeight: '110vh', padding: '15px', background: '#212121',}}>
+            <Paper elevation={3} style={{width: '200px', maxHeight: '110vh', padding: '15px', background: '#212121'}}>
               <Grid direction="column" container spacing={2}>
                 <Grid item>
                   <a className="cursor-pointer">

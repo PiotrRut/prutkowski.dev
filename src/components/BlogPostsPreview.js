@@ -30,11 +30,11 @@ function BlogPostsPreview() {
       <Grid item lg={12} xs={12} xl={12}>
         <b><h3 className="text-gray-400 text-center wow fadeIn">What is on my mind?</h3></b>
         </Grid>
-        <Grid item md={12} lg={12} xl={12}>
-          <p className="text-gray-400 text-center wow fadeIn">
+        <Grid item md={12} lg={12} xl={12} xs={12}>
+          <h6 className="text-gray-400 text-center wow fadeIn">
             Below you can see some of my latest blog posts.
             <Link to="/blog"><h6>Press here to see all of them!</h6></Link>
-          </p>
+          </h6>
         </Grid>
         {pageQuery.allMarkdownRemark.edges.slice(0, 3).map(({ node }, index) => (
           <Grid item

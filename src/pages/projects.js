@@ -22,7 +22,6 @@ function Projects() {
     }
     fetchData();
   }, []);
-  console.log(repos)
 
   return (
     <Layout>

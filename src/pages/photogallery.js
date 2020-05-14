@@ -49,7 +49,6 @@ function PhotoGallery() {
     }
     fetchData();
   }, []);
-  console.log(images)
 
   // Open picture dialog
   const handleOpen = () => {
