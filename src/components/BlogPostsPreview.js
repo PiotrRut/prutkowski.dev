@@ -6,7 +6,7 @@ import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography';
 
 // Blog posts preview on the main page, with the three latest blog posts
-const BlogPostsPreview = () => {
+function BlogPostsPreview() {
   const pageQuery = useStaticQuery(graphql`
       {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -63,6 +63,6 @@ const BlogPostsPreview = () => {
       <br/>
     </section>
   );
-};
+}
 
 export default BlogPostsPreview;

@@ -2,7 +2,7 @@
     {
       "icon": "../images/icons/web.png",
       "category": "Fundamental Web Development",
-      "name": "HTML • CSS • Vanilla JS"
+      "name": "HTML • CSS • JavaScript"
     },
     {
       "icon": "../images/icons/react.png",
@@ -13,6 +13,16 @@
       "icon": "../images/icons/nodejs.png",
       "category": "Backend Web Development",
       "name": "NodeJS • Mongoose • ExpressJS"
+    },
+    {
+      "icon": "../images/icons/cloud.png",
+      "category": "Cloud Computing Services",
+      "name": "AWS • MS Azure"
+    },
+    {
+      "icon": "../images/icons/gitlogo.png",
+      "category": "Version Control (VCS)",
+      "name": "Git"
     },
     {
       "icon": "../images/icons/python.png",

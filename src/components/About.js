@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid'
 import moment from 'moment'
+import { Link } from 'gatsby'
 import {
   FaGithub,
   FaInstagram,
@@ -39,7 +40,7 @@ const socials =
 ];
 
 // About me section
-const About = () => {
+function About() {
 
   // Automatically update my age every year on my birthday
   var bday = moment(new Date('1999/8/24'));
@@ -64,9 +65,10 @@ const About = () => {
           <br/>
           <h5 className="text-gray-400 text-center wow fadeIn">
             In my free time, apart from working on various programming projects, I dedicate a lot of time to photography. 
-            I&#39;ve been taking pictures since I can remember, and the website you&#39;re currently on, doubles as my portfolio. 
-            Here you can browse the projects I&#39;ve been working on, 
-            as well as some of the shots I&#39;ve taken during the last months.
+            I&#39;ve been taking pictures since I can remember, and the website you&#39;re currently on, doubles as my
+            photographic portfolio. 
+            <br/>
+            In the <Link to="/photogallery">gallery</Link> section, you can view som of my shots and download them!
           </h5>
           <br/>
           <h5 className="text-gray-400 text-center wow fadeIn">
@@ -106,6 +108,6 @@ const About = () => {
       </Grid>
     </section>
   );
-};
+}
 
 export default About;

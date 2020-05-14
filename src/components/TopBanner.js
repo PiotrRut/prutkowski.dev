@@ -33,20 +33,21 @@ return (
       <h1 className="text-gray-200 text-center wow fadeIn">Piotr Rutkowski</h1> 
     <Grid item lg={12} xl={12} xs={12}>
       <Typist cursor={{ show: false }} className="text-center items-center">
-          <code>
-            <span className="text-gray-400">console</span>
-            <span className="text-blue-600">.log</span>
-            <span className="text-gray-400">(</span>
-            <span className="text-green-600">&#39;Welcome to my website&#39;</span>
-            <span className="text-gray-400">)</span>
-          </code>
+        <code>
+          <span className="text-gray-400">console</span>
+          <span className="text-gray-400">.</span>
+          <span className="text-blue-600">log</span>
+          <span className="text-gray-400">(</span>
+          <span className="text-green-600">&#39;Welcome to my website&#39;</span>
+          <span className="text-gray-400">)</span>
+        </code>
       </Typist> 
     </Grid>
     <Grid item>
-    <IconButton aria-label="comments" className="scrollArrow bounce"
-          onClick={() => scrollTo('#about-me')}
-        >
-          <KeyboardArrowDownIcon fontSize="large" style={{color: 'white'}}/> 
+      <IconButton aria-label="comments" className="scrollArrow bounce"
+            onClick={() => scrollTo('#about-me')}
+          >
+            <KeyboardArrowDownIcon fontSize="large" style={{color: 'white'}}/> 
       </IconButton>
     </Grid>
   </Grid>

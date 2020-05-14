@@ -6,7 +6,7 @@ import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography';
 
 // Sections with my skills displayed
-const Skills = () => {
+function Skills() {
   const data = useStaticQuery(graphql`
     {
       allSkillsJson {
@@ -45,8 +45,10 @@ const Skills = () => {
               <Paper elevation={3} style={{width: '300px', maxHeight: '20vh', padding: '15px', background: '#212121',}}>
                 <Grid container direction="column" spacing={2}>
                   <Grid item>
-                    <Img {...node.icon.childImageSharp}/>
-                    <h6 className="text-gray-400">{node.name}</h6>
+                    
+                    <h6 className="text-gray-400">
+                      <Img style={{marginBottom: '-3px'}} {...node.icon.childImageSharp}/> &nbsp;{node.name}
+                    </h6>
                     <h6 className="text-gray-600">{node.category}</h6>
                   </Grid>
                 </Grid>
@@ -58,6 +60,6 @@ const Skills = () => {
       <br/>
     </section>
   );
-};
+}
 
 export default Skills;

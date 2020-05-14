@@ -12,6 +12,12 @@ It is written entirely from scratch using React with hooks and Gatsby. It is mos
 
 ## :open_file_folder: Frameworks and libraries used
 
-* Material UI
-* TailwindCSS
-* Wow.js
+* ReactJS
+* GatsbyJS
+* Material UI (for grid layout)
+* TailwindCSS (for grid and text classes)
+* Wow.js (for animations)
+
+## :recycle: Old website
+
+The old codebase can be found [here](https://github.com/PiotrRut/prutkowski.tech), although that repository is now read only.

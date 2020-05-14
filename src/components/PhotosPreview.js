@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // Show four pictures for gallery preview on main page
-const PhotosPreview = () => {
+function PhotosPreview() {
   const [images, setImgs] = useState([{lowRes: '', highRes: ''}])
   const [selectedURLS, setUrl] = useState([])
   const [open, setOpen] = React.useState(false);
@@ -100,6 +100,6 @@ const PhotosPreview = () => {
       <br/>
     </section>
   );
-};
+}
 
 export default PhotosPreview;
