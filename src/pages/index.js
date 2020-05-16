@@ -7,7 +7,7 @@ import ProjectsPreview from '../components/ProjectsPreview'
 import BlogPostsPreview from '../components/BlogPostsPreview'
 import PhotosPreview from '../components/PhotosPreview'
 import SEO from '../components/seo'
-
+import Contact from '../components/Contact'
 import Layout from "../components/layout";
 
 function IndexPage() {
@@ -33,6 +33,9 @@ function IndexPage() {
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
             <PhotosPreview/>
+          </Grid>
+          <Grid item xl={12} lg={12} xs={12}>
+            <Contact/>
           </Grid>
         </Grid>
       </div>
