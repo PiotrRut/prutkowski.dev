@@ -2,3 +2,8 @@
 package.json
 package-lock.json
 public
+.vscode-test/
+out/
+dist/
+test-fixtures/
+node_modules/

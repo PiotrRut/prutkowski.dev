@@ -8,7 +8,7 @@ import { Link } from 'gatsby'
 function Contact() {
 
     return (
-        <section id="photos-prev">
+        <section id="contact">
           <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
           <Grid item lg={12} xs={12} xl={12}>
             <b><h3 className="text-gray-400 text-center wow fadeIn">Come say hello!</h3></b>

@@ -43,9 +43,9 @@ function PhotoGallery() {
 
   // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
-      const fetchData = async () => {
-        const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
-        setImgs(response.data.reverse());
+    const fetchData = async () => {
+      const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
+      setImgs(response.data.reverse());
     }
     fetchData();
   }, []);
@@ -164,7 +164,7 @@ function PhotoGallery() {
                 CLICK HERE
               </Button>
             </React.Fragment>
-        }
+          }
         />
         <br/><br/><br/>
       </div>
