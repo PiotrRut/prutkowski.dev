@@ -11,11 +11,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: -35,
     padding: theme.spacing(5),
-    backgroundColor: '#212121'
+    backgroundColor: '#212121',
   },
   paper: { // set colour of the paper dialog
     backgroundColor: '#212121',
-    color: 'white'
+    color: 'white',
   }
 }));
 
@@ -64,13 +64,13 @@ function PhotosPreview() {
               animationDelay: `${index * 200 + 200}ms`,
             }}
           >
-            <Paper elevation={3} style={{width: '200px', maxHeight: '110vh', padding: '15px', background: '#212121'}}>
+            <Paper className="pic-preview-main" elevation={3} style={{maxHeight: '110vh', padding: '10px', background: '#212121'}}>
               <Grid direction="column" container spacing={2}>
                 <Grid item>
                   <a className="cursor-pointer">
                     <img 
                       src={image.lowRes} 
-                      height="200" width="200" 
+                      height="180" width="180"
                       onClick={() => { setUrl({lowRes: image.lowRes, highRes: image.highRes}); handleOpen();}}
                     />
                   </a>
