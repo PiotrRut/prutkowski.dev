@@ -103,13 +103,14 @@ textarea::placeholder {
 }
 
 @media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) { 
+  and (max-width: 480px) { 
       h1 {
         @apply text-5xl;
       }
       span { 
         font-size: .9em; 
+      }
+      .pic-preview-main {
+        width: 140px
       }
     }
