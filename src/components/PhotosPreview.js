@@ -64,13 +64,13 @@ function PhotosPreview() {
               animationDelay: `${index * 200 + 200}ms`,
             }}
           >
-            <Paper className="pic-preview-main" elevation={3} style={{padding: '8px', background: '#212121'}}>
+            <Paper className="pic-preview-main" elevation={3} style={{maxHeight: '110vh', padding: '10px', background: '#212121'}}>
               <Grid direction="column" container spacing={2}>
                 <Grid item>
                   <a className="cursor-pointer">
                     <img 
                       src={image.lowRes} 
-                      height="200" width="200"
+                      height="180" width="180"
                       onClick={() => { setUrl({lowRes: image.lowRes, highRes: image.highRes}); handleOpen();}}
                     />
                   </a>
