@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   snackbar: { 
     // pull the snackbar up from the bottom on smaller screens
     [theme.breakpoints.down('xs')]: {
-      bottom: 90,
+      bottom: 70,
     },
   },
 }));
@@ -75,11 +75,11 @@ function PhotoGallery() {
       <div className="container grid-cols-1 row-gap-16">
         <br/>
         <Grid direction="row" justify="center" alignItems="center" container spacing={4}>
-          <Grid Grid item lg={12} xs={12} xl={12}>
+          <Grid Grid item md={12} lg={12} xs={12} xl={12}>
             <br/>
             <b><h2 className="text-gray-400 text-center wow fadeIn"><span>📸</span> My Gallery</h2></b>
           </Grid>
-          <Grid item md={12} lg={12} xl={12}>
+          <Grid item md={12} lg={12} xl={12} xs={12}>
             <p className="text-gray-400 text-center wow fadeIn">
               Here you can see some of the pictures I&#39;ve taken!
             </p>
@@ -105,13 +105,13 @@ function PhotoGallery() {
                   animationDelay: `${index * 100 + 100}ms`,
                 }}
               >
-              <Paper elevation={3} style={{width: '200px', maxHeight: '110vh', padding: '15px', background: '#212121',}}>
+              <Paper elevation={3} className="gallery-pics" style={{padding: '8px', background: '#212121',}}>
                 <Grid direction="column" container spacing={2}>
                   <Grid item>
                     <a className="cursor-pointer">
                       <img 
                         src={image.lowRes} 
-                        height="200" width="200" 
+                        height="180" width="180" 
                         onClick={() => { setUrl({lowRes: image.lowRes, highRes: image.highRes}); handleOpen(); openSnackBar();}}
                       />
                     </a>

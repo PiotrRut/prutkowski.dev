@@ -64,7 +64,7 @@ function PhotosPreview() {
               animationDelay: `${index * 200 + 200}ms`,
             }}
           >
-            <Paper className="pic-preview-main" elevation={3} style={{maxHeight: '110vh', padding: '10px', background: '#212121'}}>
+            <Paper className="pic-preview-main" elevation={3} style={{maxHeight: '110vh', padding: '8px', background: '#212121'}}>
               <Grid direction="column" container spacing={2}>
                 <Grid item>
                   <a className="cursor-pointer">
@@ -100,5 +100,6 @@ function PhotosPreview() {
     </section>
   );
 }
+
 
 export default PhotosPreview;
