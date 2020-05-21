@@ -53,7 +53,7 @@ function PhotosPreview() {
         <Grid item md={12} xs={12} lg={12} xl={12}>
           <h6 className="text-gray-400 text-center wow fadeIn">
             Below you can see some of my best shots!
-            <Link to="/photogallery"><h6>Press here to see all of them!</h6></Link>
+            <h6><Link to="/photogallery">Press here to see all of them!</Link></h6>
           </h6>
         </Grid>
         {images.slice(0, 4).map((image, index) => (

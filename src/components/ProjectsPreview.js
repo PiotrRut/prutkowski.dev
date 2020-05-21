@@ -27,7 +27,7 @@ function ProjectsPreview() {
         <Grid item md={12} lg={12} xl={12} xs={12}>
           <h6 className="text-gray-400 text-center wow fadeIn">
             Below you can only see three of my latest projects.
-            <Link to="/projects"><h6>Press here to see all of them!</h6></Link>
+            <h6><Link to="/projects">Press here to see all of them!</Link></h6>
           </h6>
         </Grid>
         {repos.slice(0, 3).map((repo, index) => (
