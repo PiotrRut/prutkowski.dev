@@ -43,6 +43,13 @@ return (
         </code>
       </Typist> 
     </Grid>
+    <h6 className="text-gray-500 wow fadeIn">
+       <span className="cursor-pointer nav" onClick={() => scrollTo('#skills')}>Skills</span> | 
+       <span className="cursor-pointer nav" onClick={() => scrollTo('#proj-preview')}> Projects</span> | 
+       <span className="cursor-pointer nav" onClick={() => scrollTo('#blog-prev')}> Blog</span> | 
+       <span className="cursor-pointer nav" onClick={() => scrollTo('#photos-prev')}> Gallery</span> | 
+       <span className="cursor-pointer nav" onClick={() => scrollTo('#contact')}> Contact</span>
+    </h6>
     <Grid item>
       <IconButton aria-label="comments" className="scrollArrow bounce"
             onClick={() => scrollTo('#about-me')}

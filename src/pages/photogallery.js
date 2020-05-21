@@ -78,6 +78,7 @@ function PhotoGallery() {
           <Grid Grid item md={12} lg={12} xs={12} xl={12}>
             <br/>
             <b><h2 className="text-gray-400 text-center wow fadeIn"><span>📸</span> My Gallery</h2></b>
+            <Link to="/"><h6 className="text-center wow fadeIn">Return home</h6></Link>
           </Grid>
           <Grid item md={12} lg={12} xl={12} xs={12}>
             <p className="text-gray-400 text-center wow fadeIn">
