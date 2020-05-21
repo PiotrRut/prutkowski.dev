@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   snackbar: { 
     // pull the snackbar up from the bottom on smaller screens
     [theme.breakpoints.down('xs')]: {
-      bottom: 90,
+      bottom: 70,
     },
   },
 }));
