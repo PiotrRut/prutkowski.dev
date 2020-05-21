@@ -105,7 +105,7 @@ function PhotoGallery() {
                   animationDelay: `${index * 100 + 100}ms`,
                 }}
               >
-              <Paper elevation={3} className="gallery-pics" style={{padding: '10px', background: '#212121',}}>
+              <Paper elevation={3} className="gallery-pics" style={{padding: '8px', background: '#212121',}}>
                 <Grid direction="column" container spacing={2}>
                   <Grid item>
                     <a className="cursor-pointer">
