@@ -8,17 +8,17 @@ import GradeIcon from '@material-ui/icons/Grade';
 
 // The projects section on the main page, with three latest
 function ProjectsPreview() {
-    const [repos, setRepos] = useState([])
+  const [repos, setRepos] = useState([])
 
-    useEffect(() => {
-        const fetchData = async () => {
-          const response = await axios.get(`https://api.github.com/users/PiotrRut/repos?sort=created`);
-          setRepos(response.data);
-      }
-      fetchData();
-    }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(`https://api.github.com/users/PiotrRut/repos?sort=created`);
+      setRepos(response.data);
+    }
+    fetchData();
+  }, []);
 
-return (
+  return (
     <section id="proj-preview">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
@@ -38,17 +38,17 @@ return (
               animationDelay: `${index * 200 + 200}ms`,
             }}
           >
-            <Paper elevation={3} style={{width: '300px', maxHeight: '110vh', padding: '15px', background: '#212121',}}>
+            <Paper elevation={3} style={{ width: '300px', maxHeight: '110vh', padding: '15px', background: '#212121', }}>
               <Grid direction="column" container spacing={2}>
                 <Grid item><i><h5><a className="text-gray-400" href={repo.html_url}>{repo.name}</a></h5></i></Grid>
                 <Grid item><h6 className="text-gray-400">{repo.description}</h6></Grid>
                 <Grid item>
                   <h6 className="text-gray-400">
-                    <FiberManualRecordIcon className={repo.language} fontSize="small" style={{paddingBottom: '3px'}}/> {repo.language}
+                    <FiberManualRecordIcon className={repo.language} fontSize="small" style={{ paddingBottom: '3px' }} /> {repo.language}
                     &nbsp;
                       {repo.stargazers_count >= 1 &&
-                        <span><GradeIcon style={{paddingBottom: '3px', fontSize: 'large'}}/>{repo.stargazers_count}</span>
-                      }
+                      <span><GradeIcon style={{ paddingBottom: '3px', fontSize: 'large' }} />{repo.stargazers_count}</span>
+                    }
                   </h6>
                 </Grid>
               </Grid>
@@ -56,8 +56,8 @@ return (
           </Grid>
         ))}
       </Grid>
-      <br/>
-      <br/>
+      <br />
+      <br />
     </section>
   );
 }

@@ -31,56 +31,56 @@ function Blog() {
 
   return (
     <Layout>
-      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`, `blog`]} title="Blog"/>
+      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`, `blog`]} title="Blog" />
       <div className="container grid-cols-1 row-gap-16">
-        <br/>
+        <br />
         <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
           <Grid Grid item lg={12} xs={12} xl={12}>
-            <br/>
+            <br />
             <b><h2 className="text-gray-400 text-center wow fadeIn"><span>📝</span> Piotr&#39;s Blog</h2></b>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
             <p className="text-gray-400 text-center wow fadeIn">
-              Here you can find my recent blog posts about topics I&#39;m interested in, or just my thoughts in general! Enjoy! 
+              Here you can find my recent blog posts about topics I&#39;m interested in, or just my thoughts in general! Enjoy!
             </p>
           </Grid>
           {pageQuery.allMarkdownRemark.edges.map(({ node }, index) => (
-          <Grid item
-            className="wow fadeIn"
-            key={node.frontmatter.title}
-            style={{
-              animationDelay: `${index * 100 + 100}ms`,
-            }}
-          >
-            <Link to={node.frontmatter.path} className="font-normal">
-            <Paper elevation={3} style={{width: '300px', maxHeight: '22vh', padding: '15px', background: '#212121',}}>
-              <Grid container direction="column" spacing={2}>
-                <Grid item>
-                  <h6 className="text-gray-400 font-semibold">
-                      <i>{node.frontmatter.title}</i>  
-                  </h6>
-                  <h6 className="text-gray-600">{node.frontmatter.date}</h6>
-                  <br/>
-                  <h6 className="text-gray-700">{node.excerpt}</h6>
-                </Grid>
-              </Grid>
-            </Paper>
-            </Link>
-          </Grid>
+            <Grid item
+              className="wow fadeIn"
+              key={node.frontmatter.title}
+              style={{
+                animationDelay: `${index * 100 + 100}ms`,
+              }}
+            >
+              <Link to={node.frontmatter.path} className="font-normal">
+                <Paper elevation={3} style={{ width: '300px', maxHeight: '22vh', padding: '15px', background: '#212121', }}>
+                  <Grid container direction="column" spacing={2}>
+                    <Grid item>
+                      <h6 className="text-gray-400 font-semibold">
+                        <i>{node.frontmatter.title}</i>
+                      </h6>
+                      <h6 className="text-gray-600">{node.frontmatter.date}</h6>
+                      <br />
+                      <h6 className="text-gray-700">{node.excerpt}</h6>
+                    </Grid>
+                  </Grid>
+                </Paper>
+              </Link>
+            </Grid>
           ))}
         </Grid>
-        <br/>
+        <br />
         <Grid container direction="column" justify="center" alignItems="center">
           <Grid item lg={12} xs={12} xl={12}>
-            <br/>
+            <br />
             <Link className="no-underline text-black" to="/">
-            <Button variant="contained" color="inherit" startIcon={<KeyboardBackspaceIcon/>}>
-              Return home
+              <Button variant="contained" color="inherit" startIcon={<KeyboardBackspaceIcon />}>
+                Return home
             </Button>
             </Link>
           </Grid>
         </Grid>
-        <br/><br/><br/>
+        <br /><br /><br />
       </div>
     </Layout>
   );

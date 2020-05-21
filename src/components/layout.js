@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       const WOW = require('wow.js');
       window.wow = new WOW().init();
     }, []);
-  } 
+  }
 
   return (
     <div>

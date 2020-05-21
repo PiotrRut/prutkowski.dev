@@ -27,8 +27,8 @@ function BlogPostsPreview() {
   return (
     <section id="blog-prev">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
-      <Grid item lg={12} xs={12} xl={12}>
-        <b><h3 className="text-gray-400 text-center wow fadeIn">What is on my mind?</h3></b>
+        <Grid item lg={12} xs={12} xl={12}>
+          <b><h3 className="text-gray-400 text-center wow fadeIn">What is on my mind?</h3></b>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
           <h6 className="text-gray-400 text-center wow fadeIn">
@@ -45,22 +45,22 @@ function BlogPostsPreview() {
             }}
           >
             <Link to={node.frontmatter.path} className="font-normal">
-            <Paper elevation={3} style={{width: '300px', maxHeight: '13vh', padding: '15px', background: '#212121',}}>
-              <Grid container direction="column" spacing={2}>
-                <Grid item>
-                  <h6 className="text-gray-400 font-semibold">
-                    <i>{node.frontmatter.title}</i>
-                  </h6>
-                  <h6 className="text-gray-600">{node.frontmatter.date}</h6>
+              <Paper elevation={3} style={{ width: '300px', maxHeight: '13vh', padding: '15px', background: '#212121', }}>
+                <Grid container direction="column" spacing={2}>
+                  <Grid item>
+                    <h6 className="text-gray-400 font-semibold">
+                      <i>{node.frontmatter.title}</i>
+                    </h6>
+                    <h6 className="text-gray-600">{node.frontmatter.date}</h6>
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Paper>
+              </Paper>
             </Link>
           </Grid>
-          ))}
+        ))}
       </Grid>
-      <br/>
-      <br/>
+      <br />
+      <br />
     </section>
   );
 }

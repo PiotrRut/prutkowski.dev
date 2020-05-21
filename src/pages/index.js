@@ -13,29 +13,29 @@ import Layout from "../components/layout";
 function IndexPage() {
   return (
     <Layout>
-    <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]} title="Home"/>
+      <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]} title="Home" />
       <div className="container grid-cols-1 row-gap-16">
         <Grid direction="column" justify="center" alignItems="center" container spacing={5}>
           <Grid item xl={9} lg={5} xs={12}>
-            <TopBanner/>
+            <TopBanner />
           </Grid>
           <Grid item xl={12} lg={12} xs={12}>
-            <About/>
+            <About />
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
-            <Skills/>
+            <Skills />
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
-            <ProjectsPreview/>
+            <ProjectsPreview />
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
-            <BlogPostsPreview/>
+            <BlogPostsPreview />
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
-            <PhotosPreview/>
+            <PhotosPreview />
           </Grid>
           <Grid item xl={12} lg={12} xs={12}>
-            <Contact/>
+            <Contact />
           </Grid>
         </Grid>
       </div>

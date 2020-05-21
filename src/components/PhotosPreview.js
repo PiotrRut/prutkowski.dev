@@ -21,16 +21,16 @@ const useStyles = makeStyles((theme) => ({
 
 // Show four pictures for gallery preview on main page
 function PhotosPreview() {
-  const [images, setImgs] = useState([{lowRes: '', highRes: ''}])
+  const [images, setImgs] = useState([{ lowRes: '', highRes: '' }])
   const [selectedURLS, setUrl] = useState([])
   const [open, setOpen] = useState(false);
   const classes = useStyles();
 
   // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
-      const fetchData = async () => {
-        const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
-        setImgs(response.data.reverse());
+    const fetchData = async () => {
+      const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
+      setImgs(response.data.reverse());
     }
     fetchData();
   }, []);
@@ -47,8 +47,8 @@ function PhotosPreview() {
   return (
     <section id="photos-prev">
       <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
-      <Grid item lg={12} xs={12} xl={12}>
-        <b><h3 className="text-gray-400 text-center wow fadeIn">Did someone say cheese?</h3></b>
+        <Grid item lg={12} xs={12} xl={12}>
+          <b><h3 className="text-gray-400 text-center wow fadeIn">Did someone say cheese?</h3></b>
         </Grid>
         <Grid item md={12} xs={12} lg={12} xl={12}>
           <h6 className="text-gray-400 text-center wow fadeIn">
@@ -64,14 +64,14 @@ function PhotosPreview() {
               animationDelay: `${index * 200 + 200}ms`,
             }}
           >
-            <Paper className="pic-preview-main" elevation={3} style={{maxHeight: '110vh', padding: '8px', background: '#212121'}}>
+            <Paper className="pic-preview-main" elevation={3} style={{ maxHeight: '110vh', padding: '8px', background: '#212121' }}>
               <Grid direction="column" container spacing={2}>
                 <Grid item>
                   <a className="cursor-pointer">
-                    <img 
-                      src={image.lowRes} 
+                    <img
+                      src={image.lowRes}
                       height="180" width="180"
-                      onClick={() => { setUrl({lowRes: image.lowRes, highRes: image.highRes}); handleOpen();}}
+                      onClick={() => { setUrl({ lowRes: image.lowRes, highRes: image.highRes }); handleOpen(); }}
                     />
                   </a>
                 </Grid>
@@ -82,21 +82,21 @@ function PhotosPreview() {
       </Grid>
 
       {/* Dialog with the selected picture for preview */}
-      <Dialog 
-        classes={classes} 
-        onClose={handleClose} 
-        aria-labelledby="customized-dialog-title" 
+      <Dialog
+        classes={classes}
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
         open={open}
         scroll="body"
         maxWidth="xs"
       >
         <div className={classes.paper}>
-          <img className="photoPreview" src={selectedURLS.lowRes}/>
+          <img className="photoPreview" src={selectedURLS.lowRes} />
         </div>
       </Dialog>
 
-      <br/>
-      <br/>
+      <br />
+      <br />
     </section>
   );
 }

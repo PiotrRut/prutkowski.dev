@@ -34,29 +34,29 @@ function Skills() {
         <Grid item lg={12} xs={12} xl={12}>
           <b><h3 className="text-gray-400 text-center wow fadeIn">Here are some things I know...</h3></b>
         </Grid>
-          {data.allSkillsJson.edges.map(({ node }, index) => (
-            <Grid item
-              className="wow fadeIn"
-              key={node.id}
-              style={{
-                animationDelay: `${index * 100 + 100}ms`,
-              }}
-            >
-              <Paper elevation={3} style={{width: '300px', maxHeight: '20vh', padding: '15px', background: '#212121',}}>
-                <Grid container direction="column" spacing={2}>
-                  <Grid item>
-                    <h6 className="text-gray-400">
-                      <Img style={{marginBottom: '-3px'}} {...node.icon.childImageSharp}/> &nbsp;{node.name}
-                    </h6>
-                    <h6 className="text-gray-600">{node.category}</h6>
-                  </Grid>
+        {data.allSkillsJson.edges.map(({ node }, index) => (
+          <Grid item
+            className="wow fadeIn"
+            key={node.id}
+            style={{
+              animationDelay: `${index * 100 + 100}ms`,
+            }}
+          >
+            <Paper elevation={3} style={{ width: '300px', maxHeight: '20vh', padding: '15px', background: '#212121', }}>
+              <Grid container direction="column" spacing={2}>
+                <Grid item>
+                  <h6 className="text-gray-400">
+                    <Img style={{ marginBottom: '-3px' }} {...node.icon.childImageSharp} /> &nbsp;{node.name}
+                  </h6>
+                  <h6 className="text-gray-600">{node.category}</h6>
                 </Grid>
-              </Paper>
-            </Grid>
-          ))}
+              </Grid>
+            </Paper>
+          </Grid>
+        ))}
       </Grid>
-      <br/>
-      <br/>
+      <br />
+      <br />
     </section>
   );
 }
