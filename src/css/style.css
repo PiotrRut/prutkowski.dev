@@ -102,6 +102,7 @@ textarea::placeholder {
   }
 }
 
+
 @media only screen 
   and (max-width: 480px) { 
       h1 {
@@ -111,6 +112,9 @@ textarea::placeholder {
         font-size: .9em; 
       }
       .pic-preview-main {
+        width: 140px
+      }
+      .gallery-pics {
         width: 140px
       }
     }
