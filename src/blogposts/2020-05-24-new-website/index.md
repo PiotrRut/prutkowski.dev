@@ -26,7 +26,20 @@ function genImageUrl(key){
 }
 ```
 
-These URLs are then inserted into a JSON object for each picture I have in storage, and sent to my front end via an ```HTTP GET``` request, stored in local state-array, and displayed using the compressed image to reduce load size and network usage. Once an image is pressed on to isolate it on the screen (against a fully black background to allow better contrast) anybody can press a button which will take them to the full sized picture in a separate tab 😊
+These URLs are then inserted into a JSON object for each picture I have in storage, and sent to my front end via an ```HTTP GET``` request, stored in local state-array, and displayed using the compressed image to reduce load size and network usage.
+
+```javascript
+ // Fetch all image URLs from Azure via my backend and append to array
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
+      setImgs(response.data.reverse());
+    }
+    fetchData();
+  }, []);
+```
+
+Once an image is clicked on to isolate it on the screen (against a fully black background to allow better contrast) anybody can press a button which will take them to the full sized picture in a separate tab 😊
 
 I hope you will enjoy this site just as much as I enjoyed crating it! It
 

@@ -18,7 +18,7 @@ export default function Template({
   return (
     <Layout>
       <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]} title="Blog"/>
-      <div>
+      <div className="overflow-x-hidden">
         <br/><br/>
         <Grid direction="column" justify="center" alignItems="center" container spacing={8}>
           <Grid Grid item lg={12} xs={12} xl={12}>
