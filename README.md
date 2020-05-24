@@ -22,4 +22,4 @@ The API that I've written which the gallery uses can be found [here](https://git
 
 ## :recycle: Old website
 
-The old codebase can be found [here](https://github.com/PiotrRut/prutkowski-old), although that repository is now read only.
+The old codebase can be found [here](https://github.com/PiotrRut/OLD-prutkowski.tech), although that repository is now read only.
