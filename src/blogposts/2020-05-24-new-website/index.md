@@ -11,7 +11,8 @@ As opposed to my old website, full of vibrant colurs and big, bulky text, I want
 
 The projects page for example, is now its own separate page, where __all__ of my public GitHub repositories fetched automatically via the GitHub REST API live, and are displayed in a neat grid! There is also a blog section (where you probably found this post) as well as the new addition to my portfolio - a dedicated gallery!
 
-### __The creation of the gallery__
+### __The creation of the gallery__ 
+</br>
   
 Now, to make this possible I had to do a lot of thinking. The images I shoot are in the RAW format, which is great for post-production in software like Adobe Lightroom, because it saves all the image metadata, and lets me manipulate everything in the picture - from the highlights and shadows, through the clarity and sharpness, to the smallest details like saturation and luminosity! The downside though - very large file size!! Even after exporting them to JPG format from within lightroom, image files are around 10-15MB in size, each. This of course, would make it really inefficient to store and display locally.
 
