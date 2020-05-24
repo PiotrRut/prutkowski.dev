@@ -61,7 +61,7 @@ function PhotosPreview() {
             className="wow fadeIn"
             key={image.lowRes}
             style={{
-              animationDelay: `${index * 200 + 200}ms`,
+              animationDelay: `${index * 150 + 150}ms`,
             }}
           >
             <Paper className="pic-preview-main" elevation={3} style={{ maxHeight: '110vh', padding: '8px', background: '#212121' }}>

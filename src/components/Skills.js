@@ -39,7 +39,7 @@ function Skills() {
             className="wow fadeIn"
             key={node.id}
             style={{
-              animationDelay: `${index * 100 + 100}ms`,
+              animationDelay: `${index * 70 + 70}ms`,
             }}
           >
             <Paper elevation={3} style={{ width: '300px', maxHeight: '20vh', padding: '15px', background: '#212121', }}>
