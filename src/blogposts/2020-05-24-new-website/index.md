@@ -7,9 +7,9 @@ Hey all, and welcome to the finally refreshed website! This post is going to be 
 
 With my old website (created way back in 2019) well overdue a new, fresh look, and me being stuck at home due to social distancing and whatnot, the website you are currently on came to life. It is written entirely from scratch with React and Gatsby!
 
-As opposed to my old website, full of vibrant colurs and big, bulky text, I wanted this one to be much more minimalistic. The bright colours were switched out with black and white, and the whole structure has changed too - it is now a _single page application_!! This means that all of the content is on the main page (also called the _landing page_), but in my case, there are some separate pages here as well.
+As opposed to my old website, full of vibrant colours and big, bulky text, I wanted this one to be much more minimalistic. The bright colours were switched out with black and white, and the whole structure has changed too - it is now a _single page application_!! This means that all of the content is on the main page (also called the _landing page_), but in my case, there are some separate pages here as well.
 
-The projects page for example, is now its own separate page, where __all__ of my public GitHub repositories fetched automatically via the GitHub REST API live, and are displayed in a neat grid! There is also a blog section (where you probably found this post) as well as the new addition to my portfolio - a dedicated gallery!
+The projects page for example, is now its own separate page, where __all__ of my public GitHub repositories are fetched automatically via the GitHub REST API live, and are displayed in a neat grid! There is also a blog section (where you probably found this post) as well as the new addition to my portfolio - a dedicated gallery!
 
 ### __The creation of the gallery__
 
