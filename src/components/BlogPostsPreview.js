@@ -51,7 +51,7 @@ function BlogPostsPreview() {
                     <h6 className="text-gray-400 font-semibold">
                       <i>{node.frontmatter.title}</i>
                     </h6>
-                    <h6 className="text-gray-600">{node.frontmatter.date}</h6>
+                    <h6 className="text-gray-500">{node.frontmatter.date}</h6>
                   </Grid>
                 </Grid>
               </Paper>

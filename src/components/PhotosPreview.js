@@ -72,6 +72,7 @@ function PhotosPreview() {
                       src={image.lowRes}
                       height="180" width="180"
                       onClick={() => { setUrl({ lowRes: image.lowRes, highRes: image.highRes }); handleOpen(); }}
+                      alt="Image"
                     />
                   </a>
                 </Grid>

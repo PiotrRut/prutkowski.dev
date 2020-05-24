@@ -59,7 +59,7 @@ function Blog() {
                       <h6 className="text-gray-400 font-semibold">
                         <i>{node.frontmatter.title}</i>
                       </h6>
-                      <h6 className="text-gray-600">{node.frontmatter.date}</h6>
+                      <h6 className="text-gray-500">{node.frontmatter.date}</h6>
                       <br />
                       <h6 className="text-gray-700">{node.excerpt}</h6>
                     </Grid>
