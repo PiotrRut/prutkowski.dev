@@ -49,12 +49,12 @@ function About() {
 
   return (
     <section id="about-me" className="overflow-hidden">
-      <Grid direction="column" align-content="center" justify="flex-start" alignItems="center" container spacing={2}>
+      <Grid direction="column" align-content="center" justify="center" alignItems="center" container spacing={2}>
         <Grid item lg={5} xl={7}>
           <b><h3 className="text-gray-400 text-center wow fadeIn">Who am I?</h3></b>
         </Grid>
         <Grid item lg={9} xl={10}>
-          <h5 className="text-gray-400 text-center wow fadeIn">
+          <h5 className="text-gray-400 text-left wow fadeIn">
             Great question! My name is Piotr, although people mostly call me Peter, and I am a {age} year old programmer
             and second-year BSc Computer Science student at City, University of London.
             I was originally born in Poland, but for the majority
@@ -63,7 +63,7 @@ function About() {
             as well as electronics and electrical engineering.
           </h5>
           <br />
-          <h5 className="text-gray-400 text-center wow fadeIn">
+          <h5 className="text-gray-400 text-left wow fadeIn">
             In my free time, apart from working on various programming projects, I dedicate a lot of time to photography.
             I&#39;ve been taking pictures since I can remember, and the website you&#39;re currently on, doubles as my
             photographic portfolio.
@@ -71,7 +71,7 @@ function About() {
             In the <Link to="/photogallery">gallery</Link> section, you can view some of my shots and download them!
           </h5>
           <br />
-          <h5 className="text-gray-400 text-center wow fadeIn">
+          <h5 className="text-gray-400 text-left wow fadeIn">
             My passion for programming started a couple of years ago, after
             accidentally finding a Python instruction course on YouTube. Ever
             since I have been trying to learn new languages, concepts, and
@@ -81,7 +81,7 @@ function About() {
             and in my spare time, through various side-projects.
           </h5>
           <br />
-          <h5 className="text-gray-400 text-center wow fadeIn">
+          <h5 className="text-gray-400 text-left wow fadeIn">
             I hope you enjoy this website as much as I&#39;ve enjoyed making it, and don&#39;t forget to
             check out my socials! <span>😁</span>
           </h5>
