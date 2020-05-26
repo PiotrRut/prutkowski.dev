@@ -61,6 +61,11 @@ function About() {
             of my life I&#39;ve been living in Norway. In September 2018 I moved to London to study.
             Before I came to the UK I graduated high school with a diploma in general studies,
             as well as electronics and electrical engineering.
+            <br/> 
+            <b><u>
+              I am currenly seeking an industrial placement
+              opportunity in software or web development for 2020-2021!
+            </u></b>
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">
@@ -69,16 +74,6 @@ function About() {
             photographic portfolio.
             <br />
             In the <Link to="/photogallery">gallery</Link> section, you can view some of my shots and download them!
-          </h5>
-          <br />
-          <h5 className="text-gray-400 text-left wow fadeIn">
-            My passion for programming started a couple of years ago, after
-            accidentally finding a Python instruction course on YouTube. Ever
-            since I have been trying to learn new languages, concepts, and
-            technologies. What amazes me most about computer science, is how
-            vast it is, and just how much you can do with even a slight
-            knowledge of it. I am learning more and more every single day, both in University
-            and in my spare time, through various side-projects.
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">
