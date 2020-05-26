@@ -23,6 +23,7 @@
     "gatsby-transformer-json": "^2.4.1",
     "gatsby-transformer-remark": "^2.8.7",
     "gatsby-transformer-sharp": "^2.5.2",
+    "mdi-material-ui": "^6.15.0",
     "moment": "^2.25.3",
     "parcel-bundler": "^1.12.4",
     "prismjs": "^1.20.0",

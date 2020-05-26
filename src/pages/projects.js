@@ -8,6 +8,7 @@ import SEO from '../components/seo'
 import GradeIcon from '@material-ui/icons/Grade';
 import Button from '@material-ui/core/Button'
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+import SourceFork from 'mdi-material-ui/SourceFork'
 
 import Layout from "../components/layout";
 
@@ -60,11 +61,15 @@ function Projects() {
                         className={repo.language}
                         fontSize="small"
                         style={{ paddingBottom: '3px' }}
-                      />
-                      {repo.language}
+                      /> {repo.language}
                       &nbsp;
                       {repo.stargazers_count >= 1 &&
                         <span><GradeIcon fontSize="small" style={{ paddingBottom: '3px' }} />{repo.stargazers_count}</span>
+                      }
+                      &nbsp;
+                      {
+                      repo.forks >= 1 &&
+                      <span><SourceFork style={{fontSize: '18px', paddingBottom: '3px' }}/>{repo.forks}</span>
                       }
                     </h6>
                   </Grid>

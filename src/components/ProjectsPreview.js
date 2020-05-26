@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import GradeIcon from '@material-ui/icons/Grade';
+import SourceFork from 'mdi-material-ui/SourceFork'
 
 // The projects section on the main page, with three latest
 function ProjectsPreview() {
@@ -44,10 +45,20 @@ function ProjectsPreview() {
                 <Grid item><h6 className="text-gray-400">{repo.description}</h6></Grid>
                 <Grid item>
                   <h6 className="text-gray-400">
-                    <FiberManualRecordIcon className={repo.language} fontSize="small" style={{ paddingBottom: '3px' }} /> {repo.language}
+                    <FiberManualRecordIcon 
+                      className={repo.language} 
+                      fontSize="small" 
+                      style={{ paddingBottom: '3px' }} 
+                    /> {repo.language}
                     &nbsp;
-                      {repo.stargazers_count >= 1 &&
-                      <span><GradeIcon style={{ paddingBottom: '3px', fontSize: 'large' }} />{repo.stargazers_count}</span>
+                      {
+                        repo.stargazers_count >= 1 &&
+                        <span><GradeIcon style={{ paddingBottom: '3px', fontSize: 'large' }} />{repo.stargazers_count}</span>
+                      }
+                    &nbsp;
+                    {
+                      repo.forks >= 1 &&
+                      <span><SourceFork style={{fontSize: '18px', paddingBottom: '3px' }}/>{repo.forks}</span>
                     }
                   </h6>
                 </Grid>
