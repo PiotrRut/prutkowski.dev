@@ -51,10 +51,10 @@ function ProjectsPreview() {
                       style={{ paddingBottom: '3px' }} 
                     /> {repo.language}
                     &nbsp;
-                      {
-                        repo.stargazers_count >= 1 &&
-                        <span><GradeIcon style={{ paddingBottom: '3px', fontSize: 'large' }} />{repo.stargazers_count}</span>
-                      }
+                    {
+                      repo.stargazers_count >= 1 &&
+                      <span><GradeIcon style={{ paddingBottom: '3px', fontSize: 'large' }} />{repo.stargazers_count}</span>
+                    }
                     &nbsp;
                     {
                       repo.forks >= 1 &&
