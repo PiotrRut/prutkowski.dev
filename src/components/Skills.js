@@ -3,7 +3,6 @@ import Img from "gatsby-image";
 import React from "react";
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography';
 
 // Sections with my skills displayed
 function Skills() {
@@ -43,7 +42,7 @@ function Skills() {
             }}
           >
             <Paper elevation={3} style={{ width: '300px', maxHeight: '20vh', padding: '15px', background: '#212121', }}>
-              <Grid container direction="column" spacing={2}>
+              <Grid container direction="row" spacing={2}>
                 <Grid item>
                   <h6 className="text-gray-400">
                     <Img style={{ marginBottom: '-3px' }} {...node.icon.childImageSharp} /> &nbsp;{node.name}
