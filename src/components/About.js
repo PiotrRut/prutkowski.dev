@@ -61,11 +61,6 @@ function About() {
             of my life I&#39;ve been living in Norway. In September 2018 I moved to London to study.
             Before I came to the UK I graduated high school with a diploma in general studies,
             as well as electronics and electrical engineering.
-            <br/> 
-            <b><u>
-              I am currenly seeking an industrial placement
-              opportunity in software or web development for 2020-2021!
-            </u></b>
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">
