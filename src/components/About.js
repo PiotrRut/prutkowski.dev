@@ -60,7 +60,7 @@ function About() {
             I was originally born in Poland, but for the majority
             of my life I&#39;ve been living in Norway. In September 2018 I moved to London to study.
             Before I came to the UK I graduated high school with a diploma in general studies,
-            as well as electronics and electrical engineering.
+            as well as electronics and electrical engineering. I am currently working as an intern software engineer for <a href="http://equalsmoney.com">Equals</a>!
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">
