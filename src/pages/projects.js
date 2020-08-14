@@ -43,7 +43,7 @@ function Projects() {
               To visit the GitHub page for any of them, click the project name.
             </p>
           </Grid>
-          {repos.map((repo, index) => (
+          {repos.filter(repo => repo.name !== 'PiotrRut').map((repo, index) => (
             <Grid item
               className="wow fadeIn"
               key={repo.id}

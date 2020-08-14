@@ -31,7 +31,7 @@ function ProjectsPreview() {
             <h6><Link to="/projects">Press here to see all of them!</Link></h6>
           </h6>
         </Grid>
-        {repos.slice(0, 3).map((repo, index) => (
+        {repos.filter(repo => repo.name !== 'PiotrRut').slice(0, 3).map((repo, index) => (
           <Grid item
             className="wow fadeIn"
             key={repo.id}
