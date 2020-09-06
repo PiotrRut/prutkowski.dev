@@ -48,7 +48,7 @@ function Projects() {
               className="wow fadeIn"
               key={repo.id}
               style={{
-                animationDelay: `${index * 100 + 100}ms`,
+                animationDelay: `${index * 70 + 70}ms`,
               }}
             >
               <Paper elevation={3} style={{ width: '350px', maxHeight: '110vh', padding: '15px', background: '#212121', }}>

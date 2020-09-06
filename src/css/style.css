@@ -106,7 +106,6 @@ textarea::placeholder {
   }
 }
 
-
 @media only screen 
   and (max-width: 480px) { 
       h1 {
@@ -122,3 +121,23 @@ textarea::placeholder {
         width: 140px
       }
     }
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+float: left;
+width: 33.33%;
+padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+
+@media screen and (max-width: 750px) {
+  .column {
+    width: 100%;
+  }
+}

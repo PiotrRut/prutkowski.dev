@@ -77,6 +77,16 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {},
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 400,
+              showCaptions: true,
+              markdownCaptions: true,
+              backgroundColor: 'none',
+              disableBgImage:true
+            },
+          },
         ],
       },
     },
