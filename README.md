@@ -7,7 +7,7 @@ My old personal website, which I made back in 2019, was well overdue for a redes
 It is written entirely from scratch using React and Gatsby. It is mostly a single page web app, with a few exceptions:
 
 * __Projects__: This page holds a list of all my public GitHub repositories, automatically updated from the GitHub API.
-* __Blog__: Hold a list of all my blog posts, written using markdown.
+* __Blog__: Holds a list of all my blog posts, written in Markdown.
 * __Gallery__: Displays a chosen selection of photographs I've recently taken. It retrieves the pictures through a remote Heroku dyno (via my back end), from my Microsoft Azure storage.
 
 The API that I've written which the gallery uses can be found [here](https://github.com/PiotrRut/prutkowski.tech-backend).
@@ -16,8 +16,8 @@ The API that I've written which the gallery uses can be found [here](https://git
 
 * ReactJS
 * GatsbyJS
-* Material UI (for grid layout)
-* TailwindCSS (for grid and text classes)
+* Material UI
+* TailwindCSS
 * Wow.js (for animations)
 
 ## :recycle: Old website
