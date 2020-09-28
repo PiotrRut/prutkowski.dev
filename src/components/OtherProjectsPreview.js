@@ -27,6 +27,7 @@ const useStyles = makeStyles({
 // Projects I am involved in with at work
 function OtherProjectsPreview() {
   const classes = useStyles();
+  const img = require.context('../images', true);
 
   return (
     <section id="proj-preview">
@@ -47,7 +48,7 @@ function OtherProjectsPreview() {
                 }}
               >
                 <Card className={classes.root}>
-                  <CardMedia title={item.title} className={classes.media} image={item.picture} />
+                  <CardMedia title={item.title} className={classes.media} image={img(`./${item.picture}`)} />
                   <CardContent>
                   <Typography gutterBottom className={classes.text} variant="h6" component="h2">
                     {item.title}
