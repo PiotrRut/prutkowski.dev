@@ -49,7 +49,7 @@ function About() {
 
   return (
     <section id="about-me" className="overflow-hidden">
-      <Grid direction="column" align-content="center" justify="center" alignItems="center" container spacing={2}>
+      <Grid direction="column" align-content="center" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={5} xl={7}>
           <b><h3 className="text-gray-400 text-center wow fadeIn">Who am I?</h3></b>
         </Grid>
