@@ -39,24 +39,29 @@ function OtherProjectsPreview() {
         </Grid>
         <Grid container item direction="row" justify="center" alignItems="center" spacing={4}>
           {
-            projects.map((item, i) => (
+            projects.map((p, i) => (
               <Grid item md={6} lg={6}
                 className="wow fadeIn"
-                key={item.title}
+                key={p.title}
                 style={{
                   animationDelay: `${i * 70 + 70}ms`,
                 }}
               >
                 <Card className={classes.root}>
-                  <CardMedia title={item.title} className={classes.media} image={img(`./${item.picture}`)} />
+                  <CardMedia title={p.title} className={classes.media} image={img(`./${p.picture}`)} />
                   <CardContent>
-                  <Typography gutterBottom className={classes.text} variant="h6" component="h2">
-                    {item.title}
-                  </Typography>
-                  <Typography variant="body2" className={classes.text} component="p">
-                    {item.description}
-                  </Typography>
+                    <Typography gutterBottom className={classes.text} variant="h6" component="h2">
+                      {p.title}
+                    </Typography>
+                    <Typography variant="body2" className={classes.text} component="p">
+                      {p.description}
+                    </Typography>
                   </CardContent>
+                  <CardActions>
+                    <Button color="primary" href={p.path}>
+                      See more
+                    </Button>
+                  </CardActions>
                 </Card>
               </Grid>
             ))
