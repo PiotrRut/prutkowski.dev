@@ -1,26 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "gatsby"
+import React from 'react';
 import Grid from '@material-ui/core/Grid'
 import projects from '../misc/projects.json'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import Tooltip from '@material-ui/core/Tooltip'
 
 // Styles override
 const useStyles = makeStyles({
   root: {
-    width: 360,
+    width: 370,
     background: '#212121',
   },
   media: {
     height: 140,
   },
   text: {
+    color: 'white'
+  },
+  teamText: {
+    color: 'gray'
+  },
+  action: {
+    marginTop: '-20px'
+  },
+  info: {
+    marginLeft: 'auto',
     color: 'white'
   }
 });
@@ -58,10 +69,15 @@ function OtherProjectsPreview() {
                       {p.description}
                     </Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button color="primary" href={p.path}>
+                  <CardActions disableSpacing className={classes.action}>
+                    <Button color="primary" size="small" href={p.path}>
                       See more
                     </Button>
+                    <Tooltip title={"Team: " + p.team} aria-label="team" placement="left">
+                      <IconButton className={classes.info}>
+                        <InfoOutlinedIcon/>
+                      </IconButton>
+                    </Tooltip>
                   </CardActions>
                 </Card>
               </Grid>
