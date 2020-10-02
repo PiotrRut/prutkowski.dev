@@ -7,9 +7,17 @@ import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    color: 'white'
+  }
+});
 
 // The top banner with profile pic, name, and some animated text
 function TopBanner() {
+  const classes = useStyles();
   const data = useStaticQuery(graphql`
       {
         photo: file(relativePath: { eq: "ProfileImg.png" }) {
@@ -28,7 +36,7 @@ function TopBanner() {
         <Grid item lg={12} xl={12} xs={12} >
           <Image {...data.photo.childImageSharp} />
         </Grid>
-        <h1 className="text-gray-200 text-center wow fadeIn">Piotr Rutkowski</h1>
+        <Typography variant="h2" component="h1" classes={classes}>Piotr Rutkowski</Typography>
         <Grid item lg={12} xl={12} xs={12}>
           <Typist cursor={{ show: false }} className="text-center items-center">
             <code>
@@ -43,7 +51,8 @@ function TopBanner() {
         </Grid>
         <h6 className="text-gray-500 wow fadeIn">
           <span className="cursor-pointer nav" onClick={() => scrollTo('#skills')}>Skills</span> |
-          <span className="cursor-pointer nav" onClick={() => scrollTo('#proj-preview')}> Projects</span> |
+          <span className="cursor-pointer nav" onClick={() => scrollTo('#proj-preview')}> Github Projects</span> |
+          <span className="cursor-pointer nav" onClick={() => scrollTo('#other-proj-preview')}> Other Projects</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#blog-prev')}> Blog</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#photos-prev')}> Gallery</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#contact')}> Contact</span>

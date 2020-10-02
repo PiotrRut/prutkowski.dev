@@ -10,13 +10,13 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-  text: {
+  root: {
     color: 'white'
   }
 });
 
 // The projects section on the main page, with three latest
-function ProjectsPreview() {
+function GitProjectsPreview() {
   const classes = useStyles();
   const [repos, setRepos] = useState([])
 
@@ -32,15 +32,15 @@ function ProjectsPreview() {
     <section id="proj-preview">
       <Grid direction="column" justify="center" alignItems="center" container spacing={2}>
         <Grid item lg={12} xs={12} xl={12}>
-          <b><Typography variant="h4" className={classes.text}>GitHub Projects</Typography></b>
+          <Typography variant="h4" classes={classes}>GitHub Projects</Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" className={classes.text}>
+          <Typography variant="subtitle1" classes={classes}>
             All my GitHub repositories, fetched in live time.
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" className={classes.text}>
+          <Typography variant="subtitle1">
             <Link to="/projects">Press here to see all of them!</Link>
           </Typography>
         </Grid>
@@ -88,4 +88,4 @@ function ProjectsPreview() {
   );
 }
 
-export default ProjectsPreview;   
+export default GitProjectsPreview;   

@@ -30,10 +30,10 @@ function OtherProjectsPreview() {
   const img = require.context('../images', true);
 
   return (
-    <section id="proj-preview">
+    <section id="other-proj-preview">
       <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
-          <b><Typography variant="h4" className={classes.text}>Work projects</Typography></b>
+          <b><Typography variant="h4" className={classes.text}>Other projects</Typography></b>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
         </Grid>

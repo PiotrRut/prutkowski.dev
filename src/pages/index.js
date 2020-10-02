@@ -3,7 +3,7 @@ import TopBanner from '../components/TopBanner'
 import About from '../components/About'
 import Grid from '@material-ui/core/Grid'
 import Skills from '../components/Skills'
-import ProjectsPreview from '../components/ProjectsPreview'
+import GitProjectsPreview from '../components/GitProjectsPreview'
 import BlogPostsPreview from '../components/BlogPostsPreview'
 import PhotosPreview from '../components/PhotosPreview'
 import SEO from '../components/seo'
@@ -27,7 +27,7 @@ function IndexPage() {
             <Skills />
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
-            <ProjectsPreview />
+            <GitProjectsPreview />
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
             <OtherProjectsPreview />
