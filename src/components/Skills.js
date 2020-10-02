@@ -3,9 +3,19 @@ import Img from "gatsby-image";
 import React from "react";
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
+import { Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    color: 'white'
+  },
+})
+
 
 // Sections with my skills displayed
 function Skills() {
+  const classes = useStyles();
   const data = useStaticQuery(graphql`
     {
       allSkillsJson {
@@ -29,10 +39,11 @@ function Skills() {
 
   return (
     <section id="skills">
-      <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
+      <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
-          <b><h3 className="text-gray-400 text-center wow fadeIn">Here are some things I know...</h3></b>
+          <Typography variant="h4" classes={classes}>Here are some things I know...</Typography>
         </Grid>
+        <Grid container item justify="center" alignItems="center"spacing={3}>
         {data.allSkillsJson.edges.map(({ node }, index) => (
           <Grid item
             className="wow fadeIn"
@@ -53,6 +64,7 @@ function Skills() {
             </Paper>
           </Grid>
         ))}
+        </Grid>
       </Grid>
       <br />
       <br />

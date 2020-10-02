@@ -36,7 +36,7 @@ function GitProjectsPreview() {
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
           <Typography variant="subtitle1" classes={classes}>
-            All my GitHub repositories, fetched in live time.
+            All my GitHub repositories, fetched in real time.
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
@@ -44,7 +44,7 @@ function GitProjectsPreview() {
             <Link to="/projects">Press here to see all of them!</Link>
           </Typography>
         </Grid>
-        <Grid container item direction="row" justify="center" alignItems="center" spacing={3}>
+        <Grid container item justify="center" alignItems="center" spacing={3}>
           {repos.filter(repo => repo.name !== 'PiotrRut').slice(0, 3).map((repo, index) => (
             <Grid item
               className="wow fadeIn"

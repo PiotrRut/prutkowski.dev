@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import BACKEND_URL from '../apiRoutes/backend'
 import Dialog from '@material-ui/core/Dialog'
 import Paper from '@material-ui/core/Paper'
+import { Typography } from '@material-ui/core'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +18,10 @@ const useStyles = makeStyles((theme) => ({
   paper: { // set colour of the paper dialog
     backgroundColor: '#212121',
     color: 'white',
-  }
+  },
+  text: {
+    color: 'white'
+  },
 }));
 
 // Show four pictures for gallery preview on main page
@@ -46,9 +51,9 @@ function PhotosPreview() {
 
   return (
     <section id="photos-prev">
-      <Grid direction="row" justify="center" alignItems="center" container spacing={3}>
+      <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
-          <b><h3 className="text-gray-400 text-center wow fadeIn">Did someone say cheese?</h3></b>
+          <Typography variant="h4" className={classes.text}>Did someone say cheese?</Typography>
         </Grid>
         <Grid item md={12} xs={12} lg={12} xl={12}>
           <h6 className="text-gray-400 text-center wow fadeIn">
@@ -56,6 +61,7 @@ function PhotosPreview() {
             <h6><Link to="/photogallery">Press here to see all of them!</Link></h6>
           </h6>
         </Grid>
+        <Grid container item justify="center" alignItems="center" spacing={3}>
         {images.slice(0, 4).map((image, index) => (
           <Grid item
             className="wow fadeIn"
@@ -80,6 +86,7 @@ function PhotosPreview() {
             </Paper>
           </Grid>
         ))}
+        </Grid>
       </Grid>
 
       {/* Dialog with the selected picture for preview */}

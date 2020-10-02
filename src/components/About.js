@@ -9,7 +9,8 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import IconButton from '@material-ui/core/IconButton'
-
+import { Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
 
 const socials =
   [
@@ -39,8 +40,15 @@ const socials =
     },
   ];
 
+  const useStyles = makeStyles({
+    root: {
+      color: 'white'
+    }
+  });
+
 // About me section
 function About() {
+  const classes = useStyles();
 
   // Automatically update my age every year on my birthday
   var bday = moment(new Date('1999/8/24'));
@@ -51,7 +59,7 @@ function About() {
     <section id="about-me" className="overflow-hidden">
       <Grid direction="column" align-content="center" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={5} xl={7}>
-          <b><h3 className="text-gray-400 text-center wow fadeIn">Who am I?</h3></b>
+          <Typography variant="h4" classes={classes}>Who am I?</Typography>
         </Grid>
         <Grid item lg={9} xl={10}>
           <h5 className="text-gray-400 text-left wow fadeIn">

@@ -33,11 +33,11 @@ function OtherProjectsPreview() {
     <section id="other-proj-preview">
       <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
-          <b><Typography variant="h4" className={classes.text}>Other projects</Typography></b>
+          <b><Typography variant="h4" className={classes.text}>Other Projects</Typography></b>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
         </Grid>
-        <Grid container item direction="row" justify="center" alignItems="center" spacing={4}>
+        <Grid container item justify="center" alignItems="center" spacing={4}>
           {
             projects.map((p, i) => (
               <Grid item md={6} lg={6}
