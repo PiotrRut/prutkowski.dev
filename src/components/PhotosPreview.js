@@ -8,7 +8,7 @@ import Dialog from '@material-ui/core/Dialog'
 import Paper from '@material-ui/core/Paper'
 import { Typography } from '@material-ui/core'
 
-
+// Styles override
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: -35,

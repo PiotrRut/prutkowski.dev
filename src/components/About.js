@@ -40,11 +40,12 @@ const socials =
     },
   ];
 
-  const useStyles = makeStyles({
-    root: {
-      color: 'white'
-    }
-  });
+// Styles override
+const useStyles = makeStyles({
+  root: {
+    color: 'white'
+  }
+});
 
 // About me section
 function About() {

@@ -9,6 +9,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles';
 
+// Styles override
 const useStyles = makeStyles({
   root: {
     color: 'white'

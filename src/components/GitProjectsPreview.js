@@ -9,6 +9,7 @@ import SourceFork from 'mdi-material-ui/SourceFork'
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
+// Styles override
 const useStyles = makeStyles({
   root: {
     color: 'white'
