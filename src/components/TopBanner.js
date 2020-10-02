@@ -37,7 +37,7 @@ function TopBanner() {
         <Grid item lg={12} xl={12} xs={12} >
           <Image {...data.photo.childImageSharp} />
         </Grid>
-        <Typography variant="h2" component="h1" classes={classes}>Piotr Rutkowski</Typography>
+        <Typography variant="h3" component="h1" classes={classes}>Piotr Rutkowski</Typography>
         <Grid item lg={12} xl={12} xs={12}>
           <Typist cursor={{ show: false }} className="text-center items-center">
             <code>
@@ -52,7 +52,7 @@ function TopBanner() {
         </Grid>
         <h6 className="text-gray-500 wow fadeIn">
           <span className="cursor-pointer nav" onClick={() => scrollTo('#skills')}>Skills</span> |
-          <span className="cursor-pointer nav" onClick={() => scrollTo('#proj-preview')}> Github Projects</span> |
+          <span className="cursor-pointer nav" onClick={() => scrollTo('#proj-preview')}> Github</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#other-proj-preview')}> Other Projects</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#blog-prev')}> Blog</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#photos-prev')}> Gallery</span> |

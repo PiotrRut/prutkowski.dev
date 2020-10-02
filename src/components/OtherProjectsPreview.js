@@ -13,10 +13,13 @@ import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import Tooltip from '@material-ui/core/Tooltip'
 
 // Styles override
-const useStyles = makeStyles({
+const useStyles =  makeStyles((theme) => ({
   root: {
     width: 370,
     background: '#212121',
+    [theme.breakpoints.down('sm')]: {
+      width: 300,
+    },
   },
   media: {
     height: 140,
@@ -34,13 +37,13 @@ const useStyles = makeStyles({
     marginLeft: 'auto',
     color: 'white'
   }
-});
+}));
 
 // Projects I am involved in with at work
 function OtherProjectsPreview() {
   const classes = useStyles();
   const img = require.context('../images', true);
-
+  
   return (
     <section id="other-proj-preview">
       <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
@@ -70,10 +73,12 @@ function OtherProjectsPreview() {
                     </Typography>
                   </CardContent>
                   <CardActions disableSpacing className={classes.action}>
-                    <Button color="primary" size="small" href={p.path}>
+                    {p.path && 
+                      <Button color="primary" size="small" href={p.path}>
                       See more
-                    </Button>
-                    <Tooltip title={"Team: " + p.team} aria-label="team" placement="left">
+                      </Button>
+                    }
+                    <Tooltip enterTouchDelay={0} title={"Team: " + p.team} arrow placement="bottom-end">
                       <IconButton className={classes.info}>
                         <InfoOutlinedIcon/>
                       </IconButton>

@@ -53,7 +53,7 @@ function PhotosPreview() {
     <section id="photos-prev">
       <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" className={classes.text}>Did someone say cheese?</Typography>
+          <Typography variant="h4" className={classes.text}>See my shots!</Typography>
         </Grid>
         <Grid item md={12} xs={12} lg={12} xl={12}>
           <h6 className="text-gray-400 text-center wow fadeIn">

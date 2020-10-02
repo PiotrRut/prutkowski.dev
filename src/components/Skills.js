@@ -41,7 +41,7 @@ function Skills() {
     <section id="skills">
       <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" classes={classes}>Here are some things I know...</Typography>
+          <Typography variant="h4" classes={classes}>I know these...</Typography>
         </Grid>
         <Grid container item justify="center" alignItems="center"spacing={3}>
         {data.allSkillsJson.edges.map(({ node }, index) => (
