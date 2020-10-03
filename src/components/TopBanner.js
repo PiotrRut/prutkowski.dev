@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Typist from 'react-typist'
 import Grid from '@material-ui/core/Grid'

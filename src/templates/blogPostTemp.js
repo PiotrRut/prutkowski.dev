@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
+import React from "react";
+import { graphql, Link } from "gatsby";
 import Grid from '@material-ui/core/Grid'
 import SEO from '../components/seo'
 import PropTypes from 'prop-types'
