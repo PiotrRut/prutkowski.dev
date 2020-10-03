@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import BACKEND_URL from '../apiRoutes/backend'
 import Dialog from '@material-ui/core/Dialog'
 import Paper from '@material-ui/core/Paper'
-import { Typography } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography';
 
 // Styles override
 const useStyles = makeStyles((theme) => ({
@@ -51,15 +51,19 @@ function PhotosPreview() {
 
   return (
     <section id="photos-prev">
-      <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
+      <Grid direction="column" justify="center" alignItems="center" container spacing={2}>
         <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" className={classes.text}>See my shots!</Typography>
+          <Typography variant="h4" className={classes.text}>Gallery</Typography>
         </Grid>
-        <Grid item md={12} xs={12} lg={12} xl={12}>
-          <h6 className="text-gray-400 text-center wow fadeIn">
-            Below you can see some of my best shots!
-            <h6><Link to="/photogallery">Press here to see all of them!</Link></h6>
-          </h6>
+        <Grid item md={12} lg={12} xl={12} xs={12}>
+          <Typography variant="subtitle1" className={classes.text}>
+            Here are some of my best shots!
+          </Typography>
+        </Grid>
+        <Grid item md={12} lg={12} xl={12} xs={12}>
+          <Typography variant="subtitle1">
+            <Link to="/gallery">View the rest here!</Link>
+          </Typography>
         </Grid>
         <Grid container item justify="center" alignItems="center" spacing={3}>
         {images.slice(0, 4).map((image, index) => (

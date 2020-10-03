@@ -8,11 +8,11 @@
 html,
 body {
   background-color: #121212;
+/*   background: linear-gradient(300deg, #2d3436 0%, #000000 74%); */
   font-size: 14px;
   font-family: 'Ubuntu', sans-serif;
   width: 100%;
 }
-
 .bounce {
   animation: bounce 2s infinite;
 }

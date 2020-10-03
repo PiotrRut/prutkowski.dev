@@ -16,10 +16,6 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   typography: {
    "fontFamily": `"Ubuntu", "Roboto", "Arial", sans-serif`,
-   "fontSize": 14,
-   "fontWeightLight": 300,
-   "fontWeightRegular": 400,
-   "fontWeightMedium": 500
   }
 });
 
@@ -51,9 +47,9 @@ function IndexPage() {
             <Grid item xl={9} lg={9} xs={12}>
               <PhotosPreview />
             </Grid>
-            <Grid item xl={12} lg={12} xs={12}>
+{/*             <Grid item xl={12} lg={12} xs={12}>
               <Contact />
-            </Grid>
+            </Grid> */}
           </Grid>
         </div>
       </Layout>

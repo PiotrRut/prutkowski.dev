@@ -37,13 +37,17 @@ function BlogPostsPreview() {
     <section id="blog-prev">
       <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" classes={classes}>GitHub Projects</Typography>
+          <Typography variant="h4" classes={classes}>What&#39;s on my mind?</Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <h6 className="text-gray-400 text-center wow fadeIn">
+          <Typography variant="subtitle1" classes={classes}>
             Below you can see some of my latest blog posts.
-            <h6><Link to="/blog">Press here to see all of them!</Link></h6>
-          </h6>
+          </Typography>
+        </Grid>
+        <Grid item md={12} lg={12} xl={12} xs={12}>
+          <Typography variant="subtitle1">
+            <Link to="/blog">Press here to see all of them!</Link>
+          </Typography>
         </Grid>
         <Grid container item justify="center" alignItems="center" spacing={3}>
         {pageQuery.allMarkdownRemark.edges.slice(0, 3).map(({ node }, index) => (
