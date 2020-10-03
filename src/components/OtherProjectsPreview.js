@@ -27,7 +27,7 @@ const useStyles =  makeStyles((theme) => ({
   text: {
     color: 'white'
   },
-  teamText: {
+  descText: {
     color: 'gray'
   },
   action: {
@@ -68,7 +68,7 @@ function OtherProjectsPreview() {
                     <Typography gutterBottom className={classes.text} variant="h6" component="h2">
                       {p.title}
                     </Typography>
-                    <Typography variant="body2" className={classes.text} component="p">
+                    <Typography variant="body2" className={classes.descText} component="p">
                       {p.description}
                     </Typography>
                   </CardContent>
