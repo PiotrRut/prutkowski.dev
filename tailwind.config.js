@@ -1,14 +1,14 @@
-const { colors } = require('tailwindcss/defaultTheme');
+const { colors } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   theme: {
     container: {
-      center: true
+      center: true,
     },
     extend: {
       colors: {
         primary: colors.teal
-      }
-    }
-  }
+      },
+    },
+  },
 };

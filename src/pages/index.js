@@ -1,21 +1,21 @@
-import React from 'react';
-import TopBanner from '../components/TopBanner';
-import About from '../components/About';
-import Grid from '@material-ui/core/Grid';
-import Skills from '../components/Skills';
-import GitProjectsPreview from '../components/GitProjectsPreview';
-import BlogPostsPreview from '../components/BlogPostsPreview';
-import PhotosPreview from '../components/PhotosPreview';
-import SEO from '../components/seo';
-import Contact from '../components/Contact';
-import Layout from '../components/layout';
-import OtherProjectsPreview from '../components/OtherProjectsPreview';
+import React from "react";
+import TopBanner from '../components/TopBanner'
+import About from '../components/About'
+import Grid from '@material-ui/core/Grid'
+import Skills from '../components/Skills'
+import GitProjectsPreview from '../components/GitProjectsPreview'
+import BlogPostsPreview from '../components/BlogPostsPreview'
+import PhotosPreview from '../components/PhotosPreview'
+import SEO from '../components/seo'
+import Contact from '../components/Contact'
+import Layout from "../components/layout";
+import OtherProjectsPreview from '../components/OtherProjectsPreview'
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: `"Ubuntu", "Roboto", "Arial", sans-serif`
+   "fontFamily": `"Ubuntu", "Roboto", "Arial", sans-serif`,
   }
 });
 
@@ -23,18 +23,9 @@ function IndexPage() {
   return (
     <MuiThemeProvider theme={theme}>
       <Layout>
-        <SEO
-          keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]}
-          title="Home"
-        />
+        <SEO keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]} title="Home" />
         <div className="container grid-cols-1 row-gap-16">
-          <Grid
-            direction="column"
-            justify="center"
-            alignItems="center"
-            container
-            spacing={5}
-          >
+          <Grid direction="column" justify="center" alignItems="center" container spacing={5}>
             <Grid item xl={9} lg={5} xs={12}>
               <TopBanner />
             </Grid>

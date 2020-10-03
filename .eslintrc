@@ -9,7 +9,7 @@
   "rules": {
     // https://eslint.org/docs/2.0.0/rules/strict
     "strict": 0,
-    "no-unused-vars": 1
+    "no-unused-vars": 0
   },
   "settings": {
     "react": {

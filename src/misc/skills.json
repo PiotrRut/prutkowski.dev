@@ -1,57 +1,57 @@
 [
-  {
-    icon: '../images/icons/web.png',
-    category: 'Fundamental Web Development',
-    name: 'HTML • CSS • JavaScript'
-  },
-  {
-    icon: '../images/icons/react.png',
-    category: 'Frontend Web Development',
-    name: 'ReactJS'
-  },
-  {
-    icon: '../images/icons/nodejs.png',
-    category: 'Backend Web Development',
-    name: 'NodeJS • ExpressJS'
-  },
-  {
-    icon: '../images/icons/cloud.png',
-    category: 'Cloud Computing Services',
-    name: 'AWS • MS Azure'
-  },
-  {
-    icon: '../images/icons/gitlogo.png',
-    category: 'Version Control (VCS)',
-    name: 'Git'
-  },
-  {
-    icon: '../images/icons/python.png',
-    category: 'Software Development',
-    name: 'Python 3'
-  },
-  {
-    icon: '../images/icons/java.png',
-    category: 'Software Development',
-    name: 'Java'
-  },
-  {
-    icon: '../images/icons/cpplus.png',
-    category: 'Software Development',
-    name: 'C++'
-  },
-  {
-    icon: '../images/icons/database.png',
-    category: 'Database Management System',
-    name: 'MongoDB • MySQL'
-  },
-  {
-    icon: '../images/icons/swift5.png',
-    category: 'iOS App Development',
-    name: 'Swift 5.2'
-  },
-  {
-    icon: '../images/icons/adobecc.png',
-    category: 'UI Design & Photo Manipulation',
-    name: 'Adobe CC'
-  }
-];
+    {
+      "icon": "../images/icons/web.png",
+      "category": "Fundamental Web Development",
+      "name": "HTML • CSS • JavaScript"
+    },
+    {
+      "icon": "../images/icons/react.png",
+      "category": "Frontend Web Development",
+      "name": "ReactJS"
+    },
+    {
+      "icon": "../images/icons/nodejs.png",
+      "category": "Backend Web Development",
+      "name": "NodeJS • ExpressJS"
+    },
+    {
+      "icon": "../images/icons/cloud.png",
+      "category": "Cloud Computing Services",
+      "name": "AWS • MS Azure"
+    },
+    {
+      "icon": "../images/icons/gitlogo.png",
+      "category": "Version Control (VCS)",
+      "name": "Git"
+    },
+    {
+      "icon": "../images/icons/python.png",
+      "category": "Software Development",
+      "name": "Python 3"
+    },
+    {
+      "icon": "../images/icons/java.png",
+      "category": "Software Development",
+      "name": "Java"
+    },
+    {
+      "icon": "../images/icons/cpplus.png",
+      "category": "Software Development",
+      "name": "C++"
+    },
+    {
+      "icon": "../images/icons/database.png",
+      "category": "Database Management System",
+      "name": "MongoDB • MySQL"
+    },
+    {
+      "icon": "../images/icons/swift5.png",
+      "category": "iOS App Development",
+      "name": "Swift 5.2"
+    },
+    {
+      "icon": "../images/icons/adobecc.png",
+      "category": "UI Design & Photo Manipulation",
+      "name": "Adobe CC"
+    }
+  ]
