@@ -4,8 +4,6 @@ import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-//TODO: Check if the h6 still breaks with e-mail on deploy preview
-
 // Styles override
 const useStyles = makeStyles({
   root: {
@@ -37,7 +35,7 @@ function Contact() {
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" className="wow fadeIn">
+          <Typography variant="subtitle1">
             <Link href="mailto:piotr.rut99@gmail.com">
               piotr.rut99@gmail.com
             </Link>
