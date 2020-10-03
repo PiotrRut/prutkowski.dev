@@ -76,7 +76,6 @@ function About() {
             In my free time, apart from working on various programming projects, I dedicate a lot of time to photography.
             I&#39;ve been taking pictures since I can remember, and the website you&#39;re currently on, doubles as my
             photographic portfolio.
-            <br />
             In the <Link to="/photogallery">gallery</Link> section, you can view some of my shots and download them!
           </h5>
           <br />

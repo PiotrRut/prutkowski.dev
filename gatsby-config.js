@@ -1,6 +1,6 @@
-const resolveConfig = require("tailwindcss/resolveConfig");
-const tailwindConfig = require("./tailwind.config.js");
-const path = require(`path`)
+const resolveConfig = require('tailwindcss/resolveConfig');
+const tailwindConfig = require('./tailwind.config.js');
+const path = require(`path`);
 const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
@@ -30,7 +30,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.teal["400"],
+        theme_color: fullConfig.theme.colors.teal['400'],
         display: `minimal-ui`,
       },
     },
@@ -50,9 +50,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-          path: `${__dirname}/src/blogposts`,
-          name: 'blogposts'
-      }
+        path: `${__dirname}/src/blogposts`,
+        name: 'blogposts',
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -84,7 +84,7 @@ module.exports = {
               showCaptions: true,
               markdownCaptions: true,
               backgroundColor: 'none',
-              disableBgImage:true
+              disableBgImage: true,
             },
           },
         ],
@@ -93,6 +93,6 @@ module.exports = {
 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-smoothscroll`
+    `gatsby-plugin-smoothscroll`,
   ],
 };
