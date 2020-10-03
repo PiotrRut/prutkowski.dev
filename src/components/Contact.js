@@ -1,6 +1,5 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid'
-import moment from 'moment'
 import { Link } from 'gatsby'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,15 +19,19 @@ function Contact() {
 
   return (
     <section id="contact">
-      <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
-      <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" classes={classes}>Get in touch!</Typography>
+      <Grid direction="column" justify="center" alignItems="center" container spacing={2}>
+        <Grid item lg={12} xs={12} xl={12}>
+          <Typography variant="h4" classes={classes}>Contact</Typography>
         </Grid>
-        <Grid item md={12} xs={12} lg={12} xl={12}>
-          <h6 className="text-gray-400 text-center wow fadeIn">
-            Get in touch with me at:
-            <h6><Link href="mailto:piotr.rut99@gmail.com">piotr.rut99@gmail.com</Link></h6>
-          </h6>
+        <Grid item md={12} lg={12} xl={12} xs={12}>
+          <Typography variant="subtitle1" classes={classes}>
+            You can get in touch at:
+          </Typography>
+        </Grid>
+        <Grid item md={12} lg={12} xl={12} xs={12}>
+          <Typography variant="subtitle1">
+            <Link href="mailto:piotr.rut99@gmail.com">piotr.rut99@gmail.com</Link>
+          </Typography>
         </Grid>
       </Grid>
       <br />

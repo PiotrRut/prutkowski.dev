@@ -47,9 +47,9 @@ function IndexPage() {
             <Grid item xl={9} lg={9} xs={12}>
               <PhotosPreview />
             </Grid>
-{/*             <Grid item xl={12} lg={12} xs={12}>
+            <Grid item xl={9} lg={9} xs={12}>
               <Contact />
-            </Grid> */}
+            </Grid>
           </Grid>
         </div>
       </Layout>

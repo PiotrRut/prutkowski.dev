@@ -62,7 +62,7 @@ function PhotosPreview() {
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
           <Typography variant="subtitle1">
-            <Link to="/gallery">View the rest here!</Link>
+            <Link to="/photogallery">View the rest here!</Link>
           </Typography>
         </Grid>
         <Grid container item justify="center" alignItems="center" spacing={3}>
