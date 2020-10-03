@@ -112,7 +112,6 @@ function PhotoGallery() {
             <h6 className="text-gray-400 text-center wow fadeIn">
               Want more? Visit my{' '}
               <a
-                className="text-gray-400"
                 href="https://www.instagram.com/prutkowskii/"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -27,17 +27,17 @@ function Contact() {
         spacing={2}
       >
         <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" classes={classes}>
+          <Typography variant="h4" className={`wow fadeIn ${classes.root}`}>
             Contact
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" classes={classes}>
+          <Typography variant="subtitle1" className={`wow fadeIn ${classes.root}`}>
             You can get in touch at:
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" className="wow fadeIn">
             <Link href="mailto:piotr.rut99@gmail.com">
               piotr.rut99@gmail.com
             </Link>

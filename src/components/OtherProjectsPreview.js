@@ -55,7 +55,7 @@ function OtherProjectsPreview() {
       >
         <Grid item lg={12} xs={12} xl={12}>
           <b>
-            <Typography variant="h4" className={classes.text}>
+            <Typography variant="h4" className={`wow fadeIn ${classes.text}`}>
               Other Projects
             </Typography>
           </b>
@@ -70,7 +70,7 @@ function OtherProjectsPreview() {
               className="wow fadeIn"
               key={p.title}
               style={{
-                animationDelay: `${i * 70 + 70}ms`,
+                animationDelay: `${i * 100 + 100}ms`,
               }}
             >
               <Card className={classes.root}>

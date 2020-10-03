@@ -60,17 +60,17 @@ function PhotosPreview() {
         spacing={2}
       >
         <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" className={classes.text}>
+          <Typography variant="h4" className={`wow fadeIn ${classes.text}`}>
             Gallery
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" className={classes.text}>
+          <Typography variant="subtitle1" className={`wow fadeIn ${classes.text}`}>
             Here are some of my best shots!
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" className="wow fadeIn">
             <Link to="/photogallery">View the rest here!</Link>
           </Typography>
         </Grid>

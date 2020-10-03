@@ -42,17 +42,17 @@ function BlogPostsPreview() {
         spacing={3}
       >
         <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" classes={classes}>
+          <Typography variant="h4" className={`wow fadeIn ${classes.root}`}>
             What&#39;s on my mind?
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" classes={classes}>
+          <Typography variant="subtitle1" className={`wow fadeIn ${classes.root}`}>
             Below you can see some of my latest blog posts.
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" className="wow fadeIn">
             <Link to="/blog">Press here to see all of them!</Link>
           </Typography>
         </Grid>

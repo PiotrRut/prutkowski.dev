@@ -47,7 +47,7 @@ function Skills() {
         spacing={3}
       >
         <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" classes={classes}>
+          <Typography variant="h4" className={`wow fadeIn ${classes.root}`}>
             I know these...
           </Typography>
         </Grid>

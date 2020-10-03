@@ -54,7 +54,7 @@ function Projects() {
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
             <p className="text-gray-400 text-center wow fadeIn">
-              Below you can see all <b>{repos.length}</b> of my public
+              Below you can see all <b>{repos.length - 1}</b> of my public
               repositories, updated automatically via the GitHub API.
             </p>
             <p className="text-gray-400 text-center wow fadeIn">

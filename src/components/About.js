@@ -60,7 +60,7 @@ function About() {
     <section id="about-me" className="overflow-hidden">
       <Grid direction="column" align-content="center" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={5} xl={7}>
-          <Typography variant="h4" classes={classes}>Who am I?</Typography>
+          <Typography variant="h4" className={`wow fadeIn ${classes.root}`}>Who am I?</Typography>
         </Grid>
         <Grid item lg={9} xl={10}>
           <h5 className="text-gray-400 text-left wow fadeIn">
