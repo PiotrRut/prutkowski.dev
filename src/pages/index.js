@@ -11,20 +11,11 @@ import Contact from '../components/Contact';
 import Layout from '../components/layout';
 import OtherProjectsPreview from '../components/OtherProjectsPreview';
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: `"Ubuntu", "Roboto", "Arial", sans-serif`,
-  },
-});
-
 function IndexPage() {
   return (
-    <MuiThemeProvider theme={theme}>
       <Layout>
         <SEO
-          keywords={[`piotr`, `rutkowski`, `prutkowski`, `london`]}
+          keywords={[`Piotr`, `Rutkowski`, `prutkowski`, `London`, `Piotr Rutkowski`]}
           title="Home"
         />
         <div className="container grid-cols-1 row-gap-16">
@@ -62,7 +53,6 @@ function IndexPage() {
           </Grid>
         </div>
       </Layout>
-    </MuiThemeProvider>
   );
 }
 

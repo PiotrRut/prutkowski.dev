@@ -11,6 +11,7 @@ import Layout from '../components/layout';
 import Dialog from '@material-ui/core/Dialog';
 import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       bottom: 70,
     },
+  },
+  text: {
+    color: 'white',
   },
 }));
 
@@ -82,7 +86,7 @@ function PhotoGallery() {
       <div className="container grid-cols-1 row-gap-16">
         <br />
         <Grid
-          direction="row"
+          direction="column"
           justify="center"
           alignItems="center"
           container
@@ -90,11 +94,9 @@ function PhotoGallery() {
         >
           <Grid Grid item md={12} lg={12} xs={12} xl={12}>
             <br />
-            <b>
-              <h2 className="text-gray-400 text-center wow fadeIn">
-                <span>📸</span> My Gallery
-              </h2>
-            </b>
+            <Typography variant="h4" component="h1" className={classes.text}>
+              📸 My Gallery
+            </Typography>
             <h6 className="text-center wow fadeIn">
               <Link to="/">Return home</Link>
             </h6>
@@ -121,43 +123,45 @@ function PhotoGallery() {
               .
             </h6>
           </Grid>
-          {images.map((image, index) => (
-            <Grid
-              item
-              className="wow fadeIn"
-              key={image.lowRes}
-              style={{
-                animationDelay: `${index * 100 + 100}ms`,
-              }}
-            >
-              <Paper
-                elevation={3}
-                className="gallery-pics"
-                style={{ padding: '8px', background: '#212121' }}
+          <Grid container item justify="center" alignItems="center" spacing={4}>
+            {images.map((image, index) => (
+              <Grid
+                item
+                className="wow fadeIn"
+                key={image.lowRes}
+                style={{
+                  animationDelay: `${index * 100 + 100}ms`,
+                }}
               >
-                <Grid direction="column" container spacing={2}>
-                  <Grid item>
-                    <a className="cursor-pointer">
-                      <img
-                        src={image.lowRes}
-                        height="180"
-                        width="180"
-                        onClick={() => {
-                          setUrl({
-                            lowRes: image.lowRes,
-                            highRes: image.highRes,
-                          });
-                          handleOpen();
-                          openSnackBar();
-                        }}
-                        alt="Image"
-                      />
-                    </a>
+                <Paper
+                  elevation={3}
+                  className="gallery-pics"
+                  style={{ padding: '8px', background: '#212121' }}
+                >
+                  <Grid direction="column" container spacing={2}>
+                    <Grid item>
+                      <a className="cursor-pointer">
+                        <img
+                          src={image.lowRes}
+                          height="180"
+                          width="180"
+                          onClick={() => {
+                            setUrl({
+                              lowRes: image.lowRes,
+                              highRes: image.highRes,
+                            });
+                            handleOpen();
+                            openSnackBar();
+                          }}
+                          alt="Image"
+                        />
+                      </a>
+                    </Grid>
                   </Grid>
-                </Grid>
-              </Paper>
-            </Grid>
-          ))}
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
         <br />
         <Grid container direction="column" justify="center" alignItems="center">
