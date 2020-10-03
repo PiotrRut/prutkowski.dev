@@ -1,6 +1,6 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid'
-import projects from '../misc/projects.json'
+import Grid from '@material-ui/core/Grid';
+import projects from '../misc/projects.json';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -10,19 +10,19 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
-import Tooltip from '@material-ui/core/Tooltip'
+import Tooltip from '@material-ui/core/Tooltip';
 
 // Styles override
-const useStyles =  makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: 370,
     background: '#212121',
     [theme.breakpoints.down('sm')]: {
-      width: 300,
-    },
+      width: 300
+    }
   },
   media: {
-    height: 140,
+    height: 140
   },
   text: {
     color: 'white'
@@ -43,51 +43,79 @@ const useStyles =  makeStyles((theme) => ({
 function OtherProjectsPreview() {
   const classes = useStyles();
   const img = require.context('../images', true);
-  
+
   return (
     <section id="other-proj-preview">
-      <Grid direction="column" justify="center" alignItems="center" container spacing={3}>
+      <Grid
+        direction="column"
+        justify="center"
+        alignItems="center"
+        container
+        spacing={3}
+      >
         <Grid item lg={12} xs={12} xl={12}>
-          <b><Typography variant="h4" className={classes.text}>Other Projects</Typography></b>
+          <b>
+            <Typography variant="h4" className={classes.text}>
+              Other Projects
+            </Typography>
+          </b>
         </Grid>
-        <Grid item md={12} lg={12} xl={12} xs={12}>
-        </Grid>
+        <Grid item md={12} lg={12} xl={12} xs={12}></Grid>
         <Grid container item justify="center" alignItems="center" spacing={4}>
-          {
-            projects.map((p, i) => (
-              <Grid item md={6} lg={6}
-                className="wow fadeIn"
-                key={p.title}
-                style={{
-                  animationDelay: `${i * 70 + 70}ms`,
-                }}
-              >
-                <Card className={classes.root}>
-                  <CardMedia title={p.title} className={classes.media} image={img(`./${p.picture}`)} />
-                  <CardContent>
-                    <Typography gutterBottom className={classes.text} variant="h6" component="h2">
-                      {p.title}
-                    </Typography>
-                    <Typography variant="body2" className={classes.descText} component="p">
-                      {p.description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions disableSpacing className={classes.action}>
-                    {p.path && 
-                      <Button color="primary" size="small" href={p.path}>
+          {projects.map((p, i) => (
+            <Grid
+              item
+              md={6}
+              lg={6}
+              className="wow fadeIn"
+              key={p.title}
+              style={{
+                animationDelay: `${i * 70 + 70}ms`
+              }}
+            >
+              <Card className={classes.root}>
+                <CardMedia
+                  title={p.title}
+                  className={classes.media}
+                  image={img(`./${p.picture}`)}
+                />
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    className={classes.text}
+                    variant="h6"
+                    component="h2"
+                  >
+                    {p.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    className={classes.descText}
+                    component="p"
+                  >
+                    {p.description}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing className={classes.action}>
+                  {p.path && (
+                    <Button color="primary" size="small" href={p.path}>
                       See more
-                      </Button>
-                    }
-                    <Tooltip enterTouchDelay={0} title={"Team: " + p.team} arrow placement="bottom-end">
-                      <IconButton className={classes.info}>
-                        <InfoOutlinedIcon/>
-                      </IconButton>
-                    </Tooltip>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))
-          }
+                    </Button>
+                  )}
+                  <Tooltip
+                    enterTouchDelay={0}
+                    title={'Team: ' + p.team}
+                    arrow
+                    placement="bottom-end"
+                  >
+                    <IconButton className={classes.info}>
+                      <InfoOutlinedIcon />
+                    </IconButton>
+                  </Tooltip>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
         </Grid>
       </Grid>
       <br />
@@ -96,4 +124,4 @@ function OtherProjectsPreview() {
   );
 }
 
-export default OtherProjectsPreview;   
+export default OtherProjectsPreview;

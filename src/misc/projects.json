@@ -1,17 +1,18 @@
 [
   {
-    "picture": "FXCards.png",
-    "title": "FairFX Multicurrency Web",
-    "description": 
-    "The FairFX Multicurrency web makes it easy to manage, pause and replace your multicurrency card online, along with addding and exchanging money on the go!",
-    "path": "https://app.fairfx.com",
-    "team": "Jamie Halvorson, Mahedi Hasan, Tabasom Aryamanesh"
+    picture: 'FXCards.png',
+    title: 'FairFX Multicurrency Web',
+    description:
+      'The FairFX Multicurrency web makes it easy to manage, pause and replace your multicurrency card online, along with addding and exchanging money on the go!',
+    path: 'https://app.fairfx.com',
+    team: 'Jamie Halvorson, Mahedi Hasan, Tabasom Aryamanesh'
   },
   {
-    "picture": "FXCards.png",
-    "title": "Geometry Web Component Library",
-    "description": "The Geometry component library provides reusable design components for the developers to use across their projects, giving all a uniform experience and look.",
-    "path": "",
-    "team": "Jamie Halvorson, Mahedi Hasan, Tabasom Aryamanesh"
+    picture: 'FXCards.png',
+    title: 'Geometry Web Component Library',
+    description:
+      'The Geometry component library provides reusable design components for the developers to use across their projects, giving all a uniform experience and look.',
+    path: '',
+    team: 'Jamie Halvorson, Mahedi Hasan, Tabasom Aryamanesh'
   }
-]
+];
