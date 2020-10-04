@@ -8,12 +8,11 @@ import BlogPostsPreview from '../components/BlogPostsPreview';
 import PhotosPreview from '../components/PhotosPreview';
 import SEO from '../components/seo';
 import Contact from '../components/Contact';
-import Layout from '../components/layout';
 import OtherProjectsPreview from '../components/OtherProjectsPreview';
 
 function IndexPage() {
   return (
-      <Layout>
+      <div>
         <SEO
           keywords={[`Piotr`, `Rutkowski`, `prutkowski`, `London`, `Piotr Rutkowski`]}
           title="Home"
@@ -52,7 +51,7 @@ function IndexPage() {
             </Grid>
           </Grid>
         </div>
-      </Layout>
+      </div>
   );
 }
 
