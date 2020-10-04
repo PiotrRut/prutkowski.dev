@@ -67,9 +67,7 @@ function About() {
             Great question! My name is Piotr, although people mostly call me Peter, and I am a {age} year old programmer
             and second-year BSc Computer Science student at City, University of London.
             I was originally born in Poland, but for the majority
-            of my life I&#39;ve been living in Norway. In September 2018 I moved to London to study.
-            Before I came to the UK I graduated high school with a diploma in general studies,
-            as well as electronics and electrical engineering. I am currently working as an intern software engineer for <a href="http://equalsmoney.com">Equals</a>!
+            of my life I&#39;ve been living in Norway. I am currently working as an intern software engineer for <a href="http://equalsmoney.com">Equals</a>!
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">
@@ -77,6 +75,7 @@ function About() {
             I&#39;ve been taking pictures since I can remember, and the website you&#39;re currently on, doubles as my
             photographic portfolio.
             In the <Link to="/photogallery">gallery</Link> section, you can view some of my shots and download them!
+            I am a fan of space exploration and new technologies 🚀!
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">

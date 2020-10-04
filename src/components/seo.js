@@ -3,20 +3,28 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(graphql`
-    query DefaultSEOQuery {
-      site {
-        siteMetadata {
-          title
-          description
-          author
+function SEO({ description, lang, meta, keywords, title, image: metaImage }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+            keywords
+            siteUrl
+          }
         }
       }
-    }
-  `);
+    `
+  );
 
   const metaDescription = description || site.siteMetadata.description;
+  const image =
+    metaImage && metaImage.src
+      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      : null;
 
   return (
     <Helmet
@@ -27,6 +35,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: 'keywords',
+          content: site.siteMetadata.keywords.join(','),
         },
         {
           property: `og:title`,
@@ -58,6 +70,33 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
       ]
         .concat(
+          metaImage
+            ? [
+                {
+                  property: 'og:image',
+                  content: image,
+                },
+                {
+                  property: 'og:image:width',
+                  content: metaImage.width,
+                },
+                {
+                  property: 'og:image:height',
+                  content: metaImage.height,
+                },
+                {
+                  name: 'twitter:card',
+                  content: 'summary_large_image',
+                },
+              ]
+            : [
+                {
+                  name: 'twitter:card',
+                  content: 'summary',
+                },
+              ]
+        )
+        .concat(
           keywords.length > 0
             ? {
                 name: `keywords`,
@@ -84,6 +123,11 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   title: PropTypes.string.isRequired,
+  image: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+  }),
 };
 
 export default SEO;
