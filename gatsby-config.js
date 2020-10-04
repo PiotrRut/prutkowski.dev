@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Piotr Rutkowski`,
     titleTemplate: "%s | Piotr Rutkowski",
-    description: `Software developer based in London, UK. Currently working as software developer at Equals.`,
+    description: `Software developer based in London, UK. Currently working at Equals.`,
     author: `Piotr Rutkowski`,
     image: "/images/social.png",
     url: "https://www.prutkowski.tech",

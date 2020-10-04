@@ -33,7 +33,7 @@ const SEO = ({ title, description, image, article }) => {
 
       {(article ? true : null) && <meta property="og:type" content="article" />}
 
-      {seo.title && <meta property="og:title" content={seo.title} />}
+      {seo.title && <meta property="og:title" content={`${defaultTitle} | ${title}`} />}
 
       {seo.description && (
         <meta property="og:description" content={seo.description} />
@@ -47,7 +47,7 @@ const SEO = ({ title, description, image, article }) => {
         <meta name="twitter:creator" content={twitterUsername} />
       )}
 
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.title && <meta name="twitter:title" content={`${defaultTitle} | ${title}`} />}
 
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
