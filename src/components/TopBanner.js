@@ -53,7 +53,7 @@ function TopBanner() {
         <h6 className="text-gray-500 wow fadeIn">
           <span className="cursor-pointer nav" onClick={() => scrollTo('#skills')}>Skills</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#proj-preview')}> GitHub</span> |
-          <span className="cursor-pointer nav" onClick={() => scrollTo('#other-proj-preview')}> Other Projects</span> |
+          <span className="cursor-pointer nav" onClick={() => scrollTo('#other-proj-preview')}> Projects</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#blog-prev')}> Blog</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#photos-prev')}> Gallery</span> |
           <span className="cursor-pointer nav" onClick={() => scrollTo('#contact')}> Contact</span>
