@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 140,
+    backgroundPositionY: '25%'
   },
   text: {
     color: 'white',
