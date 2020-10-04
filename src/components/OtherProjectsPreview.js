@@ -63,7 +63,9 @@ function OtherProjectsPreview() {
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}></Grid>
         <Grid container item justify="center" alignItems="center" spacing={4}>
-          {projects.map((p, i) => (
+          {/* In the future I would ideally only show 2 here, and rest on a separate page
+          as that looks the best */}
+          {projects.slice(0, 2).map((p, i) => (
             <Grid
               item
               md={6}
