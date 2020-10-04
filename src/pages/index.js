@@ -10,15 +10,13 @@ import SEO from '../components/seo';
 import Contact from '../components/Contact';
 import OtherProjectsPreview from '../components/OtherProjectsPreview';
 import Layout from '../components/layout'
-import ProfileImg from '../images/ProfileImg.jpeg'
 
 function IndexPage() {
   return (
       <Layout>
         <SEO
-          keywords={[`Piotr`, `Rutkowski`, `prutkowski`, `London`, `Piotr Rutkowski`]}
           title="Home"
-          image={ProfileImg}
+          keywords={[`Piotr`, `Rutkowski`, `prutkowski`, `London`, `Piotr Rutkowski`]}
         />
         <div className="container grid-cols-1 row-gap-16">
           <Grid
