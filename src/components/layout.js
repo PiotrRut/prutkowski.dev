@@ -24,9 +24,7 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
         <div className="mx-8 lg:mx-16 xl:mx-0">{children}</div>
-      </div>
     </ThemeProvider>
   );
 };

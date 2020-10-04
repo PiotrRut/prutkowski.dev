@@ -21,6 +21,7 @@ module.exports = {
         anonymize: true,
       },
     },
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
