@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-function SEO({ description, lang, meta, title, image: metaImage }) {
+function SEO({ description, lang, meta, keywords, title, image: metaImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -90,6 +90,14 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
                 },
               ]
         )
+        .concat(
+          keywords.length > 0
+            ? {
+                name: `keywords`,
+                content: keywords.join(`, `),
+              }
+            : []
+        )
         .concat(meta)}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -99,11 +107,13 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
 
 SEO.defaultProps = {
   lang: `en`,
+  keywords: [],
   meta: [],
 };
 
 SEO.propTypes = {
   description: PropTypes.string,
+  keywords: PropTypes.arrayOf(PropTypes.string),
   lang: PropTypes.string,
   meta: PropTypes.array,
   title: PropTypes.string.isRequired,
