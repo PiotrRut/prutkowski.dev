@@ -1,7 +1,7 @@
 ---
-date: "2020-09-05"
-path: "/blog/experiences-at-equals"
-title: "Working at Equals"
+date: '2020-09-05'
+path: '/blog/experiences-at-equals'
+title: 'Working at Equals'
 ---
 
 I have recently started a new job! And not only _a job_, it's a placement position as a software developer for an amazing fin-tech company based in the heart of London - [Equals](https://equals.co)!
@@ -10,7 +10,7 @@ For those not familiar with the brand, it's a financial company offering a range
 
 The new and improved FairFX brand is a result of much needed changes after the Wirecard scandal in June earlier this year. Now, I have not been with the company since all the way back then, but joined shortly after in the first half of July. By that time the design and engineering teams at Equals have already done an amazing job, with all new infrastracture, and the building stones for two brand new apps already laid out. The new apps had a fast approaching deadline, and a lot of work had to be done in order to deliver such a huge project in a short time.
 
-Already from my first day with the company I had no easy task - I've dived right in to an unknown and completely new codebase, with unknown to me work- and dev-flows, and I had to adapt quick. I was put in the squad responsible for developing the web app where online banking lives, while the other part of my team was working on the mobile app, with our engineering lead jumping between the projects to help us as much as he could. In the first few days I've gotten enough time to go through much of the code and the internal infrastracture, and started opening my first pull requests that very same week. In addition to working on the web app  with my team, I have also contributed my bit to Geometry - the internal component library at Equals, which allows the teams quick access to reusable, custom designed components to use throughout the apps. This whole web app has been developed by a team of only 4 engineers, including our team lead, and I feel extremely privileged to have been able to contribute to it.
+Already from my first day with the company I had no easy task - I've dived right in to an unknown and completely new codebase, with unknown to me work- and dev-flows, and I had to adapt quick. I was put in the squad responsible for developing the web app where online banking lives, while the other part of my team was working on the mobile app, with our engineering lead jumping between the projects to help us as much as he could. In the first few days I've gotten enough time to go through much of the code and the internal infrastracture, and started opening my first pull requests that very same week. In addition to working on the web app with my team, I have also contributed my bit to Geometry - the internal component library at Equals, which allows the teams quick access to reusable, custom designed components to use throughout the apps. This whole web app has been developed by a team of only 4 engineers, including our team lead, and I feel extremely privileged to have been able to contribute to it.
 
 <br/>
  <div class="row">

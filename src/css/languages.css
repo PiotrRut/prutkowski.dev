@@ -1,19 +1,27 @@
 /* 
 Colours for the repository language blobs.
-Only including the langiages currently used, until
+Only including the languages currently used, until
     I find a better solution to do this.
 */
 
-.JavaScript {color: #f1e05a;}
-.Java {color: #b07219;}
-.CSS {color: #563d7c;}
-.Swift {color: #ffac45;}
-.HTML {color: #e44b23;}
-.Python {color: #3572A5;}
-.TypeScript {color: #2b7489;}
-
-
-  
-
-  
-
+.JavaScript {
+  color: #f1e05a;
+}
+.Java {
+  color: #b07219;
+}
+.CSS {
+  color: #563d7c;
+}
+.Swift {
+  color: #ffac45;
+}
+.HTML {
+  color: #e44b23;
+}
+.Python {
+  color: #3572a5;
+}
+.TypeScript {
+  color: #2b7489;
+}

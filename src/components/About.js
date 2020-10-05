@@ -9,7 +9,8 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import IconButton from '@material-ui/core/IconButton'
-
+import { Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
 
 const socials =
   [
@@ -39,8 +40,16 @@ const socials =
     },
   ];
 
+// Styles override
+const useStyles = makeStyles({
+  root: {
+    color: 'white'
+  }
+});
+
 // About me section
 function About() {
+  const classes = useStyles();
 
   // Automatically update my age every year on my birthday
   var bday = moment(new Date('1999/8/24'));
@@ -49,26 +58,24 @@ function About() {
 
   return (
     <section id="about-me" className="overflow-hidden">
-      <Grid direction="column" align-content="center" justify="center" alignItems="center" container spacing={2}>
+      <Grid direction="column" align-content="center" justify="center" alignItems="center" container spacing={3}>
         <Grid item lg={5} xl={7}>
-          <b><h3 className="text-gray-400 text-center wow fadeIn">Who am I?</h3></b>
+          <Typography variant="h4" className={`wow fadeIn ${classes.root}`}>Who am I?</Typography>
         </Grid>
         <Grid item lg={9} xl={10}>
           <h5 className="text-gray-400 text-left wow fadeIn">
             Great question! My name is Piotr, although people mostly call me Peter, and I am a {age} year old programmer
             and second-year BSc Computer Science student at City, University of London.
             I was originally born in Poland, but for the majority
-            of my life I&#39;ve been living in Norway. In September 2018 I moved to London to study.
-            Before I came to the UK I graduated high school with a diploma in general studies,
-            as well as electronics and electrical engineering. I am currently working as an intern software engineer for <a href="http://equalsmoney.com">Equals</a>!
+            of my life I&#39;ve been living in Norway. I am currently working as an intern software engineer for <a href="http://equalsmoney.com">Equals</a>!
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">
             In my free time, apart from working on various programming projects, I dedicate a lot of time to photography.
             I&#39;ve been taking pictures since I can remember, and the website you&#39;re currently on, doubles as my
             photographic portfolio.
-            <br />
             In the <Link to="/photogallery">gallery</Link> section, you can view some of my shots and download them!
+            I am also a fan of space exploration and new technologies <span>🚀</span>
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">
