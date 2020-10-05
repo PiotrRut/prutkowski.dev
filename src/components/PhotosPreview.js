@@ -120,7 +120,7 @@ function PhotosPreview() {
 
       {/* Dialog with the selected picture for preview */}
       <Dialog
-        classes={classes}
+        className={classes.root}
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}

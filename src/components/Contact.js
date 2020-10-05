@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -36,9 +35,9 @@ function Contact() {
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
           <Typography variant="subtitle1">
-            <Link href="mailto:piotr.rut99@gmail.com">
+            <a href="mailto:piotr.rut99@gmail.com">
               piotr.rut99@gmail.com
-            </Link>
+            </a>
           </Typography>
         </Grid>
       </Grid>
