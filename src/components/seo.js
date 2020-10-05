@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description, image }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
 
@@ -14,7 +14,6 @@ const SEO = ({ title, description, image, article }) => {
     defaultDescription,
     siteUrl,
     defaultImage,
-    twitterUsername,
   } = site.siteMetadata;
 
   const seo = {
@@ -44,20 +43,11 @@ const SEO = ({ title, description, image, article }) => {
       {seo.image && <meta property="og:image" content={seo.image} />}
 
       <meta name="twitter:card" content="summary_large_image" />
-
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
-      )}
-
-      {seo.title && (
-        <meta name="twitter:title" content={`${defaultTitle} | ${title}`} />
-      )}
-
-      {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
-      )}
-
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
+      <meta name="twitter:title" content={`${defaultTitle} | ${title}`} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:site" content="@PiotrRut99" />
+      <meta name="twitter:creator" content="@PiotrRut99" />
+      <meta name="twitter:image" content={seo.image} />
     </Helmet>
   );
 };
