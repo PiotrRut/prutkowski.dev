@@ -6,11 +6,11 @@ const fullConfig = resolveConfig(tailwindConfig);
 module.exports = {
   siteMetadata: {
     title: `Piotr Rutkowski`,
-    titleTemplate: "%s | Piotr Rutkowski",
+    titleTemplate: '%s | Piotr Rutkowski',
     description: `Software developer based in London, UK. Currently working at Equals.`,
     author: `Piotr Rutkowski`,
-    image: "/images/social.png",
-    url: "https://www.prutkowski.tech",
+    image: '/images/social.png',
+    url: 'https://www.prutkowski.tech',
   },
   plugins: [
     {
@@ -36,7 +36,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.teal['400'],
         display: `minimal-ui`,
-        icon: './static/favicon-32.png'
+        icon: './static/favicon-32.png',
       },
     },
     {

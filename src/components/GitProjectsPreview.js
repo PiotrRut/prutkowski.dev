@@ -46,7 +46,10 @@ function GitProjectsPreview() {
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" className={`wow fadeIn ${classes.root}`}>
+          <Typography
+            variant="subtitle1"
+            className={`wow fadeIn ${classes.root}`}
+          >
             All my GitHub repositories, fetched in real time.
           </Typography>
         </Grid>

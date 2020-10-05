@@ -9,50 +9,56 @@ import PhotosPreview from '../components/PhotosPreview';
 import SEO from '../components/seo';
 import Contact from '../components/Contact';
 import OtherProjectsPreview from '../components/OtherProjectsPreview';
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 function IndexPage() {
   return (
-      <Layout>
-        <SEO
-          title="Home"
-          keywords={[`Piotr`, `Rutkowski`, `prutkowski`, `London`, `Piotr Rutkowski`]}
-        />
-        <div className="container grid-cols-1 row-gap-16">
-          <Grid
-            direction="column"
-            justify="center"
-            alignItems="center"
-            container
-            spacing={5}
-          >
-            <Grid item xl={9} lg={5} xs={12}>
-              <TopBanner />
-            </Grid>
-            <Grid item xl={12} lg={12} xs={12}>
-              <About />
-            </Grid>
-            <Grid item xl={9} lg={9} xs={12}>
-              <Skills />
-            </Grid>
-            <Grid item xl={9} lg={9} xs={12}>
-              <GitProjectsPreview />
-            </Grid>
-            <Grid item xl={9} lg={9} xs={12}>
-              <OtherProjectsPreview />
-            </Grid>
-            <Grid item xl={9} lg={9} xs={12}>
-              <BlogPostsPreview />
-            </Grid>
-            <Grid item xl={9} lg={9} xs={12}>
-              <PhotosPreview />
-            </Grid>
-            <Grid item xl={9} lg={9} xs={12}>
-              <Contact />
-            </Grid>
+    <Layout>
+      <SEO
+        title="Home"
+        keywords={[
+          `Piotr`,
+          `Rutkowski`,
+          `prutkowski`,
+          `London`,
+          `Piotr Rutkowski`,
+        ]}
+      />
+      <div className="container grid-cols-1 row-gap-16">
+        <Grid
+          direction="column"
+          justify="center"
+          alignItems="center"
+          container
+          spacing={5}
+        >
+          <Grid item xl={9} lg={5} xs={12}>
+            <TopBanner />
           </Grid>
-        </div>
-      </Layout>
+          <Grid item xl={12} lg={12} xs={12}>
+            <About />
+          </Grid>
+          <Grid item xl={9} lg={9} xs={12}>
+            <Skills />
+          </Grid>
+          <Grid item xl={9} lg={9} xs={12}>
+            <GitProjectsPreview />
+          </Grid>
+          <Grid item xl={9} lg={9} xs={12}>
+            <OtherProjectsPreview />
+          </Grid>
+          <Grid item xl={9} lg={9} xs={12}>
+            <BlogPostsPreview />
+          </Grid>
+          <Grid item xl={9} lg={9} xs={12}>
+            <PhotosPreview />
+          </Grid>
+          <Grid item xl={9} lg={9} xs={12}>
+            <Contact />
+          </Grid>
+        </Grid>
+      </div>
+    </Layout>
   );
 }
 

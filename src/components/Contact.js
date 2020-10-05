@@ -29,15 +29,16 @@ function Contact() {
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" className={`wow fadeIn ${classes.root}`}>
+          <Typography
+            variant="subtitle1"
+            className={`wow fadeIn ${classes.root}`}
+          >
             You can get in touch at:
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
           <Typography variant="subtitle1">
-            <a href="mailto:piotr.rut99@gmail.com">
-              piotr.rut99@gmail.com
-            </a>
+            <a href="mailto:piotr.rut99@gmail.com">piotr.rut99@gmail.com</a>
           </Typography>
         </Grid>
       </Grid>
