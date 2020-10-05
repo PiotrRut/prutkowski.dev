@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = ({ title, description, image, meta }) => {
+const SEO = ({ title, description, image }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
 
@@ -24,48 +24,31 @@ const SEO = ({ title, description, image, meta }) => {
   };
 
   return (
-    <Helmet 
-      title={seo.title} 
-      titleTemplate={titleTemplate}
-        meta={[
-        {
-          name: `description`,
-          content: seo.description,
-        },
-        {
-          property: `og:title`,
-          content: `${defaultTitle} | ${title}`,
-        },
-        {
-          property: `og:description`,
-          content: seo.description,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: `@PiotrRut99`,
-        },
-        {
-          name: `twitter:title`,
-          content: `${defaultTitle} | ${title}`,
-        },
-        {
-          name: `twitter:description`,
-          content: seo.description,
-        },
-        {
-          name: `twitter:image`,
-          content: seo.image,
-        },
-      ].concat(meta)}
-    />
+    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+
+      {seo.url && <meta property="og:url" content={seo.url} />}
+
+      <meta property="og:type" content="article" />
+
+      {seo.title && (
+        <meta property="og:title" content={`${defaultTitle} | ${title}`} />
+      )}
+
+      {seo.description && (
+        <meta property="og:description" content={seo.description} />
+      )}
+
+      {seo.image && <meta property="og:image" content={seo.image} />}
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={`${defaultTitle} | ${title}`} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:site" content="@PiotrRut99" />
+      <meta name="twitter:creator" content="@PiotrRut99" />
+      <meta name="twitter:image" content={seo.image} />
+    </Helmet>
   );
 };
 
@@ -76,7 +59,6 @@ SEO.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
-  meta: PropTypes.arrayOf(PropTypes.object),
 };
 
 SEO.defaultProps = {
