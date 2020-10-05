@@ -13,8 +13,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
             title
             description
             author
-            keywords
-            siteUrl
+            url
             image
           }
         }
@@ -23,7 +22,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const img = `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
+  const img = `${site.siteMetadata.url}${site.siteMetadata.image}`
 
   return (
     <Helmet
@@ -34,10 +33,6 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         {
           name: `description`,
           content: metaDescription,
-        },
-        {
-          name: 'keywords',
-          content: site.siteMetadata.keywords.join(','),
         },
         {
           property: `og:title`,
@@ -67,34 +62,15 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          property: 'og:image',
+          content: img,
+        },
+        {
+          name: 'twitter:image',
+          content: img,
+        },
       ]
-        .concat(
-          img
-            ? [
-                {
-                  property: 'og:image',
-                  content: img,
-                },
-                {
-                  name: 'twitter:card',
-                  content: 'summary_large_image',
-                },
-              ]
-            : [
-                {
-                  name: 'twitter:card',
-                  content: 'summary',
-                },
-              ]
-        )
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
         .concat(meta)}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
