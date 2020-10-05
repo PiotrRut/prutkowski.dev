@@ -52,7 +52,7 @@ function GitProjectsPreview() {
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
           <Typography variant="subtitle1" className="wow fadeIn">
-            <Link to="/projects">Take me to Github projects &gt;</Link>
+            <Link to="/projects">Take me to all Github projects &gt;</Link>
           </Typography>
         </Grid>
         <Grid container item justify="center" alignItems="center" spacing={3}>

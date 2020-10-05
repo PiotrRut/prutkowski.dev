@@ -75,7 +75,7 @@ function About() {
             I&#39;ve been taking pictures since I can remember, and the website you&#39;re currently on, doubles as my
             photographic portfolio.
             In the <Link to="/photogallery">gallery</Link> section, you can view some of my shots and download them!
-            I am a fan of space exploration and new technologies 🚀!
+            I am also a fan of space exploration and new technologies <span>🚀</span>
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">

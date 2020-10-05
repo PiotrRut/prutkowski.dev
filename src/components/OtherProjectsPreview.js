@@ -76,7 +76,7 @@ function OtherProjectsPreview() {
                 animationDelay: `${i * 100 + 100}ms`,
               }}
             >
-              <Card className={classes.root}>
+              <Card className={classes.root} raised>
                 <CardMedia
                   title={p.title}
                   className={classes.media}
