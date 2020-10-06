@@ -13,6 +13,7 @@ module.exports = {
     url: 'https://www.prutkowski.tech',
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -26,7 +27,6 @@ module.exports = {
     },
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-eslint`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -51,7 +51,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
