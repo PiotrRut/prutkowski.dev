@@ -140,7 +140,7 @@ function PhotoGallery() {
                 >
                   <Grid direction="column" container spacing={2}>
                     <Grid item>
-                      <a className="cursor-pointer">
+                      <div className="cursor-pointer">
                         <img
                           src={image.lowRes}
                           height="180"
@@ -155,7 +155,7 @@ function PhotoGallery() {
                           }}
                           alt="Image"
                         />
-                      </a>
+                      </div>
                     </Grid>
                   </Grid>
                 </Paper>
