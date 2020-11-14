@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 // Style override for site-wide font family
@@ -16,12 +16,12 @@ const Layout = ({ children }) => {
   // as it is built ahead of time and does not have access
   // to browser globals.
 
-  // if (typeof window !== 'undefined') {
-  //   useEffect(() => {
-  //     const WOW = require('wow.js');
-  //     window.wow = new WOW().init();
-  //   }, []);
-  // }
+  if (typeof window !== 'undefined') {
+    useEffect(() => {
+      const WOW = require('wow.js');
+      window.wow = new WOW().init();
+    }, []);
+  }
 
   return (
     <ThemeProvider theme={theme}>
