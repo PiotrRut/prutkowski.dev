@@ -1,29 +1,18 @@
 import React from 'react';
-import TopBanner from '../components/TopBanner';
-import About from '../components/About';
+import TopBanner from '../src/components/TopBanner';
+import About from '../src/components/About';
 import Grid from '@material-ui/core/Grid';
-import Skills from '../components/Skills';
-import GitProjectsPreview from '../components/GitProjectsPreview';
-import BlogPostsPreview from '../components/BlogPostsPreview';
-import PhotosPreview from '../components/PhotosPreview';
-import SEO from '../components/seo';
-import Contact from '../components/Contact';
-import OtherProjectsPreview from '../components/OtherProjectsPreview';
-import Layout from '../components/layout';
+import Skills from '../src/components/Skills';
+import GitProjectsPreview from '../src/components/GitProjectsPreview';
+import BlogPostsPreview from '../src/components/BlogPostsPreview';
+import PhotosPreview from '../src/components/PhotosPreview';
+import Contact from '../src/components/Contact';
+import OtherProjectsPreview from '../src/components/OtherProjectsPreview';
+import Layout from '../src/components/layout';
 
-function IndexPage() {
+const IndexPage = () => {
   return (
     <Layout>
-      <SEO
-        title="Home"
-        keywords={[
-          `Piotr`,
-          `Rutkowski`,
-          `prutkowski`,
-          `London`,
-          `Piotr Rutkowski`,
-        ]}
-      />
       <div className="container grid-cols-1 row-gap-16">
         <Grid
           direction="column"
@@ -60,6 +49,6 @@ function IndexPage() {
       </div>
     </Layout>
   );
-}
+};
 
 export default IndexPage;

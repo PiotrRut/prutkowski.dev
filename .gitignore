@@ -4,9 +4,6 @@
 node_modules
 yarn-error.log
 
-# Build directory
-/public
-
 # macOS
 .DS_Store
 
@@ -15,3 +12,6 @@ now.json
 
 #env variables
 .env.*
+
+# next
+.next

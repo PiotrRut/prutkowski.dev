@@ -77,11 +77,7 @@ function OtherProjectsPreview() {
               }}
             >
               <Card className={classes.root} raised>
-                <CardMedia
-                  title={p.title}
-                  className={classes.media}
-                  image={img(`./${p.picture}`)}
-                />
+                <CardMedia title={p.title} className={classes.media} />
                 <CardContent>
                   <Typography
                     gutterBottom

@@ -9,24 +9,9 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.10.0",
     "axios": "^0.19.2",
-    "gatsby": "^2.23.0",
-    "gatsby-image": "^2.4.6",
-    "gatsby-plugin-google-analytics": "^2.3.3",
-    "gatsby-plugin-manifest": "2.4.2",
-    "gatsby-plugin-material-ui": "^2.1.10",
-    "gatsby-plugin-offline": "3.2.1",
-    "gatsby-plugin-postcss": "2.3.1",
-    "gatsby-plugin-react-helmet": "3.3.12",
-    "gatsby-plugin-sharp": "2.6.2",
-    "gatsby-plugin-smoothscroll": "^1.1.0",
-    "gatsby-remark-images": "^3.3.28",
-    "gatsby-remark-prismjs": "^3.5.1",
-    "gatsby-source-filesystem": "^2.3.10",
-    "gatsby-transformer-json": "^2.4.1",
-    "gatsby-transformer-remark": "^2.8.14",
-    "gatsby-transformer-sharp": "^2.5.2",
     "mdi-material-ui": "^6.15.0",
     "moment": "^2.26.0",
+    "next": "^10.0.1",
     "node-forge": "^0.10.0",
     "parcel-bundler": "^1.12.4",
     "prismjs": "^1.21.0",
@@ -45,7 +30,6 @@
     "xml-js": "^1.6.11"
   },
   "keywords": [
-    "gatsby",
     "tailwind",
     "tailwindcss",
     "purgecss"
@@ -58,13 +42,10 @@
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write \"**/*.{css,js,jsx,json,md}\"",
     "fix": "npm run fix:lint && npm run fix:prettier",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "dev": "npm run develop",
-    "start": "gatsby develop -H 0.0.0.0",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "build": "next build",
+    "develop": "next dev",
+    "dev": "next dev",
+    "start": "next start"
   },
   "devDependencies": {
     "@tailwindcss/custom-forms": "0.2.1",
@@ -76,6 +57,7 @@
     "eslint-plugin-import": "2.20.2",
     "eslint-plugin-react": "7.19.0",
     "gatsby-plugin-eslint": "2.0.8",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "2.0.5",
     "tailwindcss": "1.4.5"
   }

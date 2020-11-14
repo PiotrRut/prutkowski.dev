@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 // Style override for site-wide font family
@@ -15,12 +15,13 @@ const Layout = ({ children }) => {
   // caused by Gatsby not having access to the window at build,
   // as it is built ahead of time and does not have access
   // to browser globals.
-  if (typeof window !== 'undefined') {
-    useEffect(() => {
-      const WOW = require('wow.js');
-      window.wow = new WOW().init();
-    }, []);
-  }
+
+  // if (typeof window !== 'undefined') {
+  //   useEffect(() => {
+  //     const WOW = require('wow.js');
+  //     window.wow = new WOW().init();
+  //   }, []);
+  // }
 
   return (
     <ThemeProvider theme={theme}>

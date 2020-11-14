@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'gatsby';
+import Link from 'next';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
@@ -55,7 +55,7 @@ function GitProjectsPreview() {
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
           <Typography variant="subtitle1" className="wow fadeIn">
-            <Link to="/projects">Take me to all Github projects &gt;</Link>
+            <a> Take me to all Github projects &gt;</a>
           </Typography>
         </Grid>
         <Grid container item justify="center" alignItems="center" spacing={3}>

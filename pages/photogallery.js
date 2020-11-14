@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
 import axios from 'axios';
+import Link from 'next';
 import Grid from '@material-ui/core/Grid';
-import SEO from '../components/seo';
 import Button from '@material-ui/core/Button';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import { makeStyles } from '@material-ui/core/styles';
-import BACKEND_URL from '../apiRoutes/backend';
-import Layout from '../components/layout';
+import BACKEND_URL from '../src/apiRoutes/backend';
+import Layout from '../src/components/layout';
 import Dialog from '@material-ui/core/Dialog';
 import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';
@@ -36,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // The Gallery page which displays my images stored in an MS Azure container
-function PhotoGallery() {
+const PhotoGallery = () => {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
   const [selectedURLS, setUrl] = useState([]);
   const [open, setOpen] = useState(false);
@@ -72,17 +71,6 @@ function PhotoGallery() {
 
   return (
     <Layout>
-      <SEO
-        keywords={[
-          `piotr`,
-          `rutkowski`,
-          `prutkowski`,
-          `photography`,
-          `gallery`,
-          `pictures`,
-        ]}
-        title="Photo Gallery"
-      />
       <div className="container grid-cols-1 row-gap-16">
         <br />
         <Grid
@@ -98,7 +86,7 @@ function PhotoGallery() {
               📸 My Gallery
             </Typography>
             <h6 className="text-center wow fadeIn">
-              <Link to="/">Return home</Link>
+              <Link href="/">Return home</Link>
             </h6>
           </Grid>
           <Grid item md={12} lg={12} xl={12} xs={12}>
@@ -167,7 +155,7 @@ function PhotoGallery() {
         <Grid container direction="column" justify="center" alignItems="center">
           <Grid item lg={12} xs={12} xl={12}>
             <br />
-            <Link className="no-underline text-black" to="/">
+            <Link className="no-underline text-black" href="/">
               <Button
                 className="wow fadeIn"
                 variant="contained"
@@ -224,6 +212,6 @@ function PhotoGallery() {
       </div>
     </Layout>
   );
-}
+};
 
 export default PhotoGallery;

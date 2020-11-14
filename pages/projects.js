@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import Link from 'next';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import SEO from '../components/seo';
 import GradeIcon from '@material-ui/icons/Grade';
 import Button from '@material-ui/core/Button';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import SourceFork from 'mdi-material-ui/SourceFork';
 import Typography from '@material-ui/core/Typography';
-import Layout from '../components/layout';
+import Layout from '../src/components/layout';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Styles override
@@ -21,7 +20,7 @@ const useStyles = makeStyles({
 });
 
 // The projects page, with all of my projects fetched through the GitHub API
-function Projects() {
+const Projects = () => {
   const [repos, setRepos] = useState([]);
   const classes = useStyles();
 
@@ -37,10 +36,6 @@ function Projects() {
 
   return (
     <Layout>
-      <SEO
-        keywords={[`piotr`, `rutkowski`, `prutkowski`, `projects`, `github`]}
-        title="Projects"
-      />
       <div className="container grid-cols-1 row-gap-16">
         <br />
         <Grid
@@ -56,7 +51,7 @@ function Projects() {
               🛠 Github Projects
             </Typography>
             <h6 className="text-center wow fadeIn">
-              <Link to="/">Return home</Link>
+              <Link href="/">Return home</Link>
             </h6>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
@@ -144,7 +139,7 @@ function Projects() {
         <Grid container direction="column" justify="center" alignItems="center">
           <Grid item lg={12} xs={12} xl={12}>
             <br />
-            <Link className="no-underline text-black" to="/">
+            <Link className="no-underline text-black" href="/">
               <Button
                 variant="contained"
                 color="inherit"
@@ -161,6 +156,6 @@ function Projects() {
       </div>
     </Layout>
   );
-}
+};
 
 export default Projects;
