@@ -38,6 +38,7 @@ function TopBanner() {
         </Typography>
         <Grid item lg={12} xl={12} xs={12}>
           <Typist cursor={{ show: false }} className="text-center items-center">
+            {/* purgecss start ignore */}
             <code>
               <span className="text-gray-400">console</span>
               <span className="text-gray-400">.</span>
@@ -48,6 +49,7 @@ function TopBanner() {
               </span>
               <span className="text-gray-400">)</span>
             </code>
+            {/* purgecss end ignore */}
           </Typist>
         </Grid>
         <h6 className="text-gray-500 wow fadeIn">
