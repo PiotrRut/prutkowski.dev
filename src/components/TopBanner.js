@@ -1,5 +1,6 @@
 import React from 'react';
 import Typist from 'react-typist';
+import Image from 'next/image';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
@@ -29,6 +30,9 @@ function TopBanner() {
         container
         spacing={3}
       >
+        <Grid item lg={12} xl={12} xs={12}>
+          <Image src="/ProfileImg.png" width={300} height={300} />
+        </Grid>
         <Typography variant="h3" component="h1" classes={classes}>
           Piotr Rutkowski
         </Typography>

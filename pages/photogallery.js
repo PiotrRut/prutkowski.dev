@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Link from 'next';
+import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
@@ -86,7 +86,9 @@ const PhotoGallery = () => {
               📸 My Gallery
             </Typography>
             <h6 className="text-center wow fadeIn">
-              <Link href="/">Return home</Link>
+              <Link href="/" passHref>
+                <a>Return home</a>
+              </Link>
             </h6>
           </Grid>
           <Grid item md={12} lg={12} xl={12} xs={12}>

@@ -1,4 +1,4 @@
-import Link from 'next';
+import Link from 'next/link';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -39,9 +39,13 @@ function BlogPostsPreview() {
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" className="wow fadeIn">
-            Want to read more? Click here
-          </Typography>
+          <Link href="/blog" passHref>
+            <a>
+              <Typography variant="subtitle1" className="wow fadeIn">
+                Want to read more? Click here
+              </Typography>
+            </a>
+          </Link>
         </Grid>
         <Grid
           container

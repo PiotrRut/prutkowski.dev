@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next';
+import Link from 'next/link';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -51,7 +51,9 @@ const Projects = () => {
               🛠 Github Projects
             </Typography>
             <h6 className="text-center wow fadeIn">
-              <Link href="/">Return home</Link>
+              <Link href="/" passHref>
+                <a>Return home</a>
+              </Link>
             </h6>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>

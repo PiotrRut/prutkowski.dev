@@ -1,6 +1,6 @@
 import Layout from '../src/components/layout';
 import React, { useEffect, useState } from 'react';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 import '../src/css/style.css';
 import '../src/css/animate.css';
@@ -20,16 +20,21 @@ const MyApp = ({ Component, pageProps }) => {
 
   useEffect(() => {
     setIsMounted(true);
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
+    <MuiThemeProvider theme={theme}>
       {isMounted && (
         <Layout>
           <Component {...pageProps} />
         </Layout>
       )}
-    </ThemeProvider>
+    </MuiThemeProvider>
   );
 };
 

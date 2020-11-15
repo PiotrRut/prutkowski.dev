@@ -43,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
 // Projects I am involved in with at work
 function OtherProjectsPreview() {
   const classes = useStyles();
-  const img = require.context('../images', true);
 
   return (
     <section id="other-proj-preview">
@@ -77,7 +76,11 @@ function OtherProjectsPreview() {
               }}
             >
               <Card className={classes.root} raised>
-                <CardMedia title={p.title} className={classes.media} />
+                <CardMedia
+                  title={p.title}
+                  className={classes.media}
+                  image={p.picture}
+                />
                 <CardContent>
                   <Typography
                     gutterBottom
