@@ -1,14 +1,14 @@
 import React from 'react';
-import TopBanner from '../src/components/TopBanner';
-import About from '../src/components/About';
+import TopBanner from '@components/TopBanner';
+import About from '@components/About';
 import Grid from '@material-ui/core/Grid';
-import Skills from '../src/components/Skills';
-import GitProjectsPreview from '../src/components/GitProjectsPreview';
-import BlogPostsPreview from '../src/components/BlogPostsPreview';
-import PhotosPreview from '../src/components/PhotosPreview';
-import Contact from '../src/components/Contact';
-import OtherProjectsPreview from '../src/components/OtherProjectsPreview';
-import Layout from '../src/components/layout';
+import Skills from '@components/Skills';
+import GitProjectsPreview from '@components/GitProjectsPreview';
+import BlogPostsPreview from '@components/BlogPostsPreview';
+import PhotosPreview from '@components/PhotosPreview';
+import Contact from '@components/Contact';
+import OtherProjectsPreview from '@components/OtherProjectsPreview';
+import Layout from '@components/layout';
 
 const IndexPage = () => {
   return (

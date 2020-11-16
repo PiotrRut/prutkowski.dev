@@ -1,6 +1,8 @@
+/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* purgecss end ignore */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 html,
@@ -84,16 +86,6 @@ section:hover .heading {
 
 .flex-center {
   @apply flex justify-center items-center;
-}
-
-.grayscale {
-  filter: contrast(0%) grayscale(100%);
-  @apply transition-default;
-}
-
-.grayscale:hover {
-  filter: contrast(100%) grayscale(0%);
-  @apply transition-default;
 }
 
 input::placeholder,

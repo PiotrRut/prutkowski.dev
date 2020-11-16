@@ -30,15 +30,14 @@ function TopBanner() {
         container
         spacing={3}
       >
-        <Grid item lg={12} xl={12} xs={12}>
-          <Image src="/ProfileImg.png" width={300} height={300} />
+        <Grid item lg={12} xl={12} xs={12} sm={12}>
+          <Image src="/ProfileImg.png" width={350} height={350} />
         </Grid>
         <Typography variant="h3" component="h1" classes={classes}>
           Piotr Rutkowski
         </Typography>
         <Grid item lg={12} xl={12} xs={12}>
           <Typist cursor={{ show: false }} className="text-center items-center">
-            {/* purgecss start ignore */}
             <code>
               <span className="text-gray-400">console</span>
               <span className="text-gray-400">.</span>
@@ -49,7 +48,6 @@ function TopBanner() {
               </span>
               <span className="text-gray-400">)</span>
             </code>
-            {/* purgecss end ignore */}
           </Typist>
         </Grid>
         <h6 className="text-gray-500 wow fadeIn">

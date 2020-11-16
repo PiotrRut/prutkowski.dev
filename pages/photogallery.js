@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import { makeStyles } from '@material-ui/core/styles';
 import BACKEND_URL from '../src/apiRoutes/backend';
-import Layout from '../src/components/layout';
+import Layout from '@components/layout';
 import Dialog from '@material-ui/core/Dialog';
 import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';

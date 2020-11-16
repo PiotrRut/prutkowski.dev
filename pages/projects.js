@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import SourceFork from 'mdi-material-ui/SourceFork';
 import Typography from '@material-ui/core/Typography';
-import Layout from '../src/components/layout';
+import Layout from '@components/layout';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Styles override

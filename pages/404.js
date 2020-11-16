@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import Layout from '../src/components/layout';
+import Layout from '@components/layout';
 
 // 404 Route
 const PageNotFound = () => {
