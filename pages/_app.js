@@ -1,4 +1,3 @@
-import Layout from '@components/layout';
 import React, { useEffect, useState } from 'react';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
@@ -29,11 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <MuiThemeProvider theme={theme}>
-      {isMounted && (
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      )}
+      {isMounted && <Component {...pageProps} />}
     </MuiThemeProvider>
   );
 };

@@ -9,10 +9,12 @@ import PhotosPreview from '@components/PhotosPreview';
 import Contact from '@components/Contact';
 import OtherProjectsPreview from '@components/OtherProjectsPreview';
 import Layout from '@components/layout';
+import SEO from '@components/SEO';
 
 const IndexPage = () => {
   return (
     <Layout>
+      <SEO title="Home" />
       <div className="container grid-cols-1 row-gap-16">
         <Grid
           direction="column"

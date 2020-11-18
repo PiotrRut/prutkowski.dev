@@ -6,6 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Link from 'next/link';
 
 // Styles override
 const useStyles = makeStyles({
@@ -28,7 +29,7 @@ function TopBanner() {
         justify="center"
         alignItems="center"
         container
-        spacing={3}
+        spacing={7}
       >
         <Grid item lg={12} xl={12} xs={12} sm={12}>
           <Image src="/ProfileImg.png" width={350} height={350} />
@@ -51,64 +52,39 @@ function TopBanner() {
           </Typist>
         </Grid>
         <h6 className="text-gray-500 wow fadeIn">
-          <span
-            className="cursor-pointer nav"
-            onClick={() => scrollTo('#skills')}
-          >
-            Skills
-          </span>{' '}
+          <Link href="/#skills">
+            <span className="cursor-pointer nav"> Skills </span>
+          </Link>
           |
-          <span
-            className="cursor-pointer nav"
-            onClick={() => scrollTo('#proj-preview')}
-          >
-            {' '}
-            GitHub
-          </span>{' '}
+          <Link href="/#proj-preview">
+            <span className="cursor-pointer nav"> GitHub </span>
+          </Link>
           |
-          <span
-            className="cursor-pointer nav"
-            onClick={() => scrollTo('#other-proj-preview')}
-          >
-            {' '}
-            Projects
-          </span>{' '}
+          <Link href="/#other-proj-preview">
+            <span className="cursor-pointer nav"> Projects </span>
+          </Link>
           |
-          <span
-            className="cursor-pointer nav"
-            onClick={() => scrollTo('#blog-prev')}
-          >
-            {' '}
-            Blog
-          </span>{' '}
+          <Link href="/#blog-prev">
+            <span className="cursor-pointer nav"> Blog </span>
+          </Link>
           |
-          <span
-            className="cursor-pointer nav"
-            onClick={() => scrollTo('#photos-prev')}
-          >
-            {' '}
-            Gallery
-          </span>{' '}
+          <Link href="/#photos-prev">
+            <span className="cursor-pointer nav"> Gallery </span>
+          </Link>
           |
-          <span
-            className="cursor-pointer nav"
-            onClick={() => scrollTo('#contact')}
-          >
-            {' '}
-            Contact
-          </span>
+          <Link href="/#contact">
+            <span className="cursor-pointer nav"> Contact </span>
+          </Link>
         </h6>
         <Grid item>
-          <IconButton
-            aria-label="comments"
-            className="scrollArrow bounce"
-            onClick={() => scrollTo('#about-me')}
-          >
-            <KeyboardArrowDownIcon
-              fontSize="large"
-              style={{ color: 'white' }}
-            />
-          </IconButton>
+          <Link href="/#about-me">
+            <IconButton aria-label="about" className="scrollArrow bounce">
+              <KeyboardArrowDownIcon
+                fontSize="large"
+                style={{ color: 'white' }}
+              />
+            </IconButton>
+          </Link>
         </Grid>
       </Grid>
     </section>

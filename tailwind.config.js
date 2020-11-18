@@ -1,13 +1,6 @@
 const { colors } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  // purge: {
-  //   enabled: true,
-  //   contents: ['./components/**/*.js'],
-  //   options: {
-  //     whitelist: [/^text-/, /mx-/],
-  //   },
-  // },
   theme: {
     container: {
       center: true,

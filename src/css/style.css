@@ -7,8 +7,8 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   background-color: #121212;
-  /*   background: linear-gradient(300deg, #2d3436 0%, #000000 74%); */
   font-size: 14px;
   font-family: 'Ubuntu', sans-serif;
   width: 100%;
@@ -72,16 +72,6 @@ p {
 
 .transition-default {
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-section .heading {
-  color: inherit;
-  @apply transition-default;
-}
-
-section:hover .heading {
-  color: theme('colors.primary.500');
-  @apply transition-default;
 }
 
 .flex-center {

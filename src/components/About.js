@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import moment from 'moment';
+import * as dayjs from 'dayjs';
 import Link from 'next';
 import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import IconButton from '@material-ui/core/IconButton';
@@ -46,9 +46,9 @@ function About() {
   const classes = useStyles();
 
   // Automatically update my age every year on my birthday
-  var bday = moment(new Date('1999/8/24'));
-  var now = moment(Date.now());
-  var age = now.diff(bday, 'years');
+  var bday = dayjs(new Date('1999/8/24'));
+  var now = dayjs();
+  var age = now.diff(bday, 'year');
 
   return (
     <section id="about-me" className="overflow-hidden">

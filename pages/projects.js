@@ -11,6 +11,7 @@ import SourceFork from 'mdi-material-ui/SourceFork';
 import Typography from '@material-ui/core/Typography';
 import Layout from '@components/layout';
 import { makeStyles } from '@material-ui/core/styles';
+import SEO from '@components/SEO';
 
 // Styles override
 const useStyles = makeStyles({
@@ -36,6 +37,7 @@ const Projects = () => {
 
   return (
     <Layout>
+      <SEO title="GitHub Projects" />
       <div className="container grid-cols-1 row-gap-16">
         <br />
         <Grid

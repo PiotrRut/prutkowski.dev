@@ -11,6 +11,7 @@ import Dialog from '@material-ui/core/Dialog';
 import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';
 import Typography from '@material-ui/core/Typography';
+import SEO from '@components/SEO';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -71,6 +72,7 @@ const PhotoGallery = () => {
 
   return (
     <Layout>
+      <SEO title="Gallery" />
       <div className="container grid-cols-1 row-gap-16">
         <br />
         <Grid
