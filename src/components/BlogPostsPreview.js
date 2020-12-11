@@ -16,46 +16,13 @@ function BlogPostsPreview() {
 
   return (
     <section id="blog-prev">
-      <Grid
-        direction="column"
-        justify="center"
-        alignItems="center"
-        container
-        spacing={3}
+      <Typography
+        variant="h4"
+        className={`wow fadeIn ${classes.root}`}
+        align="center"
       >
-        <Grid item lg={12} xs={12} xl={12}>
-          <Typography variant="h4" className={`wow fadeIn ${classes.root}`}>
-            What&#39;s on my mind?
-          </Typography>
-        </Grid>
-        <Grid item md={12} lg={12} xl={12} xs={12}>
-          {/* <Typography
-            variant="subtitle1"
-            className={`wow fadeIn ${classes.root}`}
-          >
-            Below you can see some of my latest blog posts.
-          </Typography> */}
-        </Grid>
-        <Grid item md={12} lg={12} xl={12} xs={12}>
-          {/* <Link href="/blog" passHref>
-            <a>
-              <Typography variant="subtitle1" className="wow fadeIn">
-                Want to read more? Click here
-              </Typography>
-            </a>
-          </Link> */}
-          <Typography variant="button" className={`wow fadeIn ${classes.root}`}>
-            The blog will bee back soon, stay tuned! 🎉
-          </Typography>
-        </Grid>
-        <Grid
-          container
-          item
-          justify="center"
-          alignItems="center"
-          spacing={3}
-        ></Grid>
-      </Grid>
+        Blog coming back soon - stay tuned! 🎉
+      </Typography>
       <br />
       <br />
     </section>
