@@ -5,10 +5,11 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {
-      colors: {
-        primary: colors.teal,
-      },
+    colors: {
+      black: colors.black,
+      gray: colors.gray,
+      blue: colors.blue,
+      green: colors.green,
     },
   },
 };

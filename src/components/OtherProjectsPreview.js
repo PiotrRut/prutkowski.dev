@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import projects from '../misc/projects.json';
+import projects from '@misc/projects.json';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -43,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
 // Projects I am involved in with at work
 function OtherProjectsPreview() {
   const classes = useStyles();
-  const img = require.context('../images', true);
 
   return (
     <section id="other-proj-preview">
@@ -80,7 +79,7 @@ function OtherProjectsPreview() {
                 <CardMedia
                   title={p.title}
                   className={classes.media}
-                  image={img(`./${p.picture}`)}
+                  image={p.picture}
                 />
                 <CardContent>
                   <Typography

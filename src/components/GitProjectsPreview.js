@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 });
 
 // The projects section on the main page, with three latest
-function GitProjectsPreview() {
+const GitProjectsPreview = () => {
   const classes = useStyles();
   const [repos, setRepos] = useState([]);
 
@@ -54,9 +54,13 @@ function GitProjectsPreview() {
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography variant="subtitle1" className="wow fadeIn">
-            <Link to="/projects">Take me to all Github projects &gt;</Link>
-          </Typography>
+          <Link href="/projects" passHref>
+            <a>
+              <Typography variant="subtitle1" className="wow fadeIn">
+                Take me to all Github projects &gt;
+              </Typography>
+            </a>
+          </Link>
         </Grid>
         <Grid container item justify="center" alignItems="center" spacing={3}>
           {repos
@@ -134,6 +138,6 @@ function GitProjectsPreview() {
       <br />
     </section>
   );
-}
+};
 
 export default GitProjectsPreview;

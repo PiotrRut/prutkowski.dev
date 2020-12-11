@@ -1,7 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import moment from 'moment';
-import { Link } from 'gatsby';
+import * as dayjs from 'dayjs';
 import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import IconButton from '@material-ui/core/IconButton';
 import { Typography } from '@material-ui/core';
@@ -46,9 +45,9 @@ function About() {
   const classes = useStyles();
 
   // Automatically update my age every year on my birthday
-  var bday = moment(new Date('1999/8/24'));
-  var now = moment(Date.now());
-  var age = now.diff(bday, 'years');
+  var bday = dayjs(new Date('1999/8/24'));
+  var now = dayjs();
+  var age = now.diff(bday, 'year');
 
   return (
     <section id="about-me" className="overflow-hidden">
@@ -79,10 +78,9 @@ function About() {
             In my free time, apart from working on various programming projects,
             I dedicate a lot of time to photography. I&#39;ve been taking
             pictures since I can remember, and the website you&#39;re currently
-            on, doubles as my photographic portfolio. In the{' '}
-            <Link to="/photogallery">gallery</Link> section, you can view some
-            of my shots and download them! I am also a fan of space exploration
-            and new technologies <span>🚀</span>
+            on, doubles as my photographic portfolio. In the section, you can
+            view some of my shots and download them! I am also a fan of space
+            exploration and new technologies <span>🚀</span>
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">
