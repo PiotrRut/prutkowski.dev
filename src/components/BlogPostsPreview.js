@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -31,21 +29,24 @@ function BlogPostsPreview() {
           </Typography>
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography
+          {/* <Typography
             variant="subtitle1"
             className={`wow fadeIn ${classes.root}`}
           >
             Below you can see some of my latest blog posts.
-          </Typography>
+          </Typography> */}
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Link href="/blog" passHref>
+          {/* <Link href="/blog" passHref>
             <a>
               <Typography variant="subtitle1" className="wow fadeIn">
                 Want to read more? Click here
               </Typography>
             </a>
-          </Link>
+          </Link> */}
+          <Typography variant="button" className={`wow fadeIn ${classes.root}`}>
+            The blog will bee back soon, stay tuned! 🎉
+          </Typography>
         </Grid>
         <Grid
           container

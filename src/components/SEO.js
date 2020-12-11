@@ -14,6 +14,7 @@ const SEO = ({ title }) => {
 
   return (
     <Head>
+      <link rel="shortcut icon" href="/favicon-32.png" />
       <title>{`${title} | Piotr Rutkowski`}</title>
       <meta name="description" content={description} />
       <meta property="og:type" content="article" />

@@ -1,7 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import * as dayjs from 'dayjs';
-import Link from 'next';
 import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import IconButton from '@material-ui/core/IconButton';
 import { Typography } from '@material-ui/core';
