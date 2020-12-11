@@ -27,7 +27,7 @@ const SEO = ({ title }) => {
       <meta property="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content={`https://prutkowskit.tech/social.png`}
+        content={`https://prutkowski.tech/social.png`}
       />
     </Head>
   );
