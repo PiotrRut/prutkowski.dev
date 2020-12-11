@@ -4,7 +4,7 @@
 
 My old personal website, which I made back in 2019, was well overdue for a redesign. I therefore finally decided to sit down and do it, and that is exactly how this website was created.
 
-It is written entirely from scratch using React and Gatsby. It is mostly a single page web app, with a few exceptions:
+It is written entirely from scratch using React and Next. It is mostly a single page web app, with a few exceptions:
 
 - **Projects**: This page holds a list of all my public GitHub repositories, automatically updated from the GitHub API.
 - **Blog**: Holds a list of all my blog posts, written in Markdown.
@@ -15,7 +15,7 @@ The API that I've written which the gallery uses can be found [here](https://git
 ## :open_file_folder: Frameworks and libraries used
 
 - ReactJS
-- GatsbyJS
+- NextJS
 - Material UI
 - TailwindCSS
 - Wow.js (for animations)

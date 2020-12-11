@@ -1,14 +1,14 @@
-/*! purgecss start ignore */
+/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-/*! purgecss end ignore */
 @tailwind utilities;
+/* purgecss end ignore */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 html,
 body {
+  scroll-behavior: smooth;
   background-color: #121212;
-  /*   background: linear-gradient(300deg, #2d3436 0%, #000000 74%); */
   font-size: 14px;
   font-family: 'Ubuntu', sans-serif;
   width: 100%;
@@ -63,7 +63,7 @@ h6 {
 
 a {
   @apply font-semibold;
-  color: #5DA6EC;
+  color: #5da6ec;
 }
 
 p {
@@ -74,28 +74,8 @@ p {
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-section .heading {
-  color: inherit;
-  @apply transition-default;
-}
-
-section:hover .heading {
-  color: theme('colors.primary.500');
-  @apply transition-default;
-}
-
 .flex-center {
   @apply flex justify-center items-center;
-}
-
-.grayscale {
-  filter: contrast(0%) grayscale(100%);
-  @apply transition-default;
-}
-
-.grayscale:hover {
-  filter: contrast(100%) grayscale(0%);
-  @apply transition-default;
 }
 
 input::placeholder,

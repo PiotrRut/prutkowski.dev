@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
   // caused by Gatsby not having access to the window at build,
   // as it is built ahead of time and does not have access
   // to browser globals.
+
   if (typeof window !== 'undefined') {
     useEffect(() => {
       const WOW = require('wow.js');

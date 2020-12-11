@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
-import Layout from '../components/layout';
+import Layout from '@components/layout';
 
 // 404 Route
-function PageNotFound() {
+const PageNotFound = () => {
   return (
     <Layout>
       <div className="container grid-cols-1 row-gap-16">
@@ -25,11 +25,15 @@ function PageNotFound() {
         <br />
         <h3 className="text-gray-400">
           In other words - either you can&#39;t type, or I can&#39;t code..
-          Either way, you should <Link to="/">go home</Link>!
+          Either way, you should{' '}
+          <Link href="/">
+            <a>go home</a>
+          </Link>
+          !
         </h3>
       </div>
     </Layout>
   );
-}
+};
 
 export default PageNotFound;
