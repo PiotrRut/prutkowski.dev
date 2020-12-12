@@ -1,18 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 import router from 'next/router';
-
 import Layout from '@components/layout';
+import SEO from '@components/SEO';
 
 // 404 Route
 const PageNotFound = () => {
-  const [progress, setProgress] = React.useState(10);
+  const [countdown, setCountdown] = React.useState(10);
 
   React.useEffect(() => {
-    while (progress > 0) {
+    while (countdown > 0) {
       const timer = setInterval(
         () =>
-          setProgress((prevProgress) =>
+          setCountdown((prevProgress) =>
             prevProgress <= 0 ? 10 : prevProgress - 1
           ),
         1000
@@ -21,16 +21,17 @@ const PageNotFound = () => {
         clearInterval(timer);
       };
     }
-    if (progress === 0) {
+    if (countdown === 0) {
       router.push('/');
     }
-  }, [progress]);
+  }, [countdown]);
 
   return (
     <Layout>
+      <SEO title="Page Not Found" />
       <div className="container grid-cols-1 row-gap-16">
         <br />
-        <h1 className="text-gray-400">404 Not Found 🤷🏻‍♂️</h1>
+        <h1 className="text-gray-400">404 Not Found</h1>
         <br />
         <i>
           <h5 className="text-gray-400">
@@ -45,16 +46,17 @@ const PageNotFound = () => {
         </i>
         <br />
         <h3 className="text-gray-400">
-          In other words - either you can&#39;t type, or I can&#39;t code..
+          In other words - either you can&#39;t type, or I can&#39;t code.. 🤷🏻‍♂️
           Either way, you should{' '}
           <Link href="/">
             <a>go home</a>
           </Link>
           !
         </h3>
+        <br />
         <h3 className="text-gray-400">
-          If you do nothing, you will be automatically redirected home in{' '}
-          {progress} seconds.
+          If you do nothing, you will be automatically redirected in {countdown}{' '}
+          seconds.
         </h3>
       </div>
     </Layout>
