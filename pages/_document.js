@@ -31,7 +31,8 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           {/* Polyfill for smoothscroll as Safari does not support it (sadness) */}
-          <script src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll" />
+          <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js" />
+          <script src="https://unpkg.com/smoothscroll-anchor-polyfill" />
           <NextScript />
         </body>
       </Html>
