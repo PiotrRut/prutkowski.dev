@@ -51,40 +51,40 @@ function TopBanner() {
             </code>
           </Typist>
         </Grid>
-        <h6 className="text-gray-500 wow fadeIn">
-          <Link href="/#skills">
-            <span className="cursor-pointer nav"> Skills </span>
-          </Link>
+        <h6 className="wow fadeIn text-gray-500">
+          <a href="#skills">
+            <span className="cursor-pointer nav text-gray-500"> Skills </span>
+          </a>
           |
-          <Link href="/#proj-preview">
-            <span className="cursor-pointer nav"> GitHub </span>
-          </Link>
+          <a href="#proj-preview">
+            <span className="cursor-pointer nav text-gray-500"> GitHub </span>
+          </a>
           |
-          <Link href="/#other-proj-preview">
-            <span className="cursor-pointer nav"> Projects </span>
-          </Link>
+          <a href="#other-proj-preview">
+            <span className="cursor-pointer nav text-gray-500"> Projects </span>
+          </a>
           |
-          <Link href="/#blog-prev">
-            <span className="cursor-pointer nav"> Blog </span>
-          </Link>
+          <a href="#blog-prev">
+            <span className="cursor-pointer nav text-gray-500"> Blog </span>
+          </a>
           |
-          <Link href="/#photos-prev">
-            <span className="cursor-pointer nav"> Gallery </span>
-          </Link>
+          <a href="#photos-prev">
+            <span className="cursor-pointer nav text-gray-500"> Gallery </span>
+          </a>
           |
-          <Link href="/#contact">
-            <span className="cursor-pointer nav"> Contact </span>
-          </Link>
+          <a href="#contact">
+            <span className="cursor-pointer nav text-gray-500"> Contact </span>
+          </a>
         </h6>
         <Grid item>
-          <Link href="/#about-me">
+          <a href="#about-me">
             <IconButton aria-label="about" className="scrollArrow bounce">
               <KeyboardArrowDownIcon
                 fontSize="large"
                 style={{ color: 'white' }}
               />
             </IconButton>
-          </Link>
+          </a>
         </Grid>
       </Grid>
     </section>
