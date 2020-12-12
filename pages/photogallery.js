@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 // The Gallery page which displays my images stored in an MS Azure container
 const PhotoGallery = () => {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
-  const [selectedURLS, setUrl] = useState([]);
+  const [selectedURLS, setUrl] = useState({});
   const [open, setOpen] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
   const classes = useStyles();
@@ -94,14 +94,14 @@ const PhotoGallery = () => {
             </h6>
           </Grid>
           <Grid item md={12} lg={12} xl={12} xs={12}>
-            <p className="text-gray-400 text-center wow fadeIn">
+            <Typography className="text-gray-400 text-center wow fadeIn">
               Here you can see some of the pictures I&#39;ve taken!
-            </p>
-            <p className="text-gray-400 text-center wow fadeIn">
+            </Typography>
+            <Typography className="text-gray-400 text-center wow fadeIn">
               These images are compressed to reduce load.
               <br />
               Follow the link from within the preview for full-size!!
-            </p>
+            </Typography>
             <br />
             <h6 className="text-gray-400 text-center wow fadeIn">
               Want more? Visit my{' '}

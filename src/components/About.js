@@ -78,9 +78,9 @@ function About() {
             In my free time, apart from working on various programming projects,
             I dedicate a lot of time to photography. I&#39;ve been taking
             pictures since I can remember, and the website you&#39;re currently
-            on, doubles as my photographic portfolio. In the section, you can
-            view some of my shots and download them! I am also a fan of space
-            exploration and new technologies <span>🚀</span>
+            on, doubles as my photographic portfolio. In the gallery section,
+            you can view some of my shots and download them! I am also a fan of
+            space exploration and new technologies <span>🚀</span>
           </h5>
           <br />
           <h5 className="text-gray-400 text-left wow fadeIn">
