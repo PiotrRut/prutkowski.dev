@@ -13,8 +13,6 @@ const useStyles = makeStyles({
   },
 });
 
-console.log(skills.map((s) => s.name));
-
 // Sections with my skills displayed
 function Skills() {
   const classes = useStyles();

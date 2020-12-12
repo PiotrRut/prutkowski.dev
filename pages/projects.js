@@ -35,6 +35,9 @@ const Projects = () => {
     fetchData();
   }, []);
 
+  // Return all languages as an array from a set to get rid of duplicates
+  const languages = Array.from(new Set(repos.map((r) => r.language)));
+
   return (
     <Layout>
       <SEO title="GitHub Projects" />
@@ -59,13 +62,28 @@ const Projects = () => {
             </h6>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
-            <p className="text-gray-400 text-center wow fadeIn">
+            <Typography className="text-gray-400 text-center wow fadeIn">
               Below you can see all <b>{repos.length - 1}</b> of my public
               repositories, updated automatically via the GitHub API.
-            </p>
-            <p className="text-gray-400 text-center wow fadeIn">
+            </Typography>
+            <Typography className="text-gray-400 text-center wow fadeIn">
               To visit the GitHub page for any of them, click the project name.
-            </p>
+            </Typography>
+          </Grid>
+          <Grid item md={12} lg={12} xl={12}>
+            <Typography className="text-gray-400 text-center wow fadeIn">
+              Language breakdown:
+            </Typography>
+            <Typography className="text-gray-400 text-center wow fadeIn">
+              {languages
+                .filter((l) => l !== null)
+                .map((l, i) => (
+                  <span key={i}>
+                    {l}: {repos.filter((r) => r.language === l).length}{' '}
+                    {i < languages.length - 2 && '/'} {''}
+                  </span>
+                ))}
+            </Typography>
           </Grid>
           <Grid container item justify="center" alignItems="center" spacing={3}>
             {repos
