@@ -8,7 +8,7 @@ const SEO = ({ title }) => {
     'Software developer based in London, UK. Currently working at Equals.';
 
   useEffect(() => {
-    ReactGA.initialize('G-E2725N0N5N');
+    ReactGA.initialize('UA-154333467-2');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
