@@ -8,6 +8,8 @@ import GradeIcon from '@material-ui/icons/Grade';
 import SourceFork from 'mdi-material-ui/SourceFork';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 // Styles override
 const useStyles = makeStyles({
@@ -52,15 +54,6 @@ const GitProjectsPreview = () => {
           >
             All my GitHub repositories, fetched in real time.
           </Typography>
-        </Grid>
-        <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Link href="/projects" passHref>
-            <a>
-              <Typography variant="subtitle1" className="wow fadeIn">
-                Take me to all Github projects &gt;
-              </Typography>
-            </a>
-          </Link>
         </Grid>
         <Grid container item justify="center" alignItems="center" spacing={3}>
           {repos
@@ -132,6 +125,18 @@ const GitProjectsPreview = () => {
                 </Paper>
               </Grid>
             ))}
+        </Grid>
+        <Grid item md={12} lg={12} xl={12} xs={12}>
+          <Link className="no-underline text-black" href="/projects" passHref>
+            <Button
+              className="wow fadeIn"
+              variant="contained"
+              color="inherit"
+              endIcon={<NavigateNextIcon />}
+            >
+              See more
+            </Button>
+          </Link>
         </Grid>
       </Grid>
       <br />

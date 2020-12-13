@@ -7,6 +7,8 @@ import BACKEND_URL from '@misc/backend';
 import Dialog from '@material-ui/core/Dialog';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 // Styles override
 const useStyles = makeStyles((theme) => ({
@@ -74,15 +76,6 @@ function PhotosPreview() {
             Here are some of my best shots!
           </Typography>
         </Grid>
-        <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Link href="/photogallery" passHref>
-            <a>
-              <Typography variant="subtitle1" className="wow fadeIn">
-                See all of them by clicking here &gt;
-              </Typography>
-            </a>
-          </Link>
-        </Grid>
         <Grid container item justify="center" alignItems="center" spacing={3}>
           {images.slice(0, 4).map((image, index) => (
             <Grid
@@ -124,6 +117,22 @@ function PhotosPreview() {
               </Paper>
             </Grid>
           ))}
+        </Grid>
+        <Grid item md={12} lg={12} xl={12} xs={12}>
+          <Link
+            className="no-underline text-black"
+            href="/photogallery"
+            passHref
+          >
+            <Button
+              className="wow fadeIn"
+              variant="contained"
+              color="inherit"
+              endIcon={<NavigateNextIcon />}
+            >
+              See more
+            </Button>
+          </Link>
         </Grid>
       </Grid>
 
