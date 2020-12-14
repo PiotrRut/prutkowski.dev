@@ -6,7 +6,6 @@ import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from 'next/link';
 
 // Styles override
 const useStyles = makeStyles({
@@ -32,7 +31,7 @@ function TopBanner() {
         spacing={7}
       >
         <Grid item lg={12} xl={12} xs={12} sm={12}>
-          <Image src="/ProfileImg.png" width={350} height={350} />
+          <Image src="/ProfileImg.webp" width={350} height={350} />
         </Grid>
         <Typography variant="h3" component="h1" classes={classes}>
           Piotr Rutkowski
