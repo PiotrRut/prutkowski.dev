@@ -52,8 +52,6 @@ function PhotosPreview() {
     setOpen(false);
   };
 
-  console.log(BACKEND_URL);
-
   return (
     <section id="photos-prev">
       <Grid
