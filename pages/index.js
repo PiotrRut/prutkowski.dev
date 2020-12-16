@@ -26,7 +26,7 @@ const IndexPage = () => {
           <Grid item xl={9} lg={5} xs={12}>
             <TopBanner />
           </Grid>
-          <Grid item xl={12} lg={12} xs={12}>
+          <Grid item xl={12} lg={10} xs={12}>
             <About />
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>

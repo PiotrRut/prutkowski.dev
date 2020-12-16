@@ -81,17 +81,17 @@ const GitProjectsPreview = () => {
                     <Grid item>
                       <i>
                         <h5>
-                          <a className="text-gray-400" href={repo.html_url}>
+                          <a className="text-gray-200" href={repo.html_url}>
                             {repo.name}
                           </a>
                         </h5>
                       </i>
                     </Grid>
                     <Grid item>
-                      <h6 className="text-gray-400">{repo.description}</h6>
+                      <h6 className="text-gray-300">{repo.description}</h6>
                     </Grid>
                     <Grid item>
-                      <h6 className="text-gray-400">
+                      <h6 className="text-gray-300">
                         <FiberManualRecordIcon
                           className={repo.language}
                           fontSize="small"

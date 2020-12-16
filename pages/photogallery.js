@@ -94,16 +94,16 @@ const PhotoGallery = () => {
             </h6>
           </Grid>
           <Grid item md={12} lg={12} xl={12} xs={12}>
-            <Typography className="text-gray-400 text-center wow fadeIn">
+            <Typography className="text-gray-200 text-center wow fadeIn">
               Here you can see some of the pictures I&#39;ve taken!
             </Typography>
-            <Typography className="text-gray-400 text-center wow fadeIn">
+            <Typography className="text-gray-200 text-center wow fadeIn">
               These images are compressed to reduce load.
               <br />
               Follow the link from within the preview for full-size!!
             </Typography>
             <br />
-            <h6 className="text-gray-400 text-center wow fadeIn">
+            <h6 className="text-gray-200 text-center wow fadeIn">
               Want more? Visit my{' '}
               <a
                 href="https://www.instagram.com/prutkowskii/"

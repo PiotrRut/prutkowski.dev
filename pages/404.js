@@ -29,12 +29,12 @@ const PageNotFound = () => {
   return (
     <Layout>
       <SEO title="Page Not Found" />
-      <div className="container grid-cols-1 row-gap-16">
+      <div className="container grid-cols-1 gap-y-16">
         <br />
-        <h1 className="text-gray-400">404 Not Found</h1>
+        <h1 className="text-gray-200">404 Not Found</h1>
         <br />
         <i>
-          <h5 className="text-gray-400">
+          <h5 className="text-gray-200">
             &#34;The HTTP 404, 404 Not Found, 404, Page Not Found, or Server Not
             Found error message is a Hypertext Transfer Protocol (HTTP) standard
             response code, in computer network communications, to indicate that
@@ -45,7 +45,7 @@ const PageNotFound = () => {
           </h5>
         </i>
         <br />
-        <h3 className="text-gray-400">
+        <h3 className="text-gray-200">
           In other words - either you can&#39;t type, or I can&#39;t code.. 🤷🏻‍♂️
           Either way, you should{' '}
           <Link href="/">
@@ -54,7 +54,7 @@ const PageNotFound = () => {
           !
         </h3>
         <br />
-        <h3 className="text-gray-400">
+        <h3 className="text-gray-200">
           If you do nothing, you will be automatically redirected in {countdown}{' '}
           seconds.
         </h3>
