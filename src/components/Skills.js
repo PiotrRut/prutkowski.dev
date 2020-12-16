@@ -53,7 +53,7 @@ function Skills() {
                 >
                   <Grid container direction="row" spacing={2}>
                     <Grid item>
-                      <h6 className="text-gray-400">
+                      <h6 className="text-gray-200">
                         <Image
                           src={s.icon}
                           width="18"
@@ -62,7 +62,7 @@ function Skills() {
                         />
                         &nbsp;{s.name}
                       </h6>
-                      <h6 className="text-gray-600">{s.category}</h6>
+                      <h6 className="text-gray-500">{s.category}</h6>
                     </Grid>
                   </Grid>
                 </Paper>

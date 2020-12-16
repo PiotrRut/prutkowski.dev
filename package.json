@@ -13,6 +13,7 @@
     "next": "^10.0.1",
     "node-forge": "^0.10.0",
     "parcel-bundler": "^1.12.4",
+    "postcss": "^8.2.1",
     "prismjs": "^1.21.0",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
@@ -43,8 +44,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
-    "@tailwindcss/custom-forms": "0.2.1",
-    "autoprefixer": "9.8.0",
+    "autoprefixer": "10.1.0",
     "babel-eslint": "10.1.0",
     "cssnano": "4.1.10",
     "eslint": "6.8.0",
@@ -53,6 +53,6 @@
     "eslint-plugin-react": "7.19.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "2.0.5",
-    "tailwindcss": "1.9.6"
+    "tailwindcss": "2.0.2"
   }
 }

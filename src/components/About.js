@@ -65,7 +65,7 @@ function About() {
           </Typography>
         </Grid>
         <Grid item lg={9} xl={10}>
-          <h5 className="text-gray-400 text-left wow fadeIn">
+          <h5 className="text-gray-200 text-left wow fadeIn">
             Great question! My name is Piotr, although people mostly call me
             Peter, and I am a {age} year old programmer and second-year BSc
             Computer Science student at City, University of London. I was
@@ -74,7 +74,7 @@ function About() {
             engineer for <a href="http://equalsmoney.com">Equals</a>!
           </h5>
           <br />
-          <h5 className="text-gray-400 text-left wow fadeIn">
+          <h5 className="text-gray-200 text-left wow fadeIn">
             In my free time, apart from working on various programming projects,
             I dedicate a lot of time to photography. I&#39;ve been taking
             pictures since I can remember, and the website you&#39;re currently
@@ -83,7 +83,7 @@ function About() {
             space exploration and new technologies <span>🚀</span>
           </h5>
           <br />
-          <h5 className="text-gray-400 text-left wow fadeIn">
+          <h5 className="text-gray-200 text-left wow fadeIn">
             I hope you enjoy this website as much as I&#39;ve enjoyed making it,
             and don&#39;t forget to check out my socials! <span>😁</span>
           </h5>

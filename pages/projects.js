@@ -41,7 +41,7 @@ const Projects = () => {
   return (
     <Layout>
       <SEO title="GitHub Projects" />
-      <div className="container grid-cols-1 row-gap-16">
+      <div className="container grid-cols-1 gap-y-16">
         <br />
         <Grid
           direction="column"
@@ -62,19 +62,19 @@ const Projects = () => {
             </h6>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
-            <Typography className="text-gray-400 text-center wow fadeIn">
+            <Typography className="text-gray-200 text-center wow fadeIn">
               Below you can see all <b>{repos.length - 1}</b> of my public
               repositories, updated automatically via the GitHub API.
             </Typography>
-            <Typography className="text-gray-400 text-center wow fadeIn">
+            <Typography className="text-gray-200 text-center wow fadeIn">
               To visit the GitHub page for any of them, click the project name.
             </Typography>
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
-            <Typography className="text-gray-400 text-center wow fadeIn">
+            <Typography className="text-gray-200 text-center wow fadeIn">
               Language breakdown:
             </Typography>
-            <Typography className="text-gray-400 text-center wow fadeIn">
+            <Typography className="text-gray-200 text-center wow fadeIn">
               {languages
                 .filter((l) => l !== null)
                 .map((l, i) => (
@@ -85,7 +85,15 @@ const Projects = () => {
                 ))}
             </Typography>
           </Grid>
-          <Grid container item justify="center" alignItems="center" spacing={3}>
+          <Grid
+            container
+            item
+            justify="center"
+            alignItems="center"
+            spacing={3}
+            md={9}
+            xl={12}
+          >
             {repos
               .filter((repo) => repo.name !== 'PiotrRut')
               .map((repo, index) => (
@@ -110,17 +118,17 @@ const Projects = () => {
                       <Grid item>
                         <i>
                           <h5>
-                            <a className="text-gray-400" href={repo.html_url}>
+                            <a className="text-gray-200" href={repo.html_url}>
                               {repo.name}
                             </a>
                           </h5>
                         </i>
                       </Grid>
                       <Grid item>
-                        <h6 className="text-gray-400">{repo.description}</h6>
+                        <h6 className="text-gray-300">{repo.description}</h6>
                       </Grid>
                       <Grid item>
-                        <h6 className="text-gray-400">
+                        <h6 className="text-gray-300">
                           <FiberManualRecordIcon
                             className={repo.language}
                             fontSize="small"

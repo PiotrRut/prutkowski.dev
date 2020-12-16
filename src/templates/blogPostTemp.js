@@ -31,10 +31,10 @@ export default function Template({ data }) {
         >
           <Grid Grid item lg={12} xs={12} xl={12}>
             <b>
-              <h2 className="text-gray-400 text-center">{frontmatter.title}</h2>
+              <h2 className="text-gray-200 text-center">{frontmatter.title}</h2>
             </b>
             <i>
-              <h6 className="text-gray-400 text-center">
+              <h6 className="text-gray-200 text-center">
                 {' '}
                 Published at: {frontmatter.date}
               </h6>
@@ -42,7 +42,7 @@ export default function Template({ data }) {
           </Grid>
           <Grid Grid item lg={9} xs={12} xl={8}>
             <h5
-              className="text-gray-400 text-left wow fadeIn"
+              className="text-gray-200 text-left wow fadeIn"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </Grid>

@@ -37,16 +37,19 @@ function TopBanner() {
           Piotr Rutkowski
         </Typography>
         <Grid item lg={12} xl={12} xs={12}>
-          <Typist cursor={{ show: false }} className="text-center items-center">
+          <Typist
+            cursor={{ show: false }}
+            className="text-center items-center text-sm"
+          >
             <code>
-              <span className="text-gray-400">console</span>
-              <span className="text-gray-400">.</span>
-              <span className="text-blue-600">log</span>
-              <span className="text-gray-400">(</span>
-              <span className="text-green-600">
+              <span className="text-gray-200">console</span>
+              <span className="text-gray-200">.</span>
+              <span className="text-blue-400">log</span>
+              <span className="text-gray-200">(</span>
+              <span className="text-green-400">
                 &#39;Welcome to my website&#39;
               </span>
-              <span className="text-gray-400">)</span>
+              <span className="text-gray-200">)</span>
             </code>
           </Typist>
         </Grid>
