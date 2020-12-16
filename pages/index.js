@@ -15,7 +15,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="container grid-cols-1 row-gap-16">
+      <div className="container grid-cols-1 gap-y-16">
         <Grid
           direction="column"
           justify="center"
@@ -26,7 +26,7 @@ const IndexPage = () => {
           <Grid item xl={9} lg={5} xs={12}>
             <TopBanner />
           </Grid>
-          <Grid item xl={12} lg={10} xs={12}>
+          <Grid item xl={9} lg={10} xs={12}>
             <About />
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>

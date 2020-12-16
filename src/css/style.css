@@ -1,8 +1,6 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* purgecss end ignore */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 html,
@@ -69,19 +67,6 @@ a {
 
 p {
   @apply leading-relaxed pb-4;
-}
-
-.transition-default {
-  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.flex-center {
-  @apply flex justify-center items-center;
-}
-
-input::placeholder,
-textarea::placeholder {
-  @apply opacity-50;
 }
 
 @screen md {

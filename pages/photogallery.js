@@ -73,7 +73,7 @@ const PhotoGallery = () => {
   return (
     <Layout>
       <SEO title="Gallery" />
-      <div className="container grid-cols-1 row-gap-16">
+      <div className="container grid-cols-1 gap-y-16">
         <br />
         <Grid
           direction="column"

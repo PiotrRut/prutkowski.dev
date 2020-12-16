@@ -41,7 +41,7 @@ const Projects = () => {
   return (
     <Layout>
       <SEO title="GitHub Projects" />
-      <div className="container grid-cols-1 row-gap-16">
+      <div className="container grid-cols-1 gap-y-16">
         <br />
         <Grid
           direction="column"
@@ -85,7 +85,15 @@ const Projects = () => {
                 ))}
             </Typography>
           </Grid>
-          <Grid container item justify="center" alignItems="center" spacing={3}>
+          <Grid
+            container
+            item
+            justify="center"
+            alignItems="center"
+            spacing={3}
+            md={9}
+            xl={12}
+          >
             {repos
               .filter((repo) => repo.name !== 'PiotrRut')
               .map((repo, index) => (
