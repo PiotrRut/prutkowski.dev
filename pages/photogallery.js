@@ -12,6 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';
 import Typography from '@material-ui/core/Typography';
 import SEO from '@components/SEO';
+import * as dayjs from 'dayjs';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
 const PhotoGallery = () => {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
   const [selectedURLS, setUrl] = useState({});
+  const [lastUpdated, setUpdated] = useState(Date());
   const [open, setOpen] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
   const classes = useStyles();
@@ -47,7 +49,8 @@ const PhotoGallery = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
-      setImgs(response.data.reverse());
+      setImgs(response.data.images.reverse());
+      setUpdated(response.data.info[0].lastUpdated);
     };
     fetchData();
   }, []);
@@ -102,7 +105,9 @@ const PhotoGallery = () => {
               <br />
               Follow the link from within the preview for full-size!!
             </Typography>
-            <br />
+            <Typography className="text-gray-200 text-center wow fadeIn">
+              Gallery last updated on {dayjs(lastUpdated).format('D MMM YYYY')}
+            </Typography>
             <h6 className="text-gray-200 text-center wow fadeIn">
               Want more? Visit my{' '}
               <a

@@ -38,7 +38,7 @@ function PhotosPreview() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
-      setImgs(response.data.reverse());
+      setImgs(response.data.images.reverse());
     };
     fetchData();
   }, []);
