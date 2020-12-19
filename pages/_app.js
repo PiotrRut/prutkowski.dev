@@ -9,9 +9,20 @@ import '@css/prism-okaidia.css';
 
 // Style override for site-wide font family
 // MUI Typography needs this, otherwise it will default to Roboto
-const theme = createMuiTheme({
+const custTheme = createMuiTheme({
   typography: {
     fontFamily: `"Ubuntu", "Roboto", "Arial", sans-serif`,
+  },
+  palette: {
+    primary: {
+      main: '#ed85e3',
+    },
+    secondary: {
+      light: '#11cb5f',
+      dark: '#11cb5f',
+      contrastText: '#11cb5f',
+      main: '#11cb5f',
+    },
   },
 });
 
@@ -28,7 +39,7 @@ const MyApp = ({ Component, pageProps }) => {
   }, []);
 
   return (
-    <MuiThemeProvider theme={theme}>
+    <MuiThemeProvider theme={custTheme}>
       <SEO title="Home" />
       {isMounted && <Component {...pageProps} />}
     </MuiThemeProvider>

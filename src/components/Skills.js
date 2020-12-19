@@ -1,10 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import { skills } from '@misc/skills';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Image from 'next/image';
+import Chip from '@material-ui/core/Chip';
 
 // Styles override
 const useStyles = makeStyles({
@@ -31,7 +30,14 @@ function Skills() {
             Some things I know...
           </Typography>
         </Grid>
-        <Grid container item justify="center" alignItems="center" spacing={3}>
+        <Grid
+          container
+          item
+          justify="center"
+          alignItems="center"
+          spacing={3}
+          lg={9}
+        >
           {skills.map((s, i) => {
             return (
               <Grid
@@ -42,30 +48,11 @@ function Skills() {
                   animationDelay: `${i * 70 + 70}ms`,
                 }}
               >
-                <Paper
-                  elevation={3}
-                  style={{
-                    width: '300px',
-                    maxHeight: '20vh',
-                    padding: '15px',
-                    background: '#212121',
-                  }}
-                >
-                  <Grid container direction="row" spacing={2}>
-                    <Grid item>
-                      <h6 className="text-gray-200">
-                        <Image
-                          src={s.icon}
-                          width="18"
-                          height="18"
-                          alt={s.name}
-                        />
-                        &nbsp;{s.name}
-                      </h6>
-                      <h6 className="text-gray-500">{s.category}</h6>
-                    </Grid>
-                  </Grid>
-                </Paper>
+                <Chip
+                  label={s.name}
+                  variant="outlined"
+                  style={{ background: '#A7FFEB' }}
+                />
               </Grid>
             );
           })}
