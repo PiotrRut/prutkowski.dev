@@ -8,6 +8,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.11.2",
     "axios": "^0.21.1",
+    "babel-plugin-styled-components": "^1.12.0",
     "dayjs": "^1.9.6",
     "mdi-material-ui": "^6.15.0",
     "next": "^10.0.1",
@@ -24,6 +25,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
     "react-typist": "^2.0.5",
+    "styled-components": "^5.2.1",
     "wow.js": "^1.2.2",
     "xml-js": "^1.6.11"
   },

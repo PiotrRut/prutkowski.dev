@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { skills } from '@misc/skills';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Chip from '@material-ui/core/Chip';
+import styled from 'styled-components';
 
 // Styles override
 const useStyles = makeStyles({
@@ -11,6 +11,21 @@ const useStyles = makeStyles({
     color: 'white',
   },
 });
+
+const SkillItem = styled.div`
+  color: white;
+  display: inline-flex;
+  padding: 0 12px;
+  border-radius: 16px;
+  border: 1px solid #009ab6;
+  height: 32px;
+  align-items: center;
+  transition: 350ms;
+
+  &:hover {
+    transform: translateX(-3px) translateY(-2px);
+  }
+`;
 
 // Sections with my skills displayed
 function Skills() {
@@ -48,11 +63,7 @@ function Skills() {
                   animationDelay: `${i * 70 + 70}ms`,
                 }}
               >
-                <Chip
-                  label={s.name}
-                  variant="outlined"
-                  style={{ background: '#A7FFEB' }}
-                />
+                <SkillItem key={s.name}>{s.name}</SkillItem>
               </Grid>
             );
           })}
