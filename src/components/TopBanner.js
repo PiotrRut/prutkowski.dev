@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     color: 'transparent',
     backgroundImage: 'linear-gradient(to right, #005e7f, #61b6cd)',
     backgroundClip: 'text',
+    WebkitBackgroundClip: 'text',
   },
 });
 
