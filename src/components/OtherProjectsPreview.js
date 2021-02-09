@@ -16,7 +16,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 370,
-    background: '#212121',
+    background: '#1a1a1a',
     [theme.breakpoints.down('sm')]: {
       width: 300,
     },

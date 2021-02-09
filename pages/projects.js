@@ -111,7 +111,7 @@ const Projects = () => {
                       width: '350px',
                       maxHeight: '110vh',
                       padding: '15px',
-                      background: '#212121',
+                      background: '#1a1a1a',
                     }}
                   >
                     <Grid direction="column" container spacing={2}>

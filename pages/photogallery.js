@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
     // position the dialog properly and add black bg
     margin: -35,
     padding: theme.spacing(5),
-    backgroundColor: '#212121',
+    backgroundColor: '#1a1a1a',
   },
   paper: {
     // set colour of the paper dialog
-    backgroundColor: '#212121',
+    backgroundColor: '#1a1a1a',
   },
   snackbar: {
     // pull the snackbar up from the bottom on smaller screens
@@ -133,7 +133,7 @@ const PhotoGallery = () => {
                 <Paper
                   elevation={3}
                   className="gallery-pics"
-                  style={{ padding: '8px', background: '#212121' }}
+                  style={{ padding: '8px', background: '#1a1a1a' }}
                 >
                   <Grid direction="column" container spacing={2}>
                     <Grid item>
