@@ -13,12 +13,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import Typography from '@material-ui/core/Typography';
 import SEO from '@components/SEO';
 import * as dayjs from 'dayjs';
-import {
-  m as motion,
-  MotionConfig,
-  GesturesFeature,
-  AnimationFeature,
-} from 'framer-motion';
+import { m as motion, MotionConfig } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,6 +44,7 @@ const PhotoGallery = () => {
   const [lastUpdated, setUpdated] = useState(Date());
   const [open, setOpen] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
+  const [features, setFeatures] = useState([]);
   const classes = useStyles();
 
   // Fetch all image URLs from Azure via my backend and append to array
@@ -59,6 +55,12 @@ const PhotoGallery = () => {
       setUpdated(response.data.info[0].lastUpdated);
     };
     fetchData();
+  }, []);
+
+  useEffect(() => {
+    import('@misc/motionConfig').then((res) => {
+      setFeatures(res.default);
+    });
   }, []);
 
   // Open picture dialog
@@ -81,7 +83,7 @@ const PhotoGallery = () => {
 
   return (
     <Layout>
-      <MotionConfig features={[GesturesFeature, AnimationFeature]}>
+      <MotionConfig features={features}>
         <SEO title="Gallery" />
         <div className="container grid-cols-1 gap-y-16">
           <br />
