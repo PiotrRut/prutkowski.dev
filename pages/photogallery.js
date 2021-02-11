@@ -99,11 +99,6 @@ const PhotoGallery = () => {
               <Typography variant="h4" component="h1" className={classes.text}>
                 📸 My Gallery
               </Typography>
-              <h6 className="text-center wow fadeIn">
-                <Link href="/" passHref>
-                  <a>Return home</a>
-                </Link>
-              </h6>
             </Grid>
             <Grid item md={12} lg={12} xl={12} xs={12}>
               <Typography className="text-gray-200 text-center wow fadeIn">

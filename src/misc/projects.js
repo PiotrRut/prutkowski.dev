@@ -1,9 +1,9 @@
 export const projects = [
   {
     picture: 'FXHome.webp',
-    title: 'FairFX Multicurrency Web',
+    title: 'FairFX Multi-currency Web',
     description:
-      'The FairFX Multicurrency web app makes it easy to manage, pause and replace your multicurrency card online, along with addding and exchanging money on the go!',
+      'The FairFX Multi-currency web app makes it easy to manage, pause and replace your multicurrency card online, along with addding and exchanging money on the go!',
     path: 'https://app.fairfx.com',
     team: 'Jamie Halvorson, Mahedi Hasan, Tabasom Aryamanesh',
   },
