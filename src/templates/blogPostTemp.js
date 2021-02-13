@@ -1,4 +1,3 @@
-import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Grid from '@material-ui/core/Grid';
 import SEO from '../components/seo';

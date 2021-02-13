@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';

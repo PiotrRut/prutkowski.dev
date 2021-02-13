@@ -1,4 +1,3 @@
-import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { projects } from '@misc/projects';
 import { makeStyles } from '@material-ui/core/styles';

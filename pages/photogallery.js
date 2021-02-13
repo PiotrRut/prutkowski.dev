@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
@@ -220,7 +220,7 @@ const PhotoGallery = () => {
             message="View full version"
             className={classes.snackbar}
             action={
-              <React.Fragment>
+              <Fragment>
                 <Button
                   color="secondary"
                   rel="noopener noreferrer"
@@ -230,7 +230,7 @@ const PhotoGallery = () => {
                 >
                   CLICK HERE
                 </Button>
-              </React.Fragment>
+              </Fragment>
             }
           />
           <br />

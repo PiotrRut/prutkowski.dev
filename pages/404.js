@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import router from 'next/router';
 import Layout from '@components/layout';
@@ -6,9 +6,9 @@ import SEO from '@components/SEO';
 
 // 404 Route
 const PageNotFound = () => {
-  const [countdown, setCountdown] = React.useState(10);
+  const [countdown, setCountdown] = useState(10);
 
-  React.useEffect(() => {
+  useEffect(() => {
     while (countdown > 0) {
       const timer = setInterval(
         () =>

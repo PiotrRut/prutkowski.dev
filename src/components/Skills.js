@@ -1,4 +1,3 @@
-import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { skills } from '@misc/skills';
 import { Typography } from '@material-ui/core';

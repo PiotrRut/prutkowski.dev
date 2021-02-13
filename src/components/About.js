@@ -1,4 +1,3 @@
-import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import * as dayjs from 'dayjs';
 import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
@@ -67,11 +66,11 @@ function About() {
         <Grid item lg={9} xl={10}>
           <h5 className="text-gray-200 text-left wow fadeIn">
             Great question! My name is Piotr, although people mostly call me
-            Peter, and I am a {age} year old programmer and second-year BSc
-            Computer Science student at City, University of London. I was
-            originally born in Poland, but for the majority of my life I&#39;ve
-            been living in Norway. I am currently working as an intern software
-            engineer for <a href="http://equalsmoney.com">Equals</a>!
+            Peter, and I am a {age} year old programmer and a BSc Computer
+            Science student at City, University of London. I was originally born
+            in Poland, but for the majority of my life I&#39;ve been living in
+            Norway. I am currently working as an intern software engineer at{' '}
+            <a href="http://equalsmoney.com">Equals</a>!
           </h5>
           <br />
           <h5 className="text-gray-200 text-left wow fadeIn">

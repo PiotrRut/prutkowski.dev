@@ -1,4 +1,3 @@
-import React from 'react';
 import TopBanner from '@components/TopBanner';
 import About from '@components/About';
 import Grid from '@material-ui/core/Grid';
