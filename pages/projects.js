@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import Layout from '@components/layout';
 import { makeStyles } from '@material-ui/core/styles';
 import SEO from '@components/SEO';
+import BACKEND_URL from '@misc/backend';
 
 // Styles override
 const useStyles = makeStyles({
@@ -27,9 +28,7 @@ const Projects = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(
-        `https://api.github.com/users/PiotrRut/repos?sort=created`
-      );
+      const response = await axios.get(`${BACKEND_URL}/platforms/github/repos`);
       setRepos(response.data);
     };
     fetchData();
@@ -89,75 +88,73 @@ const Projects = () => {
             md={9}
             xl={12}
           >
-            {repos
-              .filter((repo) => repo.name !== 'PiotrRut')
-              .map((repo, index) => (
-                <Grid
-                  item
-                  className="wow fadeIn"
-                  key={repo.id}
+            {repos.map((repo, index) => (
+              <Grid
+                item
+                className="wow fadeIn"
+                key={repo.id}
+                style={{
+                  animationDelay: `${index * 70 + 70}ms`,
+                }}
+              >
+                <Paper
+                  elevation={3}
                   style={{
-                    animationDelay: `${index * 70 + 70}ms`,
+                    width: '350px',
+                    maxHeight: '110vh',
+                    padding: '15px',
+                    background: '#1a1a1a',
                   }}
                 >
-                  <Paper
-                    elevation={3}
-                    style={{
-                      width: '350px',
-                      maxHeight: '110vh',
-                      padding: '15px',
-                      background: '#1a1a1a',
-                    }}
-                  >
-                    <Grid direction="column" container spacing={2}>
-                      <Grid item>
-                        <i>
-                          <h5>
-                            <a className="text-gray-200" href={repo.html_url}>
-                              {repo.name}
-                            </a>
-                          </h5>
-                        </i>
-                      </Grid>
-                      <Grid item>
-                        <h6 className="text-gray-300">{repo.description}</h6>
-                      </Grid>
-                      <Grid item>
-                        <h6 className="text-gray-300">
-                          <FiberManualRecordIcon
-                            className={repo.language}
-                            fontSize="small"
-                            style={{ paddingBottom: '3px' }}
-                          />{' '}
-                          {repo.language}
-                          &nbsp;
-                          {repo.stargazers_count >= 1 && (
-                            <span>
-                              <GradeIcon
-                                fontSize="small"
-                                style={{ paddingBottom: '3px' }}
-                              />
-                              {repo.stargazers_count}
-                            </span>
-                          )}
-                          &nbsp;
-                          {repo.forks >= 1 && (
-                            <span>
-                              <SourceFork
-                                style={{
-                                  fontSize: '18px',
-                                  paddingBottom: '3px',
-                                }}
-                              />
-                              {repo.forks}
-                            </span>
-                          )}
-                        </h6>
-                      </Grid>
+                  <Grid direction="column" container spacing={2}>
+                    <Grid item>
+                      <i>
+                        <h5>
+                          <a className="text-gray-200" href={repo.url}>
+                            {repo.name}
+                          </a>
+                        </h5>
+                      </i>
                     </Grid>
-                  </Paper>
-                </Grid>
-              ))}
+                    <Grid item>
+                      <h6 className="text-gray-300">{repo.description}</h6>
+                    </Grid>
+                    <Grid item>
+                      <h6 className="text-gray-300">
+                        <FiberManualRecordIcon
+                          className={repo.language}
+                          fontSize="small"
+                          style={{ paddingBottom: '3px' }}
+                        />{' '}
+                        {repo.language}
+                        &nbsp;
+                        {repo.stars >= 1 && (
+                          <span>
+                            <GradeIcon
+                              fontSize="small"
+                              style={{ paddingBottom: '3px' }}
+                            />
+                            {repo.stars}
+                          </span>
+                        )}
+                        &nbsp;
+                        {repo.forks >= 1 && (
+                          <span>
+                            <SourceFork
+                              style={{
+                                fontSize: '18px',
+                                paddingBottom: '3px',
+                              }}
+                            />
+                            {repo.forks}
+                          </span>
+                        )}
+                      </h6>
+                    </Grid>
+                  </Grid>
+                </Paper>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
         <br />
