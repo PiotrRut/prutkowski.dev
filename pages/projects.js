@@ -57,7 +57,7 @@ const Projects = () => {
           </Grid>
           <Grid item md={12} lg={12} xl={12}>
             <Typography className="text-gray-200 text-center wow fadeIn">
-              Below you can see all <b>{repos.length - 1}</b> of my public
+              Below you can see all <b>{repos.length}</b> of my public
               repositories, updated automatically via the GitHub API.
             </Typography>
             <Typography className="text-gray-200 text-center wow fadeIn">
@@ -74,7 +74,7 @@ const Projects = () => {
                 .map((l, i) => (
                   <span key={i}>
                     {l}: {repos.filter((r) => r.language === l).length}{' '}
-                    {i < languages.length - 2 && '/'} {''}
+                    {i < languages.length - 1 && '/'} {''}
                   </span>
                 ))}
             </Typography>
