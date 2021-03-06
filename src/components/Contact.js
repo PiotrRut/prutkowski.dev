@@ -37,7 +37,7 @@ function Contact() {
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
           <Typography variant="subtitle1">
-            <a href="mailto:piotr.rut99@gmail.com">piotr.rut99@gmail.com</a>
+            <a href="mailto:contact@prutkowski.dev">contact@prutkowski.dev</a>
           </Typography>
         </Grid>
       </Grid>

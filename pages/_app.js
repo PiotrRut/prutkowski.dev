@@ -15,6 +15,7 @@ const custTheme = createMuiTheme({
   },
 });
 
+// eslint-disable-next-line react/prop-types
 const MyApp = ({ Component, pageProps }) => {
   const [isMounted, setIsMounted] = useState(false);
 
