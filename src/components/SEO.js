@@ -18,12 +18,12 @@ const SEO = ({ title }) => {
       <title>{`${title} | Piotr Rutkowski`}</title>
       <meta name="description" content={description} />
 
-      <meta property="og:image" content="https://prutkowski.tech/social.webp" />
+      <meta property="og:image" content="https://prutkowski.dev/social.webp" />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={`${title} | Piotr Rutkowski`} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="Piotr Rutkowski" />
-      <meta property="og:url" content="https://prutkowski.tech/" />
+      <meta property="og:url" content="https://prutkowski.dev/" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -31,10 +31,7 @@ const SEO = ({ title }) => {
       <meta property="twitter:title" content={`${title} | Piotr Rutkowski`} />
       <meta name="twitter:site" content="@PiotrRut99" />
       <meta property="twitter:description" content={description} />
-      <meta
-        name="twitter:image"
-        content="https://prutkowski.tech/social.webp"
-      />
+      <meta name="twitter:image" content="https://prutkowski.dev/social.webp" />
     </Head>
   );
 };
