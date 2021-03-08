@@ -14,7 +14,12 @@ const SEO = ({ title }) => {
 
   return (
     <Head>
-      <link rel="shortcut icon" href="/favicon-32.png" />
+      <link rel="icon" href="/favicon-32.png" sizes="32x32" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
       <title>{`${title} | Piotr Rutkowski`}</title>
       <meta name="description" content={description} />
 
