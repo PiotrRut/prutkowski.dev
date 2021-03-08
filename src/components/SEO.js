@@ -32,6 +32,8 @@ const SEO = ({ title }) => {
       <meta name="twitter:site" content="@PiotrRut99" />
       <meta property="twitter:description" content={description} />
       <meta name="twitter:image" content="https://prutkowski.dev/social.webp" />
+
+      <link rel="canonical" href="https://prutkowski.dev" />
     </Head>
   );
 };
