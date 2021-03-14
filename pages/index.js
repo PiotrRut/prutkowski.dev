@@ -3,7 +3,6 @@ import About from '@components/About';
 import Grid from '@material-ui/core/Grid';
 import Skills from '@components/Skills';
 import GitProjectsPreview from '@components/GitProjectsPreview';
-import BlogPostsPreview from '@components/BlogPostsPreview';
 import PhotosPreview from '@components/PhotosPreview';
 import Contact from '@components/Contact';
 import OtherProjectsPreview from '@components/OtherProjectsPreview';
@@ -22,7 +21,7 @@ const IndexPage = () => {
           container
           spacing={5}
         >
-          <Grid item xl={9} lg={5} xs={12}>
+          <Grid item xs={12}>
             <TopBanner />
           </Grid>
           <Grid item xl={9} lg={10} xs={12}>
@@ -36,9 +35,6 @@ const IndexPage = () => {
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
             <OtherProjectsPreview />
-          </Grid>
-          <Grid item xl={9} lg={9} xs={12}>
-            <BlogPostsPreview />
           </Grid>
           <Grid item xl={9} lg={9} xs={12}>
             <PhotosPreview />

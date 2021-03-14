@@ -13,7 +13,7 @@ body {
   width: 100%;
 }
 .bounce {
-  animation: bounce 2s infinite;
+  animation: bounce 4s infinite;
 }
 
 @keyframes bounce {
@@ -37,7 +37,7 @@ body {
 }
 
 h1 {
-  @apply text-6xl;
+  @apply text-8xl;
 }
 
 h2 {
@@ -76,9 +76,9 @@ p {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 720px) {
   h1 {
-    @apply text-5xl;
+    font-size: 3rem;
   }
   span {
     font-size: 0.9em;

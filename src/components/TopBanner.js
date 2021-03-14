@@ -1,42 +1,28 @@
-import Image from 'next/image';
-import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
 
-// Styles override
-const useStyles = makeStyles({
-  root: {
-    color: 'transparent',
-    backgroundImage: 'linear-gradient(to right, #005e7f, #61b6cd)',
-    backgroundClip: 'text',
-    WebkitBackgroundClip: 'text',
-  },
-});
+const Header = styled.header`
+  color: transparent;
+  background-image: linear-gradient(to right, #005e7f, #61b6cd);
+  background-clip: text;
+  --webkit-background-clip: text;
+  padding-bottom: 2rem;
+`;
+
+const Nav = styled.div`
+  padding-bottom: 2rem;
+`;
 
 // The top banner with profile pic, name, and some animated text
 function TopBanner() {
-  const classes = useStyles();
-
   return (
     <section
       id="top-banner"
-      className="min-h-screen flex items-center container"
+      className="flex flex-col items-center justify-center container min-h-screen"
     >
-      <Grid
-        direction="column"
-        justify="center"
-        alignItems="center"
-        container
-        spacing={7}
-      >
-        <Grid item lg={12} xl={12} xs={12} sm={12}>
-          <Image src="/ProfileImg.webp" width={350} height={350} />
-        </Grid>
-        <Typography variant="h3" component="h1" classes={classes} gutterBottom>
-          Piotr Rutkowski
-        </Typography>
+      <Header as="h1">Piotr Rutkowski</Header>
+      <Nav>
         <h6 className="wow fadeIn text-gray-500">
           <a href="#skills">
             <span className="cursor-pointer nav text-gray-500"> Skills </span>
@@ -50,10 +36,6 @@ function TopBanner() {
             <span className="cursor-pointer nav text-gray-500"> Projects </span>
           </a>
           |
-          <a href="#blog-prev">
-            <span className="cursor-pointer nav text-gray-500"> Blog </span>
-          </a>
-          |
           <a href="#photos-prev">
             <span className="cursor-pointer nav text-gray-500"> Gallery </span>
           </a>
@@ -62,17 +44,12 @@ function TopBanner() {
             <span className="cursor-pointer nav text-gray-500"> Contact </span>
           </a>
         </h6>
-        <Grid item>
-          <a href="#about-me">
-            <IconButton aria-label="about" className="scrollArrow bounce">
-              <KeyboardArrowDownIcon
-                fontSize="large"
-                style={{ color: 'white' }}
-              />
-            </IconButton>
-          </a>
-        </Grid>
-      </Grid>
+      </Nav>
+      <a href="#about-me">
+        <IconButton aria-label="about" className="bounce">
+          <KeyboardArrowDownIcon fontSize="large" style={{ color: 'white' }} />
+        </IconButton>
+      </a>
     </section>
   );
 }

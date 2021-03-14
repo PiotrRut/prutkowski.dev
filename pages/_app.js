@@ -5,7 +5,6 @@ import SEO from '@components/SEO';
 import '@css/style.css';
 import '@css/animate.css';
 import '@css/languages.css';
-import '@css/prism-okaidia.css';
 
 // Style override for site-wide font family
 // MUI Typography needs this, otherwise it will default to Roboto
