@@ -4,6 +4,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 // Style override for site-wide font family
 // MUI Typography needs this, otherwise it will default to Roboto
+
 const theme = createMuiTheme({
   typography: {
     fontFamily: `"Ubuntu", "Roboto", "Arial", sans-serif`,

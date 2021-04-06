@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 // Show four pictures for gallery preview on main page
 function PhotosPreview() {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
-  const [selectedURLS, setUrl] = useState([]);
+  const [selectedURLS, setUrl] = useState({ lowRes: '', highRes: '' });
   const [open, setOpen] = useState(false);
   const classes = useStyles();
 
@@ -117,11 +117,7 @@ function PhotosPreview() {
           ))}
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Link
-            className="no-underline text-black"
-            href="/photogallery"
-            passHref
-          >
+          <Link href="/photogallery" passHref>
             <Button
               className="wow fadeIn"
               variant="contained"

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FunctionComponent } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 });
 
 // The projects page, with all of my projects fetched through the GitHub API
-const Projects = () => {
+const Projects: FunctionComponent = () => {
   const [repos, setRepos] = useState([]);
   const classes = useStyles();
 
@@ -161,7 +161,7 @@ const Projects = () => {
         <Grid container direction="column" justify="center" alignItems="center">
           <Grid item lg={12} xs={12} xl={12}>
             <br />
-            <Link className="no-underline text-black" href="/">
+            <Link href="/">
               <Button
                 variant="contained"
                 color="inherit"
