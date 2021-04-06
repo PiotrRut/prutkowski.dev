@@ -1,4 +1,6 @@
-export const projects = [
+import { Project } from './misc.models';
+
+export const projects: Project[] = [
   {
     picture: 'FXHome.webp',
     title: 'FairFX Multi-currency Web',
