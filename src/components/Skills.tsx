@@ -57,7 +57,7 @@ function Skills() {
               <Grid
                 item
                 className="wow fadeIn"
-                key={s.id}
+                key={i}
                 style={{
                   animationDelay: `${i * 70 + 70}ms`,
                 }}
