@@ -123,7 +123,7 @@ const GitProjectsPreview = () => {
           ))}
         </Grid>
         <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Link className="no-underline text-black" href="/projects" passHref>
+          <Link href="/projects" passHref>
             <Button
               className="wow fadeIn"
               variant="contained"

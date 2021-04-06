@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect, FunctionComponent } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
@@ -12,7 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';
 import Typography from '@material-ui/core/Typography';
 import SEO from '@components/SEO';
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import { m as motion, MotionConfig } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
@@ -38,9 +38,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // The Gallery page which displays my images stored in an MS Azure container
-const PhotoGallery = () => {
+const PhotoGallery: FunctionComponent = () => {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
-  const [selectedURLS, setUrl] = useState({});
+  const [selectedURLS, setUrl] = useState({ lowRes: '', highRes: '' });
   const [lastUpdated, setUpdated] = useState(Date());
   const [open, setOpen] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
@@ -94,7 +94,7 @@ const PhotoGallery = () => {
             container
             spacing={4}
           >
-            <Grid Grid item md={12} lg={12} xs={12} xl={12}>
+            <Grid item md={12} lg={12} xs={12} xl={12}>
               <br />
               <Typography variant="h4" component="h1" className={classes.text}>
                 📸 My Gallery
@@ -182,7 +182,7 @@ const PhotoGallery = () => {
           >
             <Grid item lg={12} xs={12} xl={12}>
               <br />
-              <Link className="no-underline text-black" href="/">
+              <Link href="/">
                 <Button
                   className="wow fadeIn"
                   variant="contained"
