@@ -1,5 +1,6 @@
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
 const Header = styled.header`
@@ -15,7 +16,7 @@ const Nav = styled.div`
 `;
 
 // The top banner with profile pic, name, and some animated text
-function TopBanner() {
+const Hero: FunctionComponent = () => {
   return (
     <section
       id="top-banner"
@@ -52,6 +53,6 @@ function TopBanner() {
       </a>
     </section>
   );
-}
+};
 
-export default TopBanner;
+export default Hero;

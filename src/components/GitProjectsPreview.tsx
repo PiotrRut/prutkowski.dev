@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FunctionComponent } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 });
 
 // The projects section on the main page, with three latest
-const GitProjectsPreview = () => {
+const GitProjectsPreview: FunctionComponent = () => {
   const classes = useStyles();
   const [repos, setRepos] = useState([]);
 

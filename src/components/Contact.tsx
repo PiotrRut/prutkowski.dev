@@ -1,6 +1,7 @@
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { FunctionComponent } from 'react';
 
 // Styles override
 const useStyles = makeStyles({
@@ -10,7 +11,7 @@ const useStyles = makeStyles({
 });
 
 // About me section
-function Contact() {
+const Contact: FunctionComponent = () => {
   const classes = useStyles();
 
   return (
@@ -45,6 +46,6 @@ function Contact() {
       <br />
     </section>
   );
-}
+};
 
 export default Contact;

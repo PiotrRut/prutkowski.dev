@@ -1,9 +1,13 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
+import { FunctionComponent, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactGA from 'react-ga';
 
-const SEO = ({ title }) => {
+interface SEOProps {
+  title: string;
+}
+
+const SEO: FunctionComponent<SEOProps> = ({ title }) => {
   const description =
     'Software developer based in London, UK. Currently working at Equals.';
 

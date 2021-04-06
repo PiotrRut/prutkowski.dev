@@ -1,4 +1,4 @@
-import { useState, useEffect, FunctionComponent } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
@@ -13,6 +13,7 @@ import Layout from '@components/layout';
 import { makeStyles } from '@material-ui/core/styles';
 import SEO from '@components/SEO';
 import BACKEND_URL from '@misc/backend';
+import { NextPage } from 'next';
 
 // Styles override
 const useStyles = makeStyles({
@@ -22,7 +23,7 @@ const useStyles = makeStyles({
 });
 
 // The projects page, with all of my projects fetched through the GitHub API
-const Projects: FunctionComponent = () => {
+const Projects: NextPage = () => {
   const [repos, setRepos] = useState([]);
   const classes = useStyles();
 

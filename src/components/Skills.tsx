@@ -3,6 +3,7 @@ import { skills } from '@misc/skills';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
+import { FunctionComponent } from 'react';
 
 // Styles override
 const useStyles = makeStyles({
@@ -27,7 +28,7 @@ const SkillItem = styled.div`
 `;
 
 // Sections with my skills displayed
-function Skills() {
+const Skills: FunctionComponent = () => {
   const classes = useStyles();
 
   return (
@@ -71,6 +72,6 @@ function Skills() {
       <br />
     </section>
   );
-}
+};
 
 export default Skills;

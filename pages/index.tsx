@@ -1,4 +1,4 @@
-import TopBanner from '@components/TopBanner';
+import Hero from '@components/Hero';
 import About from '@components/About';
 import Grid from '@material-ui/core/Grid';
 import Skills from '@components/Skills';
@@ -8,8 +8,9 @@ import Contact from '@components/Contact';
 import OtherProjectsPreview from '@components/OtherProjectsPreview';
 import Layout from '@components/layout';
 import SEO from '@components/SEO';
+import { NextPage } from 'next';
 
-const IndexPage = () => {
+const IndexPage: NextPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -22,7 +23,7 @@ const IndexPage = () => {
           spacing={5}
         >
           <Grid item xs={12}>
-            <TopBanner />
+            <Hero />
           </Grid>
           <Grid item xl={9} lg={10} xs={12}>
             <About />

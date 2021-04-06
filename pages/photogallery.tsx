@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect, FunctionComponent } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import Grid from '@material-ui/core/Grid';
@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import SEO from '@components/SEO';
 import dayjs from 'dayjs';
 import { m as motion, MotionConfig } from 'framer-motion';
+import { NextPage } from 'next';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // The Gallery page which displays my images stored in an MS Azure container
-const PhotoGallery: FunctionComponent = () => {
+const PhotoGallery: NextPage = () => {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
   const [selectedURLS, setUrl] = useState({ lowRes: '', highRes: '' });
   const [lastUpdated, setUpdated] = useState(Date());

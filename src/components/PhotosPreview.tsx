@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FunctionComponent } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // Show four pictures for gallery preview on main page
-function PhotosPreview() {
+const PhotosPreview: FunctionComponent = () => {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
   const [selectedURLS, setUrl] = useState({ lowRes: '', highRes: '' });
   const [open, setOpen] = useState(false);
@@ -148,6 +148,6 @@ function PhotosPreview() {
       <br />
     </section>
   );
-}
+};
 
 export default PhotosPreview;

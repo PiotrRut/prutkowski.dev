@@ -3,9 +3,10 @@ import Link from 'next/link';
 import router from 'next/router';
 import Layout from '@components/layout';
 import SEO from '@components/SEO';
+import { NextPage } from 'next';
 
 // 404 Route
-const PageNotFound = () => {
+const PageNotFound: NextPage = () => {
   const [countdown, setCountdown] = useState(10);
 
   useEffect(() => {

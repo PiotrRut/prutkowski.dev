@@ -4,6 +4,7 @@ import IconButton from '@material-ui/core/IconButton';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { socials } from '@misc/socials';
+import { FunctionComponent } from 'react';
 
 // Styles override
 const useStyles = makeStyles({
@@ -13,7 +14,7 @@ const useStyles = makeStyles({
 });
 
 // About me section
-function About() {
+const About: FunctionComponent = () => {
   const classes = useStyles();
 
   // Automatically update my age every year on my birthday
@@ -96,6 +97,6 @@ function About() {
       </Grid>
     </section>
   );
-}
+};
 
 export default About;
