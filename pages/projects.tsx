@@ -34,9 +34,6 @@ const Projects: FunctionComponent = () => {
     fetchData();
   }, []);
 
-  // Return all languages as an array from a set to get rid of duplicates
-  const languages = Array.from(new Set(repos.map((r) => r.language)));
-
   return (
     <Layout>
       <SEO title="GitHub Projects" />
@@ -62,21 +59,6 @@ const Projects: FunctionComponent = () => {
             </Typography>
             <Typography className="text-gray-200 text-center wow fadeIn">
               To visit the GitHub page for any of them, click the project name.
-            </Typography>
-          </Grid>
-          <Grid item md={12} lg={12} xl={12}>
-            <Typography className="text-gray-200 text-center wow fadeIn">
-              Language breakdown:
-            </Typography>
-            <Typography className="text-gray-200 text-center wow fadeIn">
-              {languages
-                .filter((l) => l !== null)
-                .map((l, i) => (
-                  <span key={i}>
-                    {l}: {repos.filter((r) => r.language === l).length}{' '}
-                    {i < languages.length - 1 && '/'} {''}
-                  </span>
-                ))}
             </Typography>
           </Grid>
           <Grid
