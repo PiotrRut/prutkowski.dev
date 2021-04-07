@@ -1,9 +1,9 @@
-import Grid from '@material-ui/core/Grid';
-import dayjs from 'dayjs';
-import IconButton from '@material-ui/core/IconButton';
 import { Typography } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import { socials } from '@misc/socials';
+import dayjs from 'dayjs';
 import { FunctionComponent } from 'react';
 
 // Styles override
@@ -18,9 +18,9 @@ const About: FunctionComponent = () => {
   const classes = useStyles();
 
   // Automatically update my age every year on my birthday
-  var bday = dayjs(new Date('1999/8/24'));
-  var now = dayjs();
-  var age = now.diff(bday, 'year');
+  const bday = dayjs(new Date('1999/8/24'));
+  const now = dayjs();
+  const age = now.diff(bday, 'year');
 
   return (
     <section id="about-me" className="overflow-hidden">

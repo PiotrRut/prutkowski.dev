@@ -1,9 +1,9 @@
-import Grid from '@material-ui/core/Grid';
-import { skills } from '@misc/skills';
 import { Typography } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import styled from 'styled-components';
+import { skills } from '@misc/skills';
 import { FunctionComponent } from 'react';
+import styled from 'styled-components';
 
 // Styles override
 const useStyles = makeStyles({

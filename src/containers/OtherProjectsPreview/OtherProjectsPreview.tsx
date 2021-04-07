@@ -1,15 +1,16 @@
-import Grid from '@material-ui/core/Grid';
-import { projects } from '@misc/projects';
-import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
-import Tooltip from '@material-ui/core/Tooltip';
+import { projects } from '@misc/projects';
+import { FunctionComponent } from 'react';
 
 // Styles override
 const useStyles = makeStyles((theme) => ({
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // Projects I am involved in with at work
-function OtherProjectsPreview() {
+const OtherProjectsPreview: FunctionComponent = () => {
   const classes = useStyles();
 
   return (
@@ -123,6 +124,6 @@ function OtherProjectsPreview() {
       <br />
     </section>
   );
-}
+};
 
 export default OtherProjectsPreview;

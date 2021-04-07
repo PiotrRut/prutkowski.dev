@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { FunctionComponent, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { FunctionComponent, useEffect } from 'react';
 import ReactGA from 'react-ga';
 
 interface SEOProps {

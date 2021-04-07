@@ -1,16 +1,18 @@
-import { useState, useEffect, FunctionComponent } from 'react';
-import axios from 'axios';
-import Link from 'next/link';
+import LanguageBlob from '@components/LanguageBlob';
+import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import GradeIcon from '@material-ui/icons/Grade';
-import SourceFork from 'mdi-material-ui/SourceFork';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import GradeIcon from '@material-ui/icons/Grade';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import BACKEND_URL from '@misc/backend';
+import axios from 'axios';
+import SourceFork from 'mdi-material-ui/SourceFork';
+import Link from 'next/link';
+import { FunctionComponent,useEffect, useState } from 'react';
+
+import { Repo } from './GitProjectsPreview.models';
 
 // Styles override
 const useStyles = makeStyles({
@@ -22,7 +24,7 @@ const useStyles = makeStyles({
 // The projects section on the main page, with three latest
 const GitProjectsPreview: FunctionComponent = () => {
   const classes = useStyles();
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState<Repo[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,7 +61,7 @@ const GitProjectsPreview: FunctionComponent = () => {
             <Grid
               item
               className="wow fadeIn"
-              key={repo.id}
+              key={index}
               style={{
                 animationDelay: `${index * 100 + 100}ms`,
               }}
@@ -88,8 +90,8 @@ const GitProjectsPreview: FunctionComponent = () => {
                   </Grid>
                   <Grid item>
                     <h6 className="text-gray-300">
-                      <FiberManualRecordIcon
-                        className={repo.language}
+                      <LanguageBlob
+                        language={repo.language}
                         fontSize="small"
                         style={{ paddingBottom: '3px' }}
                       />{' '}
