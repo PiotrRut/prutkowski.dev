@@ -1,19 +1,8 @@
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import { FunctionComponent } from 'react';
-import styled from 'styled-components';
+import React, { FunctionComponent } from 'react';
 
-const Header = styled.header`
-  color: transparent;
-  background-image: linear-gradient(to right, #005e7f, #61b6cd);
-  background-clip: text;
-  -webkit-background-clip: text;
-  padding-bottom: 2rem;
-`;
-
-const Nav = styled.div`
-  padding-bottom: 2rem;
-`;
+import { Header, Nav } from './Hero.styles';
 
 // The top banner with profile pic, name, and some animated text
 const Hero: FunctionComponent = () => {

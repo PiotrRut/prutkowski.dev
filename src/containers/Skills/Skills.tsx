@@ -2,8 +2,9 @@ import { Typography } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { skills } from '@misc/skills';
-import { FunctionComponent } from 'react';
-import styled from 'styled-components';
+import React, { FunctionComponent } from 'react';
+
+import { SkillItem } from './Skills.styles';
 
 // Styles override
 const useStyles = makeStyles({
@@ -11,21 +12,6 @@ const useStyles = makeStyles({
     color: 'white',
   },
 });
-
-const SkillItem = styled.div`
-  color: white;
-  display: inline-flex;
-  padding: 0 12px;
-  border-radius: 16px;
-  border: 1px solid #009ab6;
-  height: 32px;
-  align-items: center;
-  transition: 350ms;
-
-  &:hover {
-    transform: translateX(-3px) translateY(-2px);
-  }
-`;
 
 // Sections with my skills displayed
 const Skills: FunctionComponent = () => {
