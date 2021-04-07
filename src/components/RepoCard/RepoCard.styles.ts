@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const RepoCardRoot = styled.div`
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
-  padding: 15px;
-  width: 350px;
+  padding: 0.938rem;
+  width: 21.875rem;
 
   @media (max-width: 850px) {
     width: 80vw;
@@ -14,10 +14,10 @@ export const RepoCardRoot = styled.div`
 `;
 
 export const Name = styled.a`
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
   color: #fff;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
 
   &:hover {
     text-decoration: underline;
@@ -36,7 +36,7 @@ export const RepoDetails = styled.div`
 `;
 
 export const SectionWrapper = styled.div`
-  padding-right: 10px;
+  padding-right: 0.625rem;
   display: flex;
   align-items: center;
 `;
