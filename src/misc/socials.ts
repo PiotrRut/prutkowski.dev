@@ -1,4 +1,5 @@
 import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+
 import { Social } from './misc.models';
 
 export const socials: Social[] = [

@@ -1,6 +1,6 @@
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 // Style override for site-wide font family
 // MUI Typography needs this, otherwise it will default to Roboto
@@ -19,6 +19,7 @@ const Layout = ({ children }) => {
 
   if (typeof window !== 'undefined') {
     useEffect(() => {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       const WOW = require('wow.js');
       window.wow = new WOW().init();
     }, []);

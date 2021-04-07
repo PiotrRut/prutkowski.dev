@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import SEO from '@components/SEO';
-
 import '@css/style.css';
 import '@css/animate.css';
-import '@css/languages.css';
+
+import SEO from '@components/SEO';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { useEffect, useState } from 'react';
 
 // Style override for site-wide font family
 // MUI Typography needs this, otherwise it will default to Roboto
