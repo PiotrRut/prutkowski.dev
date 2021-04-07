@@ -1,16 +1,13 @@
-import LanguageBlob from '@components/LanguageBlob';
+import RepoCard from '@components/RepoCard';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import GradeIcon from '@material-ui/icons/Grade';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
-import SourceFork from 'mdi-material-ui/SourceFork';
 import Link from 'next/link';
-import { FunctionComponent,useEffect, useState } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 
 import { Repo } from './GitProjectsPreview.models';
 
@@ -66,61 +63,14 @@ const GitProjectsPreview: FunctionComponent = () => {
                 animationDelay: `${index * 100 + 100}ms`,
               }}
             >
-              <Paper
-                elevation={3}
-                style={{
-                  width: '300px',
-                  maxHeight: '110vh',
-                  padding: '15px',
-                  background: '#1a1a1a',
-                }}
-              >
-                <Grid direction="column" container spacing={2}>
-                  <Grid item>
-                    <i>
-                      <h5>
-                        <a className="text-gray-200" href={repo.url}>
-                          {repo.name}
-                        </a>
-                      </h5>
-                    </i>
-                  </Grid>
-                  <Grid item>
-                    <h6 className="text-gray-300">{repo.description}</h6>
-                  </Grid>
-                  <Grid item>
-                    <h6 className="text-gray-300">
-                      <LanguageBlob
-                        language={repo.language}
-                        fontSize="small"
-                        style={{ paddingBottom: '3px' }}
-                      />{' '}
-                      {repo.language}
-                      &nbsp;
-                      {repo.stars >= 1 && (
-                        <span>
-                          <GradeIcon
-                            style={{
-                              paddingBottom: '3px',
-                              fontSize: 'large',
-                            }}
-                          />
-                          {repo.stars}
-                        </span>
-                      )}
-                      &nbsp;
-                      {repo.forks >= 1 && (
-                        <span>
-                          <SourceFork
-                            style={{ fontSize: '18px', paddingBottom: '3px' }}
-                          />
-                          {repo.forks}
-                        </span>
-                      )}
-                    </h6>
-                  </Grid>
-                </Grid>
-              </Paper>
+              <RepoCard
+                language={repo.language}
+                forks={repo.forks}
+                name={repo.name}
+                stars={repo.stars}
+                description={repo.description}
+                url={repo.url}
+              />
             </Grid>
           ))}
         </Grid>

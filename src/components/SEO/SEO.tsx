@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { FunctionComponent, useEffect } from 'react';
 import ReactGA from 'react-ga';
 
-interface SEOProps {
-  title: string;
-}
+import { SEOProps } from './SEO.models';
 
 const SEO: FunctionComponent<SEOProps> = ({ title }) => {
   const description =

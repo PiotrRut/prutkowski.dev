@@ -1,20 +1,17 @@
-import LanguageBlob from '@components/LanguageBlob';
 import Layout from '@components/Layout';
+import RepoCard from '@components/RepoCard/RepoCard';
 import SEO from '@components/SEO';
 import { Repo } from '@containers/GitProjectsPreview/GitProjectsPreview.models';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import GradeIcon from '@material-ui/icons/Grade';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
-import SourceFork from 'mdi-material-ui/SourceFork';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Styles override
 const useStyles = makeStyles({
@@ -69,8 +66,7 @@ const GitHubProjects: NextPage = () => {
             justify="center"
             alignItems="center"
             spacing={3}
-            md={9}
-            xl={12}
+            xs={12}
           >
             {repos.map((repo, index) => (
               <Grid
@@ -81,62 +77,14 @@ const GitHubProjects: NextPage = () => {
                   animationDelay: `${index * 70 + 70}ms`,
                 }}
               >
-                <Paper
-                  elevation={3}
-                  style={{
-                    width: '350px',
-                    maxHeight: '110vh',
-                    padding: '15px',
-                    background: '#1a1a1a',
-                  }}
-                >
-                  <Grid direction="column" container spacing={2}>
-                    <Grid item>
-                      <i>
-                        <h5>
-                          <a className="text-gray-200" href={repo.url}>
-                            {repo.name}
-                          </a>
-                        </h5>
-                      </i>
-                    </Grid>
-                    <Grid item>
-                      <h6 className="text-gray-300">{repo.description}</h6>
-                    </Grid>
-                    <Grid item>
-                      <h6 className="text-gray-300">
-                        <LanguageBlob
-                          language={repo.language}
-                          fontSize="small"
-                          style={{ paddingBottom: '3px' }}
-                        />{' '}
-                        {repo.language}
-                        &nbsp;
-                        {repo.stars >= 1 && (
-                          <span>
-                            <GradeIcon
-                              fontSize="small"
-                              style={{ paddingBottom: '3px' }}
-                            />
-                            {repo.stars}
-                          </span>
-                        )}
-                        &nbsp;
-                        {repo.forks >= 1 && (
-                          <span>
-                            <SourceFork
-                              style={{
-                                fontSize: '18px',
-                                paddingBottom: '3px',
-                              }}
-                            />
-                            {repo.forks}
-                          </span>
-                        )}
-                      </h6>
-                    </Grid>
-                  </Grid>
-                </Paper>
+                <RepoCard
+                  language={repo.language}
+                  forks={repo.forks}
+                  name={repo.name}
+                  stars={repo.stars}
+                  description={repo.description}
+                  url={repo.url}
+                />
               </Grid>
             ))}
           </Grid>
