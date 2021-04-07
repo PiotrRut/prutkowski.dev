@@ -3,6 +3,9 @@
   "description": "Piotr Rutkowski",
   "version": "2.0.0",
   "author": "Piotr Rutkowski",
+  "engine": {
+    "node": "14.16"
+  },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.16",
     "@material-ui/core": "^4.11.2",
