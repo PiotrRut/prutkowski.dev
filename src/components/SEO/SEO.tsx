@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 import { FunctionComponent, useEffect } from 'react';
 import ReactGA from 'react-ga';
 
@@ -46,7 +45,3 @@ const SEO: FunctionComponent<SEOProps> = ({ title }) => {
 };
 
 export default SEO;
-
-SEO.propTypes = {
-  title: PropTypes.string,
-};

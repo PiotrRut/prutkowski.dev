@@ -1,5 +1,4 @@
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 
 // Style override for site-wide font family
@@ -30,11 +29,6 @@ const Layout = ({ children }) => {
       <div className="mx-8 lg:mx-16 xl:mx-0">{children}</div>
     </ThemeProvider>
   );
-};
-
-// Not using TypeScript sucks, huh?
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

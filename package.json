@@ -21,7 +21,6 @@
     "node-forge": "^0.10.0",
     "parcel-bundler": "^1.12.4",
     "postcss": "^8.2.1",
-    "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-ga": "^3.2.1",
