@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "author": "Piotr Rutkowski",
   "engines": {
-    "node": "^14.16"
+    "node": "^14"
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.16",
@@ -44,7 +44,7 @@
     "fix:lint": "eslint --ext .tsx --ext .ts . --fix",
     "fix:prettier": "prettier --write \"**/*.{css,js,jsx,json,md,tsx,ts}\"",
     "fix": "npm run fix:lint && npm run fix:prettier",
-    "build": "next build node -v",
+    "build": "next build",
     "develop": "next dev",
     "dev": "next dev",
     "start": "next start"
