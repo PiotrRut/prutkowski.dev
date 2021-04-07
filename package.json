@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "author": "Piotr Rutkowski",
   "engines": {
-    "node": "14.16.1"
+    "node": "^14.16"
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.16",
