@@ -1,4 +1,4 @@
-import { Language } from '@misc/languages';
+import { Colors } from 'github-linguist-colours';
 
 export interface Repo {
   /**
@@ -18,7 +18,7 @@ export interface Repo {
    *
    * [Allowed languages](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
    */
-  language: Language;
+  language: Colors;
   /**
    * How many starts does the repo have
    */

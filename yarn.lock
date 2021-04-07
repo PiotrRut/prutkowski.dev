@@ -6413,6 +6413,11 @@ github-from-package@0.0.0:
   resolved "https://registry.yarnpkg.com/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
   integrity sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=
 
+github-linguist-colours@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/github-linguist-colours/-/github-linguist-colours-1.1.1.tgz#6cad25f3dc670d5cbd428ad52efc325687fbc23a"
+  integrity sha512-Pzje41qA/U9GlOgwDPjRhjcjCcFbteGUgIel8blaUO7SHBRNmt99dq9XfAEN78e+cWCWMM8tRdBBG31n9JCUZQ==
+
 glob-parent@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
