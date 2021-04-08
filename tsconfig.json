@@ -20,7 +20,8 @@
       "@containers/*": ["src/containers/*"],
       "@misc/*": ["./src/misc/*"],
       "@css/*": ["./src/css/*"],
-      "@pages/*": ["./src/pages/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@theme/*": ["./src/theme/*"]
     }
   },
   "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx"],

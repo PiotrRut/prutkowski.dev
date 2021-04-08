@@ -1,12 +1,13 @@
+import { sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
 export const RepoCardRoot = styled.div`
-  border-radius: 0.625rem;
+  border-radius: ${sizes['10']};
   background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
-  padding: 0.938rem;
-  width: 21.875rem;
+  padding: ${sizes['15']};
+  width: ${sizes['350']};
 
   @media (max-width: 850px) {
     width: 80vw;
@@ -14,10 +15,10 @@ export const RepoCardRoot = styled.div`
 `;
 
 export const Name = styled.a`
-  font-size: 1.25rem;
+  font-size: ${sizes['20']};
   cursor: pointer;
   color: #fff;
-  padding-bottom: 0.625rem;
+  padding-bottom: ${sizes['10']};
 
   &:hover {
     text-decoration: underline;
@@ -36,7 +37,7 @@ export const RepoDetails = styled.div`
 `;
 
 export const SectionWrapper = styled.div`
-  padding-right: 0.625rem;
+  padding-right: ${sizes['10']};
   display: flex;
   align-items: center;
 `;

@@ -30,7 +30,7 @@ export interface Project {
   /**
    * Preview picture
    */
-  picture: string;
+  picture?: string;
   /**
    * Name of the project
    */
