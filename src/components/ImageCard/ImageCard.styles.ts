@@ -1,8 +1,6 @@
 import { sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
-// 250x200
-
 export const ImageCardRoot = styled.div`
   border-radius: ${sizes['10']};
   position: relative;
