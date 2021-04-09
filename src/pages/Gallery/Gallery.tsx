@@ -1,4 +1,3 @@
-import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -14,7 +13,7 @@ import dayjs from 'dayjs';
 import { m as motion, MotionConfig } from 'framer-motion';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { Fragment, useEffect,useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -83,7 +82,7 @@ const Gallery: NextPage = () => {
   };
 
   return (
-    <Layout>
+    <>
       <MotionConfig features={features}>
         <SEO title="Gallery" />
         <div className="container grid-cols-1 gap-y-16">
@@ -239,7 +238,7 @@ const Gallery: NextPage = () => {
           <br />
         </div>
       </MotionConfig>
-    </Layout>
+    </>
   );
 };
 

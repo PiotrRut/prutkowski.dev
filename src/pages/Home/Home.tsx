@@ -1,4 +1,3 @@
-import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import About from '@containers/About';
 import Contact from '@containers/Contact';
@@ -12,7 +11,7 @@ import { NextPage } from 'next';
 
 const IndexPage: NextPage = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
       <div className="container grid-cols-1 gap-y-16">
         <Grid
@@ -45,7 +44,7 @@ const IndexPage: NextPage = () => {
           </Grid>
         </Grid>
       </div>
-    </Layout>
+    </>
   );
 };
 

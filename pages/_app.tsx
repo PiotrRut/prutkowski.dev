@@ -1,9 +1,10 @@
 import '@css/style.css';
 import '@css/animate.css';
 
+import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Style override for site-wide font family
 // MUI Typography needs this, otherwise it will default to Roboto
@@ -13,7 +14,6 @@ const custTheme = createMuiTheme({
   },
 });
 
-// eslint-disable-next-line react/prop-types
 const MyApp = ({ Component, pageProps }) => {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -29,7 +29,11 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <MuiThemeProvider theme={custTheme}>
       <SEO title="Home" />
-      {isMounted && <Component {...pageProps} />}
+      {isMounted && (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
     </MuiThemeProvider>
   );
 };

@@ -32,7 +32,6 @@ const OtherProjectsPreview: FunctionComponent = () => {
             </Typography>
           </b>
         </Grid>
-        <Grid item md={12} lg={12} xl={12} xs={12}></Grid>
         <Grid container item justify="center" alignItems="center" spacing={4}>
           {projects.slice(0, 2).map((p, i) => (
             <Grid

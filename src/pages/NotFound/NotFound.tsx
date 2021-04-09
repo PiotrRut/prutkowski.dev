@@ -1,9 +1,8 @@
-import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import router from 'next/router';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // 404 Route
 const NotFound: NextPage = () => {
@@ -28,7 +27,7 @@ const NotFound: NextPage = () => {
   }, [countdown]);
 
   return (
-    <Layout>
+    <>
       <SEO title="Page Not Found" />
       <div className="container grid-cols-1 gap-y-16">
         <br />
@@ -60,7 +59,7 @@ const NotFound: NextPage = () => {
           seconds.
         </h3>
       </div>
-    </Layout>
+    </>
   );
 };
 

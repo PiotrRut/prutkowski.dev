@@ -8,7 +8,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
 import Link from 'next/link';
-import { FunctionComponent,useEffect, useState } from 'react';
+import { FunctionComponent, useEffect, useState } from 'react';
 
 // Styles override
 const useStyles = makeStyles((theme) => ({
@@ -64,14 +64,6 @@ const PhotosPreview: FunctionComponent = () => {
         <Grid item lg={12} xs={12} xl={12}>
           <Typography variant="h4" className={`wow fadeIn ${classes.text}`}>
             Gallery
-          </Typography>
-        </Grid>
-        <Grid item md={12} lg={12} xl={12} xs={12}>
-          <Typography
-            variant="subtitle1"
-            className={`wow fadeIn ${classes.text}`}
-          >
-            Here are some of my best shots!
           </Typography>
         </Grid>
         <Grid container item justify="center" alignItems="center" spacing={3}>

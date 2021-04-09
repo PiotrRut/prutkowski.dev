@@ -1,4 +1,3 @@
-import Layout from '@components/Layout';
 import RepoCard from '@components/RepoCard/RepoCard';
 import SEO from '@components/SEO';
 import { Repo } from '@containers/GitProjectsPreview/GitProjectsPreview.models';
@@ -34,7 +33,7 @@ const GitHubProjects: NextPage = () => {
   }, []);
 
   return (
-    <Layout>
+    <>
       <SEO title="GitHub Projects" />
       <div className="container grid-cols-1 gap-y-16">
         <br />
@@ -108,7 +107,7 @@ const GitHubProjects: NextPage = () => {
         <br />
         <br />
       </div>
-    </Layout>
+    </>
   );
 };
 
