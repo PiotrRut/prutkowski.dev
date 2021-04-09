@@ -103,9 +103,6 @@ const GitHubProjects: NextPage = () => {
             </Link>
           </Grid>
         </Grid>
-        <br />
-        <br />
-        <br />
       </div>
     </>
   );

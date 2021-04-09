@@ -1,19 +1,19 @@
+import ImageCard from '@components/ImageCard';
 import SEO from '@components/SEO';
+import { PicButton } from '@containers/PhotosPreview/PhotosPreview.styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
-import dayjs from 'dayjs';
 import { m as motion, MotionConfig } from 'framer-motion';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
 const Gallery: NextPage = () => {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
   const [selectedURLS, setUrl] = useState({ lowRes: '', highRes: '' });
-  const [lastUpdated, setUpdated] = useState(Date());
   const [open, setOpen] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
   const [features, setFeatures] = useState([]);
@@ -52,7 +51,6 @@ const Gallery: NextPage = () => {
     const fetchData = async () => {
       const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);
       setImgs(response.data.images.reverse());
-      setUpdated(response.data.info[0].lastUpdated);
     };
     fetchData();
   }, []);
@@ -109,10 +107,6 @@ const Gallery: NextPage = () => {
                 <br />
                 Follow the link from within the preview for full-size!!
               </Typography>
-              <Typography className="text-gray-200 text-center wow fadeIn">
-                Gallery last updated on{' '}
-                {dayjs(lastUpdated).format('D MMM YYYY')}
-              </Typography>
               <h6 className="text-gray-200 text-center wow fadeIn">
                 Want more? Visit my{' '}
                 <a
@@ -142,32 +136,20 @@ const Gallery: NextPage = () => {
                   }}
                 >
                   <motion.div whileHover={{ scale: 1.1 }}>
-                    <Paper
-                      elevation={3}
-                      className="gallery-pics"
-                      style={{ padding: '8px', background: '#212121' }}
-                    >
-                      <Grid direction="column" container spacing={2}>
-                        <Grid item>
-                          <div className="cursor-pointer">
-                            <img
-                              src={image.lowRes}
-                              height="180"
-                              width="180"
-                              onClick={() => {
-                                setUrl({
-                                  lowRes: image.lowRes,
-                                  highRes: image.highRes,
-                                });
-                                handleOpen();
-                                openSnackBar();
-                              }}
-                              alt="Image"
-                            />
-                          </div>
-                        </Grid>
-                      </Grid>
-                    </Paper>
+                    {image.lowRes && (
+                      <PicButton
+                        onClick={() => {
+                          setUrl({
+                            lowRes: image.lowRes,
+                            highRes: image.highRes,
+                          });
+                          handleOpen();
+                          openSnackBar();
+                        }}
+                      >
+                        <ImageCard path={image?.lowRes} />
+                      </PicButton>
+                    )}
                   </motion.div>
                 </Grid>
               ))}
@@ -233,9 +215,6 @@ const Gallery: NextPage = () => {
               </Fragment>
             }
           />
-          <br />
-          <br />
-          <br />
         </div>
       </MotionConfig>
     </>

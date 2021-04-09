@@ -1,14 +1,16 @@
+import ImageCard from '@components/ImageCard';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
 import Link from 'next/link';
-import { FunctionComponent, useEffect, useState } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
+
+import { PicButton } from './PhotosPreview.styles';
 
 // Styles override
 const useStyles = makeStyles((theme) => ({
@@ -76,35 +78,19 @@ const PhotosPreview: FunctionComponent = () => {
                 animationDelay: `${index * 150 + 150}ms`,
               }}
             >
-              <Paper
-                className="pic-preview-main"
-                elevation={3}
-                style={{
-                  maxHeight: '110vh',
-                  padding: '8px',
-                  background: '#1a1a1a',
-                }}
-              >
-                <Grid direction="column" container spacing={2}>
-                  <Grid item>
-                    <div className="cursor-pointer">
-                      <img
-                        src={image.lowRes}
-                        height="180"
-                        width="180"
-                        onClick={() => {
-                          setUrl({
-                            lowRes: image.lowRes,
-                            highRes: image.highRes,
-                          });
-                          handleOpen();
-                        }}
-                        alt="Image"
-                      />
-                    </div>
-                  </Grid>
-                </Grid>
-              </Paper>
+              {image.lowRes && (
+                <PicButton
+                  onClick={() => {
+                    setUrl({
+                      lowRes: image.lowRes,
+                      highRes: image.highRes,
+                    });
+                    handleOpen();
+                  }}
+                >
+                  <ImageCard path={image?.lowRes} />
+                </PicButton>
+              )}
             </Grid>
           ))}
         </Grid>
