@@ -5,7 +5,8 @@ import { ImageCardProps } from './ImageCard.models';
 import { ImageCardRoot, ImageWrapper } from './ImageCard.styles';
 
 /**
- * Card component for displaying repository information
+ * Given an image path will display a Next Image component in a
+ * small preview format
  */
 const ImageCard: FunctionComponent<ImageCardProps> = (props) => {
   const { path } = props;
