@@ -8,6 +8,11 @@ export const ImageCardRoot = styled.div`
   height: ${sizes['250']};
   width: ${sizes['200']};
   padding: ${sizes['5']};
+
+  @media (max-width: 850px) {
+    height: ${sizes['180']};
+    width: ${sizes['130']};
+  }
 `;
 
 export const ImageWrapper = styled.div`
