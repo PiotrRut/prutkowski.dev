@@ -2,7 +2,15 @@ import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import React, { FunctionComponent } from 'react';
 
-import { Header, Nav } from './Hero.styles';
+import { Header, Nav, NavItem } from './Hero.styles';
+
+const navItems = [
+  { link: '#skills', name: 'Skills' },
+  { link: '#proj-preview', name: 'GitHub' },
+  { link: '#other-proj-preview', name: 'Projects' },
+  { link: '#photos-prev', name: 'Gallery' },
+  { link: '#contact', name: 'Contact' },
+];
 
 // The top banner with profile pic, name, and some animated text
 const Hero: FunctionComponent = () => {
@@ -13,26 +21,10 @@ const Hero: FunctionComponent = () => {
     >
       <Header as="h1">Piotr Rutkowski</Header>
       <Nav>
-        <h6 className="wow fadeIn text-gray-500">
-          <a href="#skills">
-            <span className="cursor-pointer nav text-gray-500"> Skills </span>
-          </a>
-          |
-          <a href="#proj-preview">
-            <span className="cursor-pointer nav text-gray-500"> GitHub </span>
-          </a>
-          |
-          <a href="#other-proj-preview">
-            <span className="cursor-pointer nav text-gray-500"> Projects </span>
-          </a>
-          |
-          <a href="#photos-prev">
-            <span className="cursor-pointer nav text-gray-500"> Gallery </span>
-          </a>
-          |
-          <a href="#contact">
-            <span className="cursor-pointer nav text-gray-500"> Contact </span>
-          </a>
+        <h6 className="wow fadeIn">
+          {navItems.map((item) => (
+            <NavItem href={item.link}>{item.name}</NavItem>
+          ))}
         </h6>
       </Nav>
       <a href="#about-me">

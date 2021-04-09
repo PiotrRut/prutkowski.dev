@@ -32,10 +32,6 @@ body {
   }
 }
 
-.nav:hover {
-  color: rgb(231, 183, 109);
-}
-
 h1 {
   @apply text-8xl;
 }
