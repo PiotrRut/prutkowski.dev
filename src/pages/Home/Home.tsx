@@ -1,11 +1,11 @@
 import SEO from '@components/SEO';
-import About from '@containers/About';
-import Contact from '@containers/Contact';
-import GitProjectsPreview from '@containers/GitProjectsPreview';
-import Hero from '@containers/Hero';
-import OtherProjectsPreview from '@containers/OtherProjectsPreview';
-import PhotosPreview from '@containers/PhotosPreview';
-import Skills from '@containers/Skills';
+import About from '@content/About';
+import Contact from '@content/Contact';
+import GitProjectsPreview from '@content/GitProjectsPreview';
+import Hero from '@content/Hero';
+import OtherProjectsPreview from '@content/OtherProjectsPreview';
+import PhotosPreview from '@content/PhotosPreview';
+import Skills from '@content/Skills';
 import Grid from '@material-ui/core/Grid';
 import { NextPage } from 'next';
 

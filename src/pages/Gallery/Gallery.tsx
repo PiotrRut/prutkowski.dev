@@ -1,6 +1,6 @@
 import ImageCard from '@components/ImageCard';
 import SEO from '@components/SEO';
-import { PicButton } from '@containers/PhotosPreview/PhotosPreview.styles';
+import { PicButton } from '@content/PhotosPreview/PhotosPreview.styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import Grid from '@material-ui/core/Grid';
