@@ -15,10 +15,15 @@ export const Nav = styled.div`
 `;
 
 export const NavItem = styled.a`
-  cursor: pointer;
-  font-size: ${sizes['15']};
-  color: #fff;
-  &:not(:last-child):after {
-    content: ' | ';
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: inline;
+    cursor: pointer;
+    font-size: ${sizes['15']};
+    color: #fff;
+    &:not(:last-child):after {
+      content: ' | ';
+    }
   }
 `;
