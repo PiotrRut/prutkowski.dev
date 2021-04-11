@@ -6,24 +6,15 @@ import Hero from '@content/Hero';
 import OtherProjectsPreview from '@content/OtherProjectsPreview';
 import PhotosPreview from '@content/PhotosPreview';
 import Skills from '@content/Skills';
-import { MotionConfig } from 'framer-motion';
+import { domAnimation, LazyMotion } from 'framer-motion';
 import { NextPage } from 'next';
-import { useEffect, useState } from 'react';
 
 const IndexPage: NextPage = () => {
-  const [features, setFeatures] = useState([]);
-
-  useEffect(() => {
-    import('@misc/motionConfig').then((res) => {
-      setFeatures(res.default);
-    });
-  }, []);
-
   return (
     <>
       <SEO title="Home" />
       <div>
-        <MotionConfig features={features}>
+        <LazyMotion features={domAnimation}>
           <Hero />
           <About />
           <Skills />
@@ -31,7 +22,7 @@ const IndexPage: NextPage = () => {
           <OtherProjectsPreview />
           <PhotosPreview />
           <Contact />
-        </MotionConfig>
+        </LazyMotion>
       </div>
     </>
   );

@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
-import { m as motion, MotionConfig } from 'framer-motion';
+import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import React, { Fragment, useEffect, useState } from 'react';
@@ -43,7 +43,6 @@ const Gallery: NextPage = () => {
   const [selectedURLS, setUrl] = useState({ lowRes: '', highRes: '' });
   const [open, setOpen] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
-  const [features, setFeatures] = useState([]);
   const classes = useStyles();
 
   // Fetch all image URLs from Azure via my backend and append to array
@@ -53,12 +52,6 @@ const Gallery: NextPage = () => {
       setImgs(response.data.images.reverse());
     };
     fetchData();
-  }, []);
-
-  useEffect(() => {
-    import('@misc/motionConfig').then((res) => {
-      setFeatures(res.default);
-    });
   }, []);
 
   // Open picture dialog
@@ -81,7 +74,7 @@ const Gallery: NextPage = () => {
 
   return (
     <>
-      <MotionConfig features={features}>
+      <LazyMotion features={domAnimation}>
         <SEO title="Gallery" />
         <div className="container grid-cols-1 gap-y-16">
           <br />
@@ -216,7 +209,7 @@ const Gallery: NextPage = () => {
             }
           />
         </div>
-      </MotionConfig>
+      </LazyMotion>
     </>
   );
 };
