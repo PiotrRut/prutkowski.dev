@@ -1,6 +1,24 @@
 /* eslint-disable indent */
 import { sizes } from '@theme/tokens';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+const lineGrowHorizontal = keyframes`
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+`;
+
+const lineGrowVertical = keyframes`
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: ${sizes['180']};
+  }
+`;
 
 export const TimelineRoot = styled.div`
   padding: 0 0 ${sizes['30']};
@@ -13,26 +31,36 @@ export const TimelineRoot = styled.div`
   }
 `;
 
-export const TimelineItem = styled.div`
+export const TimelineItem = styled.div<{ inView: boolean }>`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
 
   &:before {
-    max-height: 90%;
     width: ${sizes['1']};
     background-color: grey;
     content: '';
     margin: 0 ${sizes['10']} ${sizes['20']} 0;
+    ${({ inView }) =>
+      inView &&
+      css`
+        animation: ${lineGrowVertical} 1s ease;
+        max-height: ${sizes['180']};
+      `};
   }
 
   @media (min-width: 1024px) {
     flex-direction: column;
     &:before {
       height: ${sizes['1']};
-      width: 90%;
       margin: 0 ${sizes['5']} ${sizes['10']} 0;
+      ${({ inView }) =>
+        inView &&
+        css`
+          animation: ${lineGrowHorizontal} 1s ease;
+          width: 90%;
+        `};
     }
   }
 `;
@@ -47,7 +75,7 @@ export const TimelineCard = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 1 0px;
-  width: 70vw;
+  width: 60vw;
 
   @media (min-width: 1024px) {
     width: ${sizes['300']};
@@ -67,7 +95,7 @@ export const Details = styled.p`
 
 export const DateMark = styled.span`
   color: grey;
-  width: ${sizes['34']};
+  width: ${sizes['50']};
 
   @media (min-width: 1024px) {
     width: ${sizes['100']};

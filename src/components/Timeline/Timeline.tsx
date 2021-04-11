@@ -30,7 +30,7 @@ const Timeline: FunctionComponent<TimelineProps> = (props) => {
               animate={inView && { y: [-10, 5], opacity: 1 }}
               transition={{ duration: index * 0.3 + 0.3 }}
             >
-              <TimelineItem>
+              <TimelineItem inView={inView}>
                 <DateMark>{event.date}</DateMark>
                 <TimelineCard>
                   <Title>{event.title}</Title>
