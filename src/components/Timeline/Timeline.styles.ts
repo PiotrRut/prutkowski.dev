@@ -75,7 +75,7 @@ export const TimelineCard = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 1 0px;
-  width: 60vw;
+  width: 70vw;
 
   @media (min-width: 1024px) {
     width: ${sizes['300']};
@@ -95,7 +95,7 @@ export const Details = styled.p`
 
 export const DateMark = styled.span`
   color: grey;
-  width: ${sizes['50']};
+  width: ${sizes['40']};
 
   @media (min-width: 1024px) {
     width: ${sizes['100']};

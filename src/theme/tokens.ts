@@ -18,6 +18,7 @@ export const sizes = {
   30: '1.875rem',
   32: '2rem',
   34: '2.125rem',
+  40: '2.5rem',
   50: '3.125rem',
   80: '5rem',
   100: '6.25rem',

@@ -22,7 +22,7 @@ const Timeline: FunctionComponent<TimelineProps> = (props) => {
   return (
     <TimelineRoot>
       {events.map((event, index) => (
-        <InView threshold={1}>
+        <InView threshold={1} triggerOnce={true}>
           {({ ref, inView }) => (
             <motion.div
               ref={ref}
