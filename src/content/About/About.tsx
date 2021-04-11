@@ -5,10 +5,10 @@ import React, { FunctionComponent } from 'react';
 
 const events: TimelineEvent[] = [
   {
-    date: 'June 2018',
-    title: 'Graduated High School 🎓',
+    date: 'July 2020',
+    title: 'New Job at Equals 🏦',
     content:
-      'I graduated with a diploma in electrical engineering and general studies, ready to start university!',
+      'I got an amazing opportunity to become a part of the engineering team at Equals in London, building multicurrency services for over a million customers!',
   },
   {
     date: 'Sept 2018',
@@ -17,10 +17,10 @@ const events: TimelineEvent[] = [
       'Shortly after graduating I moved to the UK to start a computer science degree at City, University of London!',
   },
   {
-    date: 'July 2020',
-    title: 'New Job at Equals 🏦',
+    date: 'June 2018',
+    title: 'Graduated High School 🎓',
     content:
-      'I got an amazing opportunity to become a part of the engineering team at Equals in London, building multicurrency services for over a million customers!',
+      'I graduated with a diploma in electrical engineering and general studies, ready to start university!',
   },
 ];
 
