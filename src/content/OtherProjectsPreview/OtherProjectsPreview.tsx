@@ -8,7 +8,7 @@ import { WorkProjectsWrapper } from './OtherProjectsPreview.styles';
 // Projects I am involved in with at work
 const OtherProjectsPreview: FunctionComponent = () => {
   return (
-    <Section heading="Other Projects">
+    <Section heading="Professional Projects">
       <WorkProjectsWrapper>
         {projects.slice(0, 2).map((p, i) => (
           <div

@@ -17,8 +17,8 @@ const IndexPage: NextPage = () => {
         <Hero />
         <About />
         <Skills />
-        <GitProjectsPreview />
         <OtherProjectsPreview />
+        <GitProjectsPreview />
         <PhotosPreview />
         <Contact />
       </LazyMotion>
