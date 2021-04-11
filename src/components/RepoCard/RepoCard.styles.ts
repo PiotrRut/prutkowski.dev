@@ -10,7 +10,7 @@ export const RepoCardRoot = styled.div`
   margin: 0 ${sizes['15']} ${sizes['15']};
   width: ${sizes['350']};
 
-  @media (max-width: 850px) {
+  @media (max-width: 1024px) {
     width: 80vw;
     margin: ${sizes['10']} 0;
   }

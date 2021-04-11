@@ -3,7 +3,6 @@ import SEO from '@components/SEO';
 import { PicButton } from '@content/PhotosPreview/PhotosPreview.styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
-import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -14,6 +13,8 @@ import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import React, { Fragment, useEffect, useState } from 'react';
+
+import { GalleryWrapper } from './Galllery.styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -73,144 +74,84 @@ const Gallery: NextPage = () => {
   };
 
   return (
-    <>
-      <LazyMotion features={domAnimation}>
-        <SEO title="Gallery" />
-        <div className="container grid-cols-1 gap-y-16">
-          <br />
-          <Grid
-            direction="column"
-            justify="center"
-            alignItems="center"
-            container
-            spacing={4}
-          >
-            <Grid item md={12} lg={12} xs={12} xl={12}>
-              <br />
-              <Typography variant="h4" component="h1" className={classes.text}>
-                📸 My Gallery
-              </Typography>
-            </Grid>
-            <Grid item md={12} lg={12} xl={12} xs={12}>
-              <Typography className="text-gray-200 text-center wow fadeIn">
-                Here you can see some of the pictures I&#39;ve taken!
-              </Typography>
-              <Typography className="text-gray-200 text-center wow fadeIn">
-                These images are compressed to reduce load.
-                <br />
-                Follow the link from within the preview for full-size!!
-              </Typography>
-              <h6 className="text-gray-200 text-center wow fadeIn">
-                Want more? Visit my{' '}
-                <a
-                  href="https://www.instagram.com/prutkowskii/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Instagram
-                </a>
-                .
-              </h6>
-            </Grid>
-            <Grid
-              container
-              item
-              justify="center"
-              alignItems="center"
-              spacing={4}
-            >
-              {images.map((image, index) => (
-                <Grid
-                  item
-                  className="wow fadeIn"
-                  key={image.lowRes}
-                  style={{
-                    animationDelay: `${index * 100 + 100}ms`,
-                  }}
-                >
-                  <motion.div whileHover={{ scale: 1.1 }}>
-                    {image.lowRes && (
-                      <PicButton
-                        onClick={() => {
-                          setUrl({
-                            lowRes: image.lowRes,
-                            highRes: image.highRes,
-                          });
-                          handleOpen();
-                          openSnackBar();
-                        }}
-                      >
-                        <ImageCard path={image?.lowRes} />
-                      </PicButton>
-                    )}
-                  </motion.div>
-                </Grid>
-              ))}
-            </Grid>
-          </Grid>
-          <br />
-          <Grid
-            container
-            direction="column"
-            justify="center"
-            alignItems="center"
-          >
-            <Grid item lg={12} xs={12} xl={12}>
-              <br />
-              <Link href="/">
-                <Button
-                  className="wow fadeIn"
-                  variant="contained"
-                  color="inherit"
-                  startIcon={<KeyboardBackspaceIcon />}
-                >
-                  Return home
-                </Button>
-              </Link>
-            </Grid>
-          </Grid>
+    <LazyMotion features={domAnimation}>
+      <SEO title="Gallery" />
+      <br />
+      <Typography variant="h4" component="h1" className={classes.text}>
+        📸 My Gallery
+      </Typography>
+      <GalleryWrapper>
+        {images.map((image, index) => (
+          <motion.div whileHover={{ scale: 1.1 }}>
+            {image.lowRes && (
+              <PicButton
+                onClick={() => {
+                  setUrl({
+                    lowRes: image.lowRes,
+                    highRes: image.highRes,
+                  });
+                  handleOpen();
+                  openSnackBar();
+                }}
+                key={index}
+              >
+                <ImageCard path={image?.lowRes} />
+              </PicButton>
+            )}
+          </motion.div>
+        ))}
+      </GalleryWrapper>
 
-          {/* Dialog with the selected picture for preview */}
-          <Dialog
-            classes={classes}
-            onClose={handleClose}
-            aria-labelledby="customized-dialog-title"
-            open={open}
-            scroll="body"
-            maxWidth="xs"
-          >
-            <div className={classes.paper}>
-              <img className="photoPreview" src={selectedURLS.lowRes} />
-            </div>
-          </Dialog>
+      <Link href="/">
+        <Button
+          className="wow fadeIn"
+          variant="contained"
+          color="inherit"
+          startIcon={<KeyboardBackspaceIcon />}
+        >
+          Return home
+        </Button>
+      </Link>
 
-          {/* Little snack bar with link to the full res version of each image */}
-          <Snackbar
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'center',
-            }}
-            open={openSnack}
-            onClose={closeSnackBar}
-            message="View full version"
-            className={classes.snackbar}
-            action={
-              <Fragment>
-                <Button
-                  color="secondary"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  size="small"
-                  href={selectedURLS.highRes}
-                >
-                  CLICK HERE
-                </Button>
-              </Fragment>
-            }
-          />
+      {/* Dialog with the selected picture for preview */}
+      <Dialog
+        classes={classes}
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open}
+        scroll="body"
+        maxWidth="xs"
+      >
+        <div className={classes.paper}>
+          <img className="photoPreview" src={selectedURLS.lowRes} />
         </div>
-      </LazyMotion>
-    </>
+      </Dialog>
+
+      {/* Little snack bar with link to the full res version of each image */}
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        open={openSnack}
+        onClose={closeSnackBar}
+        message="View full version"
+        className={classes.snackbar}
+        action={
+          <Fragment>
+            <Button
+              color="secondary"
+              rel="noopener noreferrer"
+              target="_blank"
+              size="small"
+              href={selectedURLS.highRes}
+            >
+              CLICK HERE
+            </Button>
+          </Fragment>
+        }
+      />
+    </LazyMotion>
   );
 };
 

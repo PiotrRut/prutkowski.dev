@@ -11,20 +11,18 @@ import { NextPage } from 'next';
 
 const IndexPage: NextPage = () => {
   return (
-    <>
+    <div>
       <SEO title="Home" />
-      <div>
-        <LazyMotion features={domAnimation}>
-          <Hero />
-          <About />
-          <Skills />
-          <GitProjectsPreview />
-          <OtherProjectsPreview />
-          <PhotosPreview />
-          <Contact />
-        </LazyMotion>
-      </div>
-    </>
+      <LazyMotion features={domAnimation}>
+        <Hero />
+        <About />
+        <Skills />
+        <GitProjectsPreview />
+        <OtherProjectsPreview />
+        <PhotosPreview />
+        <Contact />
+      </LazyMotion>
+    </div>
   );
 };
 

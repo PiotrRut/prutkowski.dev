@@ -10,7 +10,7 @@ export const SkillItem = styled.div`
   height: ${sizes['32']};
   align-items: center;
   transition: 350ms;
-  margin: ${sizes['5']};
+  margin: ${sizes['10']};
 
   &:hover {
     transform: translateX(-${sizes['3']}) translateY(-${sizes['2']});
@@ -23,7 +23,6 @@ export const SkillsWrapper = styled.div`
   direction: row;
   justify-content: center;
   align-items: center;
-  width: 80%;
 
   @media (min-width: 1024px) {
     width: 60%;

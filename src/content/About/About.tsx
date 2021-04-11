@@ -18,7 +18,7 @@ const events: TimelineEvent[] = [
   },
   {
     date: 'July 2020',
-    title: 'Started working at Equals 🏦',
+    title: 'New Job at Equals 🏦',
     content:
       'I got an amazing opportunity to become a part of the engineering team at Equals in London, building multicurrency services for over a million customers!',
   },
@@ -27,7 +27,7 @@ const events: TimelineEvent[] = [
 // About me section
 const About: FunctionComponent = () => {
   return (
-    <Section heading="What have I been up to?" id="about-me">
+    <Section heading="What's going on?" id="about-me">
       <Timeline events={events} />
     </Section>
   );

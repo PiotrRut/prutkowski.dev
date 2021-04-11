@@ -20,7 +20,7 @@ export const TimelineItem = styled.div`
   width: 100%;
 
   &:before {
-    max-height: ${sizes['150']};
+    max-height: 90%;
     width: ${sizes['1']};
     background-color: grey;
     content: '';
@@ -47,7 +47,7 @@ export const TimelineCard = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 1 0px;
-  width: 60vw;
+  width: 70vw;
 
   @media (min-width: 1024px) {
     width: ${sizes['300']};
@@ -67,7 +67,7 @@ export const Details = styled.p`
 
 export const DateMark = styled.span`
   color: grey;
-  width: ${sizes['50']};
+  width: ${sizes['34']};
 
   @media (min-width: 1024px) {
     width: ${sizes['100']};

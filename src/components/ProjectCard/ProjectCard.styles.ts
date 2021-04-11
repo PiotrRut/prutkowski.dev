@@ -12,7 +12,7 @@ export const ProjectCardRoot = styled.div`
   overflow: hidden;
   margin: 0 ${sizes['15']} ${sizes['15']};
 
-  @media (max-width: 850px) {
+  @media (max-width: 1024px) {
     width: 80vw;
     margin: ${sizes['10']} 0;
   }
