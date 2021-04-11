@@ -28,9 +28,9 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <MuiThemeProvider theme={custTheme}>
+      <SEO title="Home" />
       {isMounted && (
         <Layout>
-          <SEO title="Home" />
           <Component {...pageProps} />
         </Layout>
       )}
