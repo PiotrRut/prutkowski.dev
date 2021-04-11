@@ -6,9 +6,9 @@ import React, { FunctionComponent } from 'react';
 const events: TimelineEvent[] = [
   {
     date: 'July 2020',
-    title: 'New Job at Equals 🏦',
+    title: 'Joined Equals 🏦',
     content:
-      'I got an amazing opportunity to become a part of the engineering team at Equals in London, building multicurrency services for over a million customers!',
+      'I joined Equals in my first ever software developer position, and have since been enjoying building web and mobile platforms for more than 1 million customers!',
   },
   {
     date: 'Sept 2018',
@@ -20,7 +20,7 @@ const events: TimelineEvent[] = [
     date: 'June 2018',
     title: 'Graduated High School 🎓',
     content:
-      'I graduated with a diploma in electrical engineering and general studies, ready to start university!',
+      'I graduated with a diploma in electrical engineering and general studies, ready and motivated to start university!',
   },
 ];
 
