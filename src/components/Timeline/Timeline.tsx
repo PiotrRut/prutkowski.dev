@@ -13,8 +13,9 @@ import {
 } from './Timeline.styles';
 
 /**
- * Given an image path will display a Next Image component in a
- * small preview format
+ * A time line view to display events.
+ *
+ * Takes an array of events.
  */
 const Timeline: FunctionComponent<TimelineProps> = (props) => {
   const { events } = props;

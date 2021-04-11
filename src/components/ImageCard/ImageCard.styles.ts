@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const ImageCardRoot = styled.div`
   border-radius: ${sizes['10']};
   position: relative;
-  background-color: #1a1a1a;
+  background-color: #171717;
   height: ${sizes['250']};
   width: ${sizes['200']};
   padding: ${sizes['5']};

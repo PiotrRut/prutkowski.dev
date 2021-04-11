@@ -67,15 +67,15 @@ export const TimelineItem = styled.div<{ inView: boolean }>`
 
 export const TimelineCard = styled.div`
   border-radius: ${sizes['10']};
-  margin: 0 ${sizes['10']} ${sizes['10']};
-  padding: ${sizes['5']};
+  margin: 0 0 ${sizes['10']};
+  padding: ${sizes['10']};
   max-height: ${sizes['300']};
   color: #fff;
-  background-color: #1a1a1a;
+  background-color: #171717;
   display: flex;
   flex-direction: column;
   flex: 1 1 0px;
-  width: 70vw;
+  width: 75vw;
 
   @media (min-width: 1024px) {
     width: ${sizes['300']};

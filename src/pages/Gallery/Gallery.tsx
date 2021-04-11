@@ -21,11 +21,11 @@ const useStyles = makeStyles((theme) => ({
     // position the dialog properly and add black bg
     margin: -35,
     padding: theme.spacing(5),
-    backgroundColor: '#1a1a1a',
+    backgroundColor: '#171717',
   },
   paper: {
     // set colour of the paper dialog
-    backgroundColor: '#1a1a1a',
+    backgroundColor: '#171717',
   },
   snackbar: {
     // pull the snackbar up from the bottom on smaller screens

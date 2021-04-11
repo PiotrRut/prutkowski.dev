@@ -14,7 +14,7 @@ const events: TimelineEvent[] = [
     date: 'Sept 2018',
     title: 'Moved to London 🇬🇧',
     content:
-      'Shortly after graduating I moved to the UK to start a computer science degree at City, University of London!',
+      'Shortly after graduating high school I moved to the UK to start a computer science degree at City, University of London!',
   },
   {
     date: 'June 2018',

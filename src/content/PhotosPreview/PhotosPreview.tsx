@@ -16,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: -35,
     padding: theme.spacing(5),
-    backgroundColor: '#1a1a1a',
+    backgroundColor: '#171717',
   },
   paper: {
     // set colour of the paper dialog
-    backgroundColor: '#1a1a1a',
+    backgroundColor: '#171717',
     color: 'white',
   },
   text: {

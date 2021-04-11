@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const RepoCardRoot = styled.div`
   border-radius: ${sizes['10']};
-  background-color: #1a1a1a;
+  background-color: #171717;
   display: flex;
   flex-direction: column;
   padding: ${sizes['15']};
