@@ -10,9 +10,11 @@ export const ProjectCardRoot = styled.div`
   height: ${sizes['350']};
   width: ${sizes['450']};
   overflow: hidden;
+  margin: 0 ${sizes['15']} ${sizes['15']};
 
   @media (max-width: 850px) {
     width: 80vw;
+    margin: ${sizes['10']} 0;
   }
 `;
 

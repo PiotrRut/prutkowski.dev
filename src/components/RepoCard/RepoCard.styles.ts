@@ -7,10 +7,12 @@ export const RepoCardRoot = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${sizes['15']};
+  margin: 0 ${sizes['15']} ${sizes['15']};
   width: ${sizes['350']};
 
   @media (max-width: 850px) {
     width: 80vw;
+    margin: ${sizes['10']} 0;
   }
 `;
 

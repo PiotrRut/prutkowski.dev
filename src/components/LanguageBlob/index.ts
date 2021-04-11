@@ -3,7 +3,7 @@ import { Colors, getHexColour } from 'github-linguist-colours';
 import styled, { css } from 'styled-components';
 
 /**
- * Display a round blob for the passed language in it's GitHub's linguist based colour
+ * Display a round blob for the passed language in its GitHub's linguist based colour
  */
 const LanguageBlob = styled(FiberManualRecordIcon)<{ language: Colors }>`
   ${({ language }) =>

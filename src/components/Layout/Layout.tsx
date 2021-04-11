@@ -12,6 +12,9 @@ const theme = createMuiTheme({
   },
 });
 
+/**
+ * Layout component to provide consistent spacing throughout the site
+ */
 const Layout = ({ children }) => {
   if (typeof window !== 'undefined') {
     useEffect(() => {

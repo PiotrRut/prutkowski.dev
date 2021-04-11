@@ -22,8 +22,17 @@ export const NavItem = styled.a`
     cursor: pointer;
     font-size: ${sizes['15']};
     color: #fff;
+
     &:not(:last-child):after {
       content: ' | ';
     }
   }
+`;
+
+export const Socials = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: ${sizes['25']};
 `;
