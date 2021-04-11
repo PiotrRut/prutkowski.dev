@@ -1,38 +1,42 @@
+import Section from '@components/Section';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import { socials } from '@misc/socials';
 import React, { FunctionComponent } from 'react';
 
-import { Header, Nav, NavItem } from './Hero.styles';
-
-const navItems = [
-  { link: '#skills', name: 'Skills' },
-  { link: '#proj-preview', name: 'GitHub' },
-  { link: '#other-proj-preview', name: 'Projects' },
-  { link: '#photos-prev', name: 'Gallery' },
-  { link: '#contact', name: 'Contact' },
-];
+import { Header, Socials } from './Hero.styles';
 
 // The top banner with profile pic, name, and some animated text
 const Hero: FunctionComponent = () => {
   return (
-    <section
-      id="top-banner"
-      className="flex flex-col items-center justify-center container min-h-screen"
-    >
+    <Section id="top-banner" isFullScreen={true}>
       <Header as="h1">Piotr Rutkowski</Header>
-      <Nav>
-        <h6 className="wow fadeIn">
-          {navItems.map((item) => (
-            <NavItem href={item.link}>{item.name}</NavItem>
-          ))}
-        </h6>
-      </Nav>
+      <Socials>
+        {socials.map((social, index) => {
+          const Icon = social.icon;
+          return (
+            <IconButton
+              style={{
+                color: `${social.color}`,
+                animationDelay: `${index * 150 + 150}ms`,
+              }}
+              href={social.path}
+              target="_blank"
+              rel="noopener"
+              className="wow fadeIn"
+              key={social.name}
+            >
+              <Icon />
+            </IconButton>
+          );
+        })}
+      </Socials>
       <a href="#about-me">
         <IconButton aria-label="about" className="bounce">
           <KeyboardArrowDownIcon fontSize="large" style={{ color: 'white' }} />
         </IconButton>
       </a>
-    </section>
+    </Section>
   );
 };
 

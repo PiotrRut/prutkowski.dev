@@ -4,15 +4,17 @@ import styled from 'styled-components';
 export const ProjectCardRoot = styled.div`
   border-radius: ${sizes['10']};
   position: relative;
-  background-color: #1a1a1a;
+  background-color: #171717;
   display: flex;
   flex-direction: column;
   height: ${sizes['350']};
   width: ${sizes['450']};
   overflow: hidden;
+  margin: 0 ${sizes['15']} ${sizes['15']};
 
-  @media (max-width: 850px) {
+  @media (max-width: 1024px) {
     width: 80vw;
+    margin: ${sizes['10']} 0;
   }
 `;
 

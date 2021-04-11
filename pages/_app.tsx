@@ -2,7 +2,6 @@ import '@css/style.css';
 import '@css/animate.css';
 
 import Layout from '@components/Layout';
-import SEO from '@components/SEO';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import React, { useEffect, useState } from 'react';
 
@@ -28,7 +27,6 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <MuiThemeProvider theme={custTheme}>
-      <SEO title="Home" />
       {isMounted && (
         <Layout>
           <Component {...pageProps} />
