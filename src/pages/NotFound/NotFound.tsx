@@ -20,9 +20,9 @@ const NotFound: NextPage = () => {
         clearInterval(timer);
       };
     }
-    // if (countdown === 0) {
-    //   router.push('/');
-    // }
+    if (countdown === 0) {
+      router.push('/');
+    }
   }, [countdown]);
 
   return (
