@@ -1,13 +1,12 @@
+import Button from '@components/Button';
 import ImageCard from '@components/ImageCard';
 import Section from '@components/Section';
-import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import { makeStyles } from '@material-ui/core/styles';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
-import Link from 'next/link';
 import React, { FunctionComponent, useEffect, useState } from 'react';
+import { BsChevronRight } from 'react-icons/bs';
 
 import { GalleryWrapper, PicButton } from './PhotosPreview.styles';
 
@@ -81,16 +80,12 @@ const PhotosPreview: FunctionComponent = () => {
         ))}
       </GalleryWrapper>
 
-      <Link href="/photogallery" passHref>
-        <Button
-          className="wow fadeIn"
-          variant="contained"
-          color="inherit"
-          endIcon={<NavigateNextIcon />}
-        >
-          See more
-        </Button>
-      </Link>
+      <Button
+        name="gallery"
+        href="/photogallery"
+        label="See more"
+        iconRight={<BsChevronRight />}
+      />
 
       {/* Dialog with the selected picture for preview */}
       <Dialog
@@ -105,9 +100,6 @@ const PhotosPreview: FunctionComponent = () => {
           <img className="photoPreview" src={selectedURLS.lowRes} />
         </div>
       </Dialog>
-
-      <br />
-      <br />
     </Section>
   );
 };

@@ -1,4 +1,4 @@
-import { sizes } from '@theme/tokens';
+import { palette, sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
 export const ProjectCardRoot = styled.div`
@@ -26,7 +26,7 @@ export const ImageWrapper = styled.div`
 
 export const Title = styled.p`
   font-size: ${sizes['20']};
-  color: #fff;
+  color: ${palette.white};
   padding-bottom: ${sizes['10']};
 `;
 

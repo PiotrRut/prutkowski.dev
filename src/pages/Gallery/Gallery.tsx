@@ -1,18 +1,18 @@
+import Button from '@components/Button';
 import ImageCard from '@components/ImageCard';
 import SEO from '@components/SEO';
 import { PicButton } from '@content/PhotosPreview/PhotosPreview.styles';
-import Button from '@material-ui/core/Button';
+import { Button as MUIButton } from '@material-ui/core';
 import Dialog from '@material-ui/core/Dialog';
 import Snackbar from '@material-ui/core/Snackbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
 import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import { NextPage } from 'next';
-import Link from 'next/link';
 import React, { Fragment, useEffect, useState } from 'react';
+import { BsChevronLeft } from 'react-icons/bs';
 
 import { GalleryWrapper } from './Galllery.styles';
 
@@ -102,16 +102,12 @@ const Gallery: NextPage = () => {
         ))}
       </GalleryWrapper>
 
-      <Link href="/">
-        <Button
-          className="wow fadeIn"
-          variant="contained"
-          color="inherit"
-          startIcon={<KeyboardBackspaceIcon />}
-        >
-          Return home
-        </Button>
-      </Link>
+      <Button
+        name="home"
+        href="/"
+        label="Back home"
+        iconLeft={<BsChevronLeft />}
+      />
 
       {/* Dialog with the selected picture for preview */}
       <Dialog
@@ -139,7 +135,7 @@ const Gallery: NextPage = () => {
         className={classes.snackbar}
         action={
           <Fragment>
-            <Button
+            <MUIButton
               color="secondary"
               rel="noopener noreferrer"
               target="_blank"
@@ -147,7 +143,7 @@ const Gallery: NextPage = () => {
               href={selectedURLS.highRes}
             >
               CLICK HERE
-            </Button>
+            </MUIButton>
           </Fragment>
         }
       />

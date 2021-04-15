@@ -8,6 +8,7 @@ body {
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
   background-color: #090909;
+  color: white;
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
   width: 100%;
@@ -63,13 +64,6 @@ a {
 
 p {
   @apply leading-relaxed pb-4;
-}
-
-@screen md {
-  html,
-  body {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 720px) {

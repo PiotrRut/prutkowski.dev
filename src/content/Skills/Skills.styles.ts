@@ -1,8 +1,8 @@
-import { sizes } from '@theme/tokens';
+import { palette, sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
 export const SkillItem = styled.div`
-  color: white;
+  color: ${palette.white};
   display: inline-flex;
   padding: 0 ${sizes['12']};
   border-radius: ${sizes['base']};

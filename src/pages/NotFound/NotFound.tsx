@@ -1,6 +1,5 @@
-import SEO from '@components/SEO';
 import { NextPage } from 'next';
-import Link from 'next/link';
+import Image from 'next/image';
 import router from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -21,45 +20,23 @@ const NotFound: NextPage = () => {
         clearInterval(timer);
       };
     }
-    if (countdown === 0) {
-      router.push('/');
-    }
+    // if (countdown === 0) {
+    //   router.push('/');
+    // }
   }, [countdown]);
 
   return (
-    <>
-      <SEO title="Page Not Found" />
-      <div className="container grid-cols-1 gap-y-16">
-        <br />
-        <h1 className="text-gray-200">404 Not Found</h1>
-        <br />
-        <i>
-          <h5 className="text-gray-200">
-            &#34;The HTTP 404, 404 Not Found, 404, Page Not Found, or Server Not
-            Found error message is a Hypertext Transfer Protocol (HTTP) standard
-            response code, in computer network communications, to indicate that
-            the browser was able to communicate with a given server, but the
-            server could not find what was requested. The error may also be used
-            when a server does not wish to disclose whether it has the requested
-            information.&#34;
-          </h5>
-        </i>
-        <br />
-        <h3 className="text-gray-200">
-          In other words - either you can&#39;t type, or I can&#39;t code.. 🤷🏻‍♂️
-          Either way, you should{' '}
-          <Link href="/">
-            <a>go home</a>
-          </Link>
-          !
-        </h3>
-        <br />
-        <h3 className="text-gray-200">
-          If you do nothing, you will be automatically redirected in {countdown}{' '}
-          seconds.
-        </h3>
-      </div>
-    </>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        height: '100vh',
+      }}
+    >
+      <Image src="/404.svg" width="600" height="400" />
+    </div>
   );
 };
 

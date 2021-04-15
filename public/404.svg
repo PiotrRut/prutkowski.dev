@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="654" height="334" viewBox="0 0 654 334">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        font-size: 208.333px;
+        fill: #fff;
+        font-family: "Fira Code";
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        filter: url(#filter-3);
+      }
+    </style>
+    <filter id="filter" x="140" y="66" width="98" height="150" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="140" y="66" width="98" height="150" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTgiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgOTggMTUwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBvcGFjaXR5OiAwLjcyOwogICAgICAgIGZpbGw6IHVybCgjcmFkaWFsLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0icmFkaWFsLWdyYWRpZW50IiBjeD0iMTg3IiBjeT0iMTAxIiByPSIxOTQuODI4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzEyZDZkZiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEuNSIgc3RvcC1jb2xvcj0iI2Y3MGZmZiIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iOTgiIGhlaWdodD0iMTUwIi8+Cjwvc3ZnPgo="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="278" y="126" width="98" height="153" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="278" y="126" width="98" height="153" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTgiIGhlaWdodD0iMTUzIiB2aWV3Qm94PSIwIDAgOTggMTUzIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBvcGFjaXR5OiAwLjcyOwogICAgICAgIGZpbGw6IHVybCgjcmFkaWFsLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0icmFkaWFsLWdyYWRpZW50IiBjeD0iNDkiIGN5PSI0MSIgcj0iMTk0LjgyOCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxMmQ2ZGYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxLjUiIHN0b3AtY29sb3I9IiNmNzBmZmYiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjE1MyIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="406" y="91" width="98" height="150" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="406" y="91" width="98" height="150" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTgiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgOTggMTUwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBvcGFjaXR5OiAwLjcyOwogICAgICAgIGZpbGw6IHVybCgjcmFkaWFsLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0icmFkaWFsLWdyYWRpZW50IiBjeD0iLTc5IiBjeT0iNzYiIHI9IjE5NC44MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTJkNmRmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMS41IiBzdG9wLWNvbG9yPSIjZjcwZmZmIi8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSI5OCIgaGVpZ2h0PSIxNTAiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <text id="_4" data-name="4" class="cls-1" x="125.28" y="216.484">4</text>
+  <text id="_0" data-name="0" class="cls-2" x="262.649" y="275.795">0</text>
+  <text id="_4-2" data-name="4" class="cls-3" x="390.664" y="241.367">4</text>
+</svg>

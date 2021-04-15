@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import { sizes } from '@theme/tokens';
+import { palette, sizes } from '@theme/tokens';
 import styled, { css, keyframes } from 'styled-components';
 
 const lineGrowHorizontal = keyframes`
@@ -70,7 +70,7 @@ export const TimelineCard = styled.div`
   margin: 0 0 ${sizes['10']};
   padding: ${sizes['10']};
   max-height: ${sizes['300']};
-  color: #fff;
+  color: ${palette.white};
   background-color: #171717;
   display: flex;
   flex-direction: column;

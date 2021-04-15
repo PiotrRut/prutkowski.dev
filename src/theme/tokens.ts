@@ -32,3 +32,9 @@ export const sizes = {
   400: '25rem',
   450: '28.125rem',
 };
+
+export const palette = {
+  white: '#fff',
+  lightGray: '#9E9E9E',
+  darkGray: '#424242',
+};

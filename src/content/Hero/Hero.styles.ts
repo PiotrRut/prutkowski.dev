@@ -1,4 +1,4 @@
-import { sizes } from '@theme/tokens';
+import { palette, sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
 export const Header = styled.header`
@@ -10,7 +10,7 @@ export const Header = styled.header`
 `;
 
 export const Nav = styled.div`
-  color: #fff;
+  color: ${palette.white};
   padding-bottom: ${sizes['32']};
 `;
 
@@ -21,7 +21,7 @@ export const NavItem = styled.a`
     display: inline;
     cursor: pointer;
     font-size: ${sizes['15']};
-    color: #fff;
+    color: ${palette.white};
 
     &:not(:last-child):after {
       content: ' | ';

@@ -1,15 +1,14 @@
+import Button from '@components/Button';
 import RepoCard from '@components/RepoCard/RepoCard';
 import SEO from '@components/SEO';
 import { Repo } from '@content/GitProjectsPreview/GitProjectsPreview.models';
-import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
 import { NextPage } from 'next';
-import Link from 'next/link';
 import React, { Fragment, useEffect, useState } from 'react';
+import { BsChevronLeft } from 'react-icons/bs';
 
 import { GitHubProjectsWrapper } from './GitHubProjects.styles';
 
@@ -62,15 +61,12 @@ const GitHubProjects: NextPage = () => {
         ))}
       </GitHubProjectsWrapper>
 
-      <Link href="/">
-        <Button
-          variant="contained"
-          color="inherit"
-          startIcon={<KeyboardBackspaceIcon />}
-        >
-          Return home
-        </Button>
-      </Link>
+      <Button
+        name="home"
+        href="/"
+        iconLeft={<BsChevronLeft />}
+        label="Back home"
+      />
     </Fragment>
   );
 };

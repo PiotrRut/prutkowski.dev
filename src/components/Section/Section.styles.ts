@@ -1,4 +1,4 @@
-import { sizes } from '@theme/tokens';
+import { palette, sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
 /**
@@ -16,7 +16,7 @@ export const SectionWrapper = styled.section<{ isFullScreen: boolean }>`
 
 export const SectionHeading = styled.header`
   font-size: ${sizes['34']};
-  color: #fff;
+  color: ${palette.white};
   text-align: center;
   padding-bottom: ${sizes['50']};
 `;

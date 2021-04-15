@@ -1,11 +1,10 @@
+import Button from '@components/Button';
 import RepoCard from '@components/RepoCard';
 import Section from '@components/Section';
-import Button from '@material-ui/core/Button';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import BACKEND_URL from '@misc/backend';
 import axios from 'axios';
-import Link from 'next/link';
 import React, { FunctionComponent, useEffect, useState } from 'react';
+import { BsChevronRight } from 'react-icons/bs';
 
 import { Repo } from './GitProjectsPreview.models';
 import { ProjectsWrapper } from './GitProjectsPreview.styles';
@@ -45,16 +44,12 @@ const GitProjectsPreview: FunctionComponent = () => {
         ))}
       </ProjectsWrapper>
 
-      <Link href="/projects" passHref>
-        <Button
-          className="wow fadeIn"
-          variant="contained"
-          color="inherit"
-          endIcon={<NavigateNextIcon />}
-        >
-          See more
-        </Button>
-      </Link>
+      <Button
+        name="projects"
+        href="/projects"
+        label="See more"
+        iconRight={<BsChevronRight />}
+      />
     </Section>
   );
 };

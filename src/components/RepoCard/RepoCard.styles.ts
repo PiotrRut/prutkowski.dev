@@ -1,4 +1,4 @@
-import { sizes } from '@theme/tokens';
+import { palette, sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
 export const RepoCardRoot = styled.div`
@@ -19,7 +19,7 @@ export const RepoCardRoot = styled.div`
 export const Name = styled.a`
   font-size: ${sizes['20']};
   cursor: pointer;
-  color: #fff;
+  color: ${palette.white};
   padding-bottom: ${sizes['10']};
 
   &:hover {
@@ -28,13 +28,13 @@ export const Name = styled.a`
 `;
 
 export const Description = styled.p`
-  color: white;
+  color: ${palette.white};
 `;
 
 export const RepoDetails = styled.div`
   display: flex;
   direction: row;
-  color: white;
+  color: ${palette.white};
   align-items: center;
 `;
 
