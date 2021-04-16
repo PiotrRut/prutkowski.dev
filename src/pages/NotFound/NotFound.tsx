@@ -1,30 +1,9 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
-import router from 'next/router';
-import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 // 404 Route
 const NotFound: NextPage = () => {
-  const [countdown, setCountdown] = useState(10);
-
-  useEffect(() => {
-    while (countdown > 0) {
-      const timer = setInterval(
-        () =>
-          setCountdown((prevProgress) =>
-            prevProgress <= 0 ? 10 : prevProgress - 1
-          ),
-        1000
-      );
-      return () => {
-        clearInterval(timer);
-      };
-    }
-    if (countdown === 0) {
-      router.push('/');
-    }
-  }, [countdown]);
-
   return (
     <div
       style={{
@@ -35,7 +14,12 @@ const NotFound: NextPage = () => {
         height: '100vh',
       }}
     >
-      <Image src="/404.svg" width="600" height="400" />
+      <Image src="/404.svg" width="300" height="200" />
+      <br />
+      <p>Sorry, but this page does not exist 😔</p>
+      <p>
+        Tap <Link href="/">here</Link> to go home!
+      </p>
     </div>
   );
 };
