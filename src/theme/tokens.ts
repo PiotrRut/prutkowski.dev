@@ -34,7 +34,16 @@ export const sizes = {
 };
 
 export const palette = {
+  /**
+   * WHITE - #FFF
+   */
   white: '#fff',
+  /**
+   * LIGHT GRAY - #9E9E9E
+   */
   lightGray: '#9E9E9E',
+  /**
+   * DARK GRAY - #424242
+   */
   darkGray: '#424242',
 };

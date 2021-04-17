@@ -8,6 +8,8 @@ import { IconWrapper, StyledButton } from './Button.styles';
  * Button component - acts as a wrapper around `next/link`
  *
  * Prefer using `react-icons` rather than `material-ui/icons` for layout reasons
+ *
+ * Can be styled with an `iconLeft` or `iconRight`
  */
 const Button: FunctionComponent<ButtonProps> = (props) => {
   const { name, children, label, href, iconRight, iconLeft, ...rest } = props;
