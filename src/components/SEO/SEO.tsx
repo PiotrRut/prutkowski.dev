@@ -8,10 +8,14 @@ const SEO: FunctionComponent<SEOProps> = ({ title }) => {
   const description =
     'Software developer based in London, UK. Currently working at Equals.';
 
+  const isProd = process.env.NODE_ENV === 'production';
+
   useEffect(() => {
-    ReactGA.initialize('UA-154333467-2');
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
+    if (isProd) {
+      ReactGA.initialize('UA-154333467-2');
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+  }, [isProd]);
 
   return (
     <Head>
