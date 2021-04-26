@@ -45,6 +45,7 @@ export const TimelineItem = styled.div<{ inView: boolean }>`
     ${({ inView }) =>
       inView &&
       css`
+        margin-top: ${sizes['20']};
         animation: ${lineGrowVertical} 1s ease;
         max-height: ${sizes['180']};
       `};
@@ -97,7 +98,18 @@ export const DateMark = styled.span`
   color: grey;
   width: ${sizes['40']};
 
+  &:before {
+    content: '•';
+    color: green;
+    position: absolute;
+    left: -${sizes['2']};
+    border-radius: 50%;
+  }
+
   @media (min-width: 1024px) {
     width: ${sizes['100']};
+    &:before {
+      content: '';
+    }
   }
 `;
