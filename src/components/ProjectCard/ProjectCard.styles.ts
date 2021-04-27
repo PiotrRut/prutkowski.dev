@@ -33,7 +33,7 @@ export const Title = styled.p`
 export const TitleAsLink = styled.a`
   font-size: ${sizes['20']};
   cursor: pointer;
-  color: #4aa0ba;
+  color: ${palette.lightBlue};
   padding-bottom: ${sizes['10']};
 
   &:hover {

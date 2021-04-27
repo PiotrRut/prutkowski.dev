@@ -14,13 +14,13 @@ const events: TimelineEvent[] = [
     date: 'Sept 2018',
     title: 'Moved to London 🇬🇧',
     content:
-      'Shortly after graduating high school I moved to the UK to start a computer science degree at City, University of London!',
+      'Shortly after graduating high school I left Norway and moved to the UK to start a computer science degree at City, University of London!',
   },
   {
     date: 'June 2018',
     title: 'Graduated High School 🎓',
     content:
-      'I graduated with a diploma in electrical engineering and general studies, ready and motivated to start university!',
+      'I graduated with a diploma in electrical engineering and general studies, ready and motivated to start a degree in computer science at university!',
   },
 ];
 

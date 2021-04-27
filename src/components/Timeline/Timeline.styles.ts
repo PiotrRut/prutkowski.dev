@@ -69,7 +69,7 @@ export const TimelineItem = styled.div<{ inView: boolean }>`
 export const TimelineCard = styled.div`
   border-radius: ${sizes['10']};
   margin: 0 0 ${sizes['10']};
-  padding: ${sizes['10']};
+  padding: ${sizes['15']};
   max-height: ${sizes['300']};
   color: ${palette.white};
   background-color: #171717;
@@ -81,7 +81,7 @@ export const TimelineCard = styled.div`
   @media (min-width: 1024px) {
     width: ${sizes['300']};
     margin: ${sizes['5']} ${sizes['5']} ${sizes['5']} 0;
-    min-height: ${sizes['150']};
+    min-height: ${sizes['200']};
   }
 `;
 
@@ -100,7 +100,7 @@ export const DateMark = styled.span`
 
   &:before {
     content: '•';
-    color: green;
+    color: ${palette.cyanBlue};
     position: absolute;
     left: -${sizes['2']};
     border-radius: 50%;

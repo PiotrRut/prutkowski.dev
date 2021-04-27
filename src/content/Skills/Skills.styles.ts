@@ -6,7 +6,7 @@ export const SkillItem = styled.div`
   display: inline-flex;
   padding: 0 ${sizes['12']};
   border-radius: ${sizes['base']};
-  border: ${sizes['1']} solid #009ab6;
+  border: ${sizes['1']} solid ${palette.cyanBlue};
   height: ${sizes['32']};
   align-items: center;
   transition: 350ms;
