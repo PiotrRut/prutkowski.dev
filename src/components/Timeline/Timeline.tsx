@@ -13,9 +13,10 @@ import {
 } from './Timeline.styles';
 
 /**
- * A time line view to display events.
+ * A timeline view to display events.
  *
  * Takes an array of events.
+ *
  */
 const Timeline: FunctionComponent<TimelineProps> = (props) => {
   const { events } = props;

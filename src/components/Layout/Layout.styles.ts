@@ -6,10 +6,10 @@ export const AppWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   @media (min-width: 1024px) {
-    margin: 0 4rem 1.875rem;
+    margin: 1.5rem 4rem 1.875rem;
   }
 
   @media (min-width: 1280px) {
-    margin: 0 0 1.875rem;
+    margin: 1.5rem 0 1.875rem;
   }
 `;

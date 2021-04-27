@@ -76,7 +76,6 @@ const Gallery: NextPage = () => {
   return (
     <LazyMotion features={domAnimation}>
       <SEO title="Gallery" />
-      <br />
       <Typography variant="h4" component="h1" className={classes.text}>
         📸 My Gallery
       </Typography>

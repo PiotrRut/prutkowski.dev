@@ -25,7 +25,7 @@ export const StyledButton = styled.button<ButtonProps>`
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 ${sizes[1]} orange;
+    box-shadow: 0 0 0 ${sizes[1]} ${palette.cyanBlue};
   }
 
   &:hover {

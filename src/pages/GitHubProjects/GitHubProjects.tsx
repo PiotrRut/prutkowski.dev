@@ -35,17 +35,17 @@ const GitHubProjects: NextPage = () => {
   return (
     <Fragment>
       <SEO title="GitHub Projects" />
-      <br />
-      <Typography variant="h4" component="h1" className={classes.root}>
+      <Typography
+        variant="h4"
+        component="h1"
+        className={classes.root}
+        gutterBottom
+      >
         🛠 Github Projects
       </Typography>
-      <br />
       <Typography className="text-gray-200 text-center wow fadeIn">
         Below you can see all <b>{repos.length}</b> of my public repositories,
         updated automatically via the GitHub API.
-      </Typography>
-      <Typography className="text-gray-200 text-center wow fadeIn">
-        To visit the GitHub page for any of them, click the project name.
       </Typography>
       <GitHubProjectsWrapper>
         {repos.map((repo, index) => (
