@@ -10,7 +10,6 @@ export const GitHubProjectsWrapper = styled.div`
   flex-direction: column;
 
   @media (min-width: 1024px) {
-    width: 90vw;
     flex-direction: row;
   }
 `;

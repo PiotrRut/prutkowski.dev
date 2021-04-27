@@ -72,7 +72,7 @@ export const TimelineCard = styled.div`
   padding: ${sizes['15']};
   max-height: ${sizes['300']};
   color: ${palette.white};
-  background-color: #171717;
+  background-color: ${palette.darkGray};
   display: flex;
   flex-direction: column;
   flex: 1 1 0px;

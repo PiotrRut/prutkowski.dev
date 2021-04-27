@@ -5,7 +5,7 @@ import { ButtonProps } from './Button.models';
 
 export const StyledButton = styled.button<ButtonProps>`
   // Button overrides
-  background-color: ${palette.darkGray};
+  background-color: ${palette.gray};
   padding: ${sizes[10]};
   border: 0;
   box-shadow: none;

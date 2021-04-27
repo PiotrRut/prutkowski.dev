@@ -8,6 +8,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import BACKEND_URL from '@misc/backend';
+import { palette } from '@theme/tokens';
 import axios from 'axios';
 import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import { NextPage } from 'next';
@@ -18,14 +19,14 @@ import { GalleryWrapper } from './Galllery.styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // position the dialog properly and add black bg
+    // position the dialog properly and add dark gray backdrop
     margin: -35,
     padding: theme.spacing(5),
-    backgroundColor: '#171717',
+    backgroundColor: palette.darkGray,
   },
   paper: {
     // set colour of the paper dialog
-    backgroundColor: '#171717',
+    backgroundColor: palette.darkGray,
   },
   snackbar: {
     // pull the snackbar up from the bottom on smaller screens

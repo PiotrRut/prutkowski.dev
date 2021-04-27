@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const ProjectCardRoot = styled.div`
   border-radius: ${sizes['10']};
   position: relative;
-  background-color: #171717;
+  background-color: ${palette.darkGray};
   display: flex;
   flex-direction: column;
   height: ${sizes['350']};

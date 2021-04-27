@@ -43,9 +43,13 @@ export const palette = {
    */
   lightGray: '#9E9E9E',
   /**
-   * DARK GRAY - #424242
+   * GRAY - #424242
    */
-  darkGray: '#424242',
+  gray: '#424242',
+  /**
+   * DARK GRAY - #171717
+   */
+  darkGray: '#171717',
   /**
    * CYAN BLUE - #009ab6
    */

@@ -1,10 +1,10 @@
-import { sizes } from '@theme/tokens';
+import { palette, sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
 export const ImageCardRoot = styled.div`
   border-radius: ${sizes['10']};
   position: relative;
-  background-color: #171717;
+  background-color: ${palette.darkGray};
   height: ${sizes['250']};
   width: ${sizes['200']};
   padding: ${sizes['5']};

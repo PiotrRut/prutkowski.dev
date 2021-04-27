@@ -4,6 +4,7 @@ import Section from '@components/Section';
 import Dialog from '@material-ui/core/Dialog';
 import { makeStyles } from '@material-ui/core/styles';
 import BACKEND_URL from '@misc/backend';
+import { palette } from '@theme/tokens';
 import axios from 'axios';
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { BsChevronRight } from 'react-icons/bs';
@@ -15,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: -35,
     padding: theme.spacing(5),
-    backgroundColor: '#171717',
+    backgroundColor: palette.darkGray,
   },
   paper: {
     // set colour of the paper dialog
-    backgroundColor: '#171717',
+    backgroundColor: palette.darkGray,
     color: 'white',
   },
   text: {
