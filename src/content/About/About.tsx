@@ -24,7 +24,6 @@ const events: TimelineEvent[] = [
   },
 ];
 
-// About me section
 const About: FunctionComponent = () => {
   return (
     <Section heading="What's going on?" id="about-me">

@@ -9,7 +9,6 @@ import { BsChevronRight } from 'react-icons/bs';
 import { Repo } from './GitProjectsPreview.models';
 import { ProjectsWrapper } from './GitProjectsPreview.styles';
 
-// The projects section on the main page, with three latest
 const GitProjectsPreview: FunctionComponent = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
 

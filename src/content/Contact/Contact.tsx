@@ -3,14 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { FunctionComponent } from 'react';
 
-// Styles override
 const useStyles = makeStyles({
   root: {
     color: 'white',
   },
 });
 
-// About me section
 const Contact: FunctionComponent = () => {
   const classes = useStyles();
 

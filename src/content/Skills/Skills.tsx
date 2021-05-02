@@ -4,7 +4,6 @@ import React, { FunctionComponent } from 'react';
 
 import { SkillItem, SkillsWrapper } from './Skills.styles';
 
-// Sections with my skills displayed
 const Skills: FunctionComponent = () => {
   return (
     <Section heading="Some things I know...">

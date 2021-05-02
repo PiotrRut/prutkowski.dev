@@ -6,7 +6,6 @@ import React, { FunctionComponent } from 'react';
 
 import { Header, Socials } from './Hero.styles';
 
-// The top banner with profile pic, name, and some animated text
 const Hero: FunctionComponent = () => {
   return (
     <Section id="top-banner" isFullScreen={true}>

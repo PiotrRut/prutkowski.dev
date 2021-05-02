@@ -39,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// The Gallery page which displays my images stored in an MS Azure container
 const Gallery: NextPage = () => {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
   const [selectedURLS, setUrl] = useState({ lowRes: '', highRes: '' });
@@ -47,7 +46,6 @@ const Gallery: NextPage = () => {
   const [openSnack, setOpenSnack] = useState(false);
   const classes = useStyles();
 
-  // Fetch all image URLs from Azure via my backend and append to array
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(`${BACKEND_URL}/gallery/getAllPhotos`);

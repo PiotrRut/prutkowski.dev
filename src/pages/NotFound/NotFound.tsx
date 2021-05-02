@@ -2,7 +2,6 @@ import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// 404 Route
 const NotFound: NextPage = () => {
   return (
     <div

@@ -11,7 +11,6 @@ import { BsChevronRight } from 'react-icons/bs';
 
 import { GalleryWrapper, PicButton } from './PhotosPreview.styles';
 
-// Styles override
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: -35,

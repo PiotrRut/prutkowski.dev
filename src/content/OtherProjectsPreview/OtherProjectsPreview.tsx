@@ -5,7 +5,6 @@ import React, { FunctionComponent } from 'react';
 
 import { WorkProjectsWrapper } from './OtherProjectsPreview.styles';
 
-// Projects I am involved in with at work
 const OtherProjectsPreview: FunctionComponent = () => {
   return (
     <Section heading="Professional Projects">

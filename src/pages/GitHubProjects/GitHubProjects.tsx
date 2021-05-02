@@ -12,14 +12,12 @@ import { BsChevronLeft } from 'react-icons/bs';
 
 import { GitHubProjectsWrapper } from './GitHubProjects.styles';
 
-// Styles override
 const useStyles = makeStyles({
   root: {
     color: 'white',
   },
 });
 
-// The projects page, with all of my projects fetched through the GitHub API
 const GitHubProjects: NextPage = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
   const classes = useStyles();
