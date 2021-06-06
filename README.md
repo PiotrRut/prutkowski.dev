@@ -11,7 +11,7 @@ My REST API which the gallery uses can be found [here](https://github.com/PiotrR
 
 ## :open_file_folder: Technical stack
 
-![React](https://img.shields.io/badge/-React-black?style=flat-square&logo=react) ![NextJS](https://img.shields.io/badge/-NextJS-black?style=flat-square&logo=next.js) ![TailwindCSS](https://img.shields.io/badge/-Tailwind_CSS-black?style=flat-square&logo=tailwind-css) ![Styled Components](https://img.shields.io/badge/-Styled_Components-black?style=flat-square&logo=styled-components) ![Material UI](https://img.shields.io/badge/-Material_UI-black?style=flat-square&logo=material-ui)
+![React](https://img.shields.io/badge/-React-black?style=flat-square&logo=react) ![NextJS](https://img.shields.io/badge/-NextJS-black?style=flat-square&logo=next.js) ![Styled Components](https://img.shields.io/badge/-Styled_Components-black?style=flat-square&logo=styled-components) ![Material UI](https://img.shields.io/badge/-Material_UI-black?style=flat-square&logo=material-ui)
 
 ## :recycle: Old website
 

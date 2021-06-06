@@ -1,10 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 html,
+#__next,
 body {
+  text-rendering: optimizeSpeed;
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
   background-color: #090909;
@@ -15,6 +14,26 @@ body {
 }
 .bounce {
   animation: bounce 4s infinite;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-size: 1rem;
 }
 
 @keyframes bounce {
@@ -34,36 +53,43 @@ body {
 }
 
 h1 {
-  @apply text-8xl;
+  font-size: 6rem /* 96px */;
+  line-height: 1;
 }
 
 h2 {
-  @apply text-3xl;
+  font-size: 1.875rem /* 30px */;
+  line-height: 2.25rem /* 36px */;
 }
 
 h3 {
-  @apply text-2xl;
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
 }
 
 h4 {
-  @apply text-xl;
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
 }
 
 h5 {
-  @apply text-lg;
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
 }
 
 h6 {
-  @apply text-base;
+  font-size: 1rem /* 16px */;
+  line-height: 1.5rem /* 24px */;
 }
 
 a {
-  @apply font-semibold;
+  font-weight: 600;
   color: #009ab6;
 }
 
 p {
-  @apply leading-relaxed pb-4;
+  line-height: 1.625;
+  padding-bottom: 1rem /* 16px */;
 }
 
 @media (max-width: 720px) {
@@ -72,31 +98,5 @@ p {
   }
   span {
     font-size: 0.9em;
-  }
-  .pic-preview-main {
-    width: 140px;
-  }
-  .gallery-pics {
-    width: 140px;
-  }
-}
-
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clear floats after image containers */
-.row::after {
-  content: '';
-  clear: both;
-  display: table;
-}
-
-@media screen and (max-width: 750px) {
-  .column {
-    width: 100%;
   }
 }
