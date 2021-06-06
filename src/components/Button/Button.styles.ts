@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { ButtonProps } from './Button.models';
 
-export const StyledButton = styled.button<ButtonProps>`
+export const StyledButton = styled.button<Omit<ButtonProps, 'href'>>`
   // Button overrides
   background-color: ${palette.gray};
   padding: ${sizes[10]};

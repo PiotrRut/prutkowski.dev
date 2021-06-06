@@ -20,7 +20,11 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = (props) => {
   return (
     <ProjectCardRoot>
       <ImageWrapper>
-        <Image src={picturePath} layout="fill" objectFit="cover" />
+        <Image
+          src={picturePath ?? '/social.webp'}
+          layout="fill"
+          objectFit="cover"
+        />
       </ImageWrapper>
       <InfoSection>
         {path ? (

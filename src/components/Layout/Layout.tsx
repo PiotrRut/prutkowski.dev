@@ -15,7 +15,7 @@ const theme = createMuiTheme({
 /**
  * Layout component to provide consistent spacing throughout the site
  */
-const Layout = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   if (typeof window !== 'undefined') {
     useEffect(() => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires

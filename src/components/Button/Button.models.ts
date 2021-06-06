@@ -1,3 +1,4 @@
+import { LinkProps } from 'next/link';
 import { ButtonHTMLAttributes } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,7 +13,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Where does this redirect to?s
    */
-  href?: string;
+  href: LinkProps['href'];
   /**
    * An icon to display on the right
    */

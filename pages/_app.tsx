@@ -4,6 +4,7 @@ import '@css/animate.css';
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { AppProps } from 'next/app';
 import React, { useEffect, useState } from 'react';
 
 // Style override for site-wide font family
@@ -14,7 +15,7 @@ const custTheme = createMuiTheme({
   },
 });
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const MyApp = ({ Component, pageProps }) => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
+      jssStyles.parentElement?.removeChild(jssStyles);
     }
   }, []);
 
