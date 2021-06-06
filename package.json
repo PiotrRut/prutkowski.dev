@@ -20,7 +20,7 @@
     "next": "^10.2.3",
     "node-forge": "^0.10.0",
     "parcel-bundler": "^1.12.4",
-    "postcss": "^8.2.1",
+    "postcss": "^8.2.10",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-ga": "^3.2.1",
