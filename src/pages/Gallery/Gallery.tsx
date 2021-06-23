@@ -43,7 +43,6 @@ const Gallery: NextPage = () => {
   const [images, setImgs] = useState([{ lowRes: '', highRes: '' }]);
   const [selectedURLS, setUrl] = useState({ lowRes: '', highRes: '' });
   const [open, setOpen] = useState(false);
-  const [openSnack, setOpenSnack] = useState(false);
   const classes = useStyles();
 
   useEffect(() => {
@@ -63,15 +62,6 @@ const Gallery: NextPage = () => {
     setOpen(false);
   };
 
-  // Open URL snack bar
-  const openSnackBar = () => {
-    setOpenSnack(true);
-  };
-  // Close URL snack bar
-  const closeSnackBar = () => {
-    setOpenSnack(false);
-  };
-
   return (
     <LazyMotion features={domAnimation}>
       <SEO title="Gallery" />
@@ -89,7 +79,6 @@ const Gallery: NextPage = () => {
                     highRes: image.highRes,
                   });
                   handleOpen();
-                  openSnackBar();
                 }}
                 key={index}
               >
@@ -108,17 +97,8 @@ const Gallery: NextPage = () => {
       />
 
       {/* Dialog with the selected picture for preview */}
-      <Dialog
-        classes={classes}
-        onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
-        open={open}
-        scroll="body"
-        maxWidth="xs"
-      >
-        <div className={classes.paper}>
-          <img className="photoPreview" src={selectedURLS.lowRes} />
-        </div>
+      <Dialog classes={classes} onClose={handleClose} open={open} maxWidth="xs">
+        <img src={selectedURLS.lowRes} width="auto" height="auto" />
       </Dialog>
 
       {/* Little snack bar with link to the full res version of each image */}
@@ -127,8 +107,7 @@ const Gallery: NextPage = () => {
           vertical: 'bottom',
           horizontal: 'center',
         }}
-        open={openSnack}
-        onClose={closeSnackBar}
+        open={open}
         message="View full version"
         className={classes.snackbar}
         action={

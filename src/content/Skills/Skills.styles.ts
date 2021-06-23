@@ -1,3 +1,4 @@
+import { centredFlex } from '@theme/shortcuts';
 import { palette, sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
@@ -18,11 +19,9 @@ export const SkillItem = styled.div`
 `;
 
 export const SkillsWrapper = styled.div`
-  display: flex;
+  ${centredFlex}
   flex-wrap: wrap;
   direction: row;
-  justify-content: center;
-  align-items: center;
 
   @media (min-width: 1024px) {
     width: 60%;

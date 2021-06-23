@@ -1,27 +1,23 @@
+import { buttonReset, centredFlex } from '@theme/shortcuts';
 import { palette, sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
 import { ButtonProps } from './Button.models';
 
 export const StyledButton = styled.button<Omit<ButtonProps, 'href'>>`
-  // Button overrides
+  ${buttonReset}
   background-color: ${palette.gray};
   padding: ${sizes[10]};
-  border: 0;
-  box-shadow: none;
-
-  &:hover {
-    cursor: pointer;
-  }
 
   // Styles
-  display: inline-flex;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
   min-width: ${sizes[100]};
   max-width: ${sizes[150]};
   border-radius: ${sizes[5]};
   transition: 300ms;
+  color: ${palette.white};
 
   &:focus {
     outline: none;
@@ -42,5 +38,6 @@ export const StyledButton = styled.button<Omit<ButtonProps, 'href'>>`
 export const IconWrapper = styled.div<{
   leftIcon?: boolean;
 }>`
+  ${centredFlex}
   margin-right: ${(p) => (p.leftIcon ? sizes[10] : 0)};
 `;

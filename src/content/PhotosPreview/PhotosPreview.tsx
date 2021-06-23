@@ -91,14 +91,10 @@ const PhotosPreview: FunctionComponent = () => {
       <Dialog
         className={classes.root}
         onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
         open={open}
-        scroll="body"
         maxWidth="xs"
       >
-        <div className={classes.paper}>
-          <img className="photoPreview" src={selectedURLS.lowRes} />
-        </div>
+        <img src={selectedURLS.lowRes} width="auto" height="auto" />
       </Dialog>
     </Section>
   );

@@ -1,3 +1,4 @@
+import { centredFlex } from '@theme/shortcuts';
 import { palette, sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
@@ -5,10 +6,8 @@ import styled from 'styled-components';
  * @param isFullScreen toggle 100vh height
  */
 export const SectionWrapper = styled.section<{ isFullScreen: boolean }>`
-  display: flex;
+  ${centredFlex}
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-bottom: ${sizes['80']};
 
   height: ${(p) => (p.isFullScreen ? '100vh' : 'auto')};

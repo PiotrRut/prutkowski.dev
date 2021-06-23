@@ -8,7 +8,7 @@ export const RepoCardRoot = styled.div`
   flex-direction: column;
   padding: ${sizes['15']};
   margin: 0 ${sizes['15']} ${sizes['15']};
-  width: ${sizes['350']};
+  width: ${sizes['320']};
 
   @media (max-width: 1024px) {
     width: 80vw;
