@@ -8,8 +8,7 @@ import { ImageCardRoot, ImageWrapper } from './ImageCard.styles';
  * Given an image path will display a Next Image component in a
  * small preview format
  */
-const ImageCard: FunctionComponent<ImageCardProps> = (props) => {
-  const { path } = props;
+const ImageCard: FunctionComponent<ImageCardProps> = ({ path }) => {
   return (
     <ImageCardRoot>
       <ImageWrapper>

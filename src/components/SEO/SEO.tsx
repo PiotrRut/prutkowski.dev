@@ -15,7 +15,7 @@ const SEO: FunctionComponent<SEOProps> = ({ title }) => {
       ReactGA.initialize('UA-154333467-2');
       ReactGA.pageview(window.location.pathname + window.location.search);
     }
-  }, [isProd]);
+  }, []);
 
   return (
     <Head>

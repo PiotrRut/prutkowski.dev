@@ -43,11 +43,10 @@ const PhotosPreview: FunctionComponent = () => {
     fetchData();
   }, []);
 
-  // Open picture preview dialog
   const handleOpen = () => {
     setOpen(true);
   };
-  // Close picture preview dialog
+
   const handleClose = () => {
     setOpen(false);
   };

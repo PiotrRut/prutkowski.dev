@@ -53,11 +53,10 @@ const Gallery: NextPage = () => {
     fetchData();
   }, []);
 
-  // Open picture dialog
   const handleOpen = () => {
     setOpen(true);
   };
-  // Close picture dialog
+
   const handleClose = () => {
     setOpen(false);
   };
