@@ -3,7 +3,7 @@ import { sizes } from '@theme/tokens';
 import styled from 'styled-components';
 
 export const GitHubProjectsWrapper = styled.div`
-  margin: ${sizes['50']} 0;
+  margin: ${sizes['20']} 0;
   ${centredFlex}
   flex-wrap: wrap;
   flex-direction: column;

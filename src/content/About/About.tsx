@@ -26,7 +26,7 @@ const events: TimelineEvent[] = [
 
 const About: FunctionComponent = () => {
   return (
-    <Section heading="What's going on?" id="about-me">
+    <Section heading="What I'm up to" id="about-me">
       <Timeline events={events} />
     </Section>
   );

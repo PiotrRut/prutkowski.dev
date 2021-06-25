@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AppWrapper = styled.div`
-  margin: 0 2rem 1.875rem;
+  margin: 1rem 1rem 1.875rem;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -41,7 +41,7 @@ const GitHubProjects: NextPage = () => {
       >
         🛠 Github Projects
       </Typography>
-      <Typography className="text-gray-200 text-center wow fadeIn">
+      <Typography align="center">
         Below you can see all <b>{repos.length}</b> of my public repositories,
         updated automatically via the GitHub API.
       </Typography>
