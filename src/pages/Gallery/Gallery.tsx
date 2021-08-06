@@ -97,7 +97,7 @@ const Gallery: NextPage = () => {
 
       {/* Dialog with the selected picture for preview */}
       <Dialog classes={classes} onClose={handleClose} open={open} maxWidth="xs">
-        <img src={selectedURLS.lowRes} width="auto" height="auto" />
+        <img src={selectedURLS.lowRes} width="320" height="420" />
       </Dialog>
 
       {/* Little snack bar with link to the full res version of each image */}

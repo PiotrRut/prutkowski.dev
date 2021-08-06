@@ -93,7 +93,7 @@ const PhotosPreview: FunctionComponent = () => {
         open={open}
         maxWidth="xs"
       >
-        <img src={selectedURLS.lowRes} width="auto" height="auto" />
+        <img src={selectedURLS.lowRes} width="320" height="420" />
       </Dialog>
     </Section>
   );

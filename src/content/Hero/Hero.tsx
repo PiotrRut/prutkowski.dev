@@ -3,6 +3,7 @@ import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { socials } from '@misc/socials';
 import React, { FunctionComponent } from 'react';
+import ReactGA from 'react-ga';
 
 import { Header, Socials } from './Hero.styles';
 
@@ -20,6 +21,12 @@ const Hero: FunctionComponent = () => {
                 animationDelay: `${index * 150 + 150}ms`,
               }}
               href={social.path}
+              onClick={() => {
+                ReactGA.event({
+                  category: 'Social',
+                  action: `User pressed link to ${social.name}`,
+                });
+              }}
               target="_blank"
               rel="noopener"
               className="wow fadeIn"
