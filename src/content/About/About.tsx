@@ -8,13 +8,13 @@ const events: TimelineEvent[] = [
     date: 'July 2020',
     title: 'Joined Equals 🏦',
     content:
-      'I joined Equals in my first ever software developer position, and have since been enjoying building web and mobile platforms for more than 1 million customers!',
+      'As a software developer and feature team lead for a small team of very talented people, I develop banking- and money-management solutions for over one million personal and business customers!',
   },
   {
     date: 'Sept 2018',
     title: 'Moved to London 🇬🇧',
     content:
-      'Shortly after graduating high school I left Norway and moved to the UK to start a computer science degree at City, University of London!',
+      'I am undertaking a four year long BSc Computer Science course at City, University of London, and am on track to graduate with 1st class honours.',
   },
   {
     date: 'June 2018',

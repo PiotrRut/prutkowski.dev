@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { FunctionComponent, useEffect } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 import { SEOProps } from './SEO.models';
 
@@ -11,9 +11,9 @@ const SEO: FunctionComponent<SEOProps> = ({ title }) => {
   const isProd = process.env.NODE_ENV === 'production';
 
   useEffect(() => {
-    if (isProd) {
-      ReactGA.initialize('UA-154333467-2');
-      ReactGA.pageview(window.location.pathname + window.location.search);
+    if (!isProd) {
+      ReactGA.initialize('G-10GHER8WDZ');
+      ReactGA.send('pageview');
     }
   }, []);
 

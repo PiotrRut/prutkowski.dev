@@ -24,7 +24,8 @@ const Hero: FunctionComponent = () => {
               onClick={() => {
                 ReactGA.event({
                   category: 'Social',
-                  action: `User pressed link to ${social.name}`,
+                  action: 'Click',
+                  label: `User pressed link to ${social.name}`,
                 });
               }}
               target="_blank"
