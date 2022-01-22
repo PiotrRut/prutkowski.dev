@@ -4,7 +4,6 @@ import Contact from '@content/Contact';
 import GitProjectsPreview from '@content/GitProjectsPreview';
 import Hero from '@content/Hero';
 import OtherProjectsPreview from '@content/OtherProjectsPreview';
-import PhotosPreview from '@content/PhotosPreview';
 import Skills from '@content/Skills';
 import { domAnimation, LazyMotion } from 'framer-motion';
 import { NextPage } from 'next';
@@ -19,7 +18,6 @@ const IndexPage: NextPage = () => {
         <Skills />
         <OtherProjectsPreview />
         <GitProjectsPreview />
-        {/* <PhotosPreview /> */}
         <Contact />
       </LazyMotion>
     </div>
