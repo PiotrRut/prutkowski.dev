@@ -11,7 +11,7 @@ yarn-error.log
 now.json
 
 #env variables
-.env.*
+.env
 
 # next
 .next

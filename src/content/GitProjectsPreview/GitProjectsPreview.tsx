@@ -1,7 +1,7 @@
 import Button from '@components/Button';
 import RepoCard from '@components/RepoCard';
 import Section from '@components/Section';
-import BACKEND_URL from '@misc/backend';
+import { environment } from '@misc/environment';
 import axios from 'axios';
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { BsChevronRight } from 'react-icons/bs';
@@ -14,7 +14,9 @@ const GitProjectsPreview: FunctionComponent = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`${BACKEND_URL}/platforms/github/repos`);
+      const response = await axios.get(
+        `${environment.apiBaseUrl}/github/repos`
+      );
       setRepos(response.data);
     };
     fetchData();
@@ -32,12 +34,12 @@ const GitProjectsPreview: FunctionComponent = () => {
             key={index}
           >
             <RepoCard
-              language={repo.language}
+              language={repo.repoLanguage}
               forks={repo.forks}
-              name={repo.name}
+              name={repo.repoName}
               stars={repo.stars}
               description={repo.description}
-              url={repo.url}
+              url={repo.gitUrl}
             />
           </div>
         ))}

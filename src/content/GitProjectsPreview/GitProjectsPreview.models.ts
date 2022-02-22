@@ -4,7 +4,7 @@ export interface Repo {
   /**
    * Repo name
    */
-  name: string;
+  repoName: string;
   /**
    * Repo description
    */
@@ -18,7 +18,7 @@ export interface Repo {
    *
    * [Allowed languages](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
    */
-  language: Colors;
+  repoLanguage: Colors;
   /**
    * How many starts does the repo have
    */
@@ -26,5 +26,5 @@ export interface Repo {
   /**
    * Path to remote
    */
-  url: string;
+  gitUrl: string;
 }

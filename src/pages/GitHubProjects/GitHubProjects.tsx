@@ -4,7 +4,7 @@ import SEO from '@components/SEO';
 import { Repo } from '@content/GitProjectsPreview/GitProjectsPreview.models';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import BACKEND_URL from '@misc/backend';
+import { environment } from '@misc/environment';
 import axios from 'axios';
 import { NextPage } from 'next';
 import React, { Fragment, useEffect, useState } from 'react';
@@ -24,7 +24,9 @@ const GitHubProjects: NextPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`${BACKEND_URL}/platforms/github/repos`);
+      const response = await axios.get(
+        `${environment.apiBaseUrl}/github/repos`
+      );
       setRepos(response.data);
     };
     fetchData();
@@ -48,12 +50,12 @@ const GitHubProjects: NextPage = () => {
       <GitHubProjectsWrapper>
         {repos.map((repo, index) => (
           <RepoCard
-            language={repo.language}
+            language={repo.repoLanguage}
             forks={repo.forks}
-            name={repo.name}
+            name={repo.repoName}
             stars={repo.stars}
             description={repo.description}
-            url={repo.url}
+            url={repo.gitUrl}
             key={index}
           />
         ))}
