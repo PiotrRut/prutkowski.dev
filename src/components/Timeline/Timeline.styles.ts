@@ -2,14 +2,6 @@
 import { palette, sizes } from '@theme/tokens';
 import styled, { css, keyframes } from 'styled-components';
 
-const lineGrowHorizontal = keyframes`
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 90%;
-  }
-`;
 
 const lineGrowVertical = keyframes`
   0% {
@@ -24,11 +16,6 @@ export const TimelineRoot = styled.div`
   padding: 0 0 ${sizes['30']};
   display: flex;
   flex-direction: column;
-
-  @media (min-width: 1024px) {
-    flex-direction: row;
-    overflow: scroll;
-  }
 `;
 
 export const TimelineItem = styled.div<{ inView: boolean }>`
@@ -50,20 +37,6 @@ export const TimelineItem = styled.div<{ inView: boolean }>`
         max-height: ${sizes['180']};
       `};
   }
-
-  @media (min-width: 1024px) {
-    flex-direction: column;
-    &:before {
-      height: ${sizes['1']};
-      margin: 0 ${sizes['5']} ${sizes['10']} 0;
-      ${({ inView }) =>
-        inView &&
-        css`
-          animation: ${lineGrowHorizontal} 1s ease;
-          width: 90%;
-        `};
-    }
-  }
 `;
 
 export const TimelineCard = styled.div`
@@ -79,9 +52,7 @@ export const TimelineCard = styled.div`
   width: 75vw;
 
   @media (min-width: 1024px) {
-    width: ${sizes['300']};
-    margin: ${sizes['5']} ${sizes['5']} ${sizes['5']} 0;
-    min-height: ${sizes['200']};
+    width: ${sizes['600']};
   }
 `;
 
@@ -108,8 +79,5 @@ export const DateMark = styled.span`
 
   @media (min-width: 1024px) {
     width: ${sizes['100']};
-    &:before {
-      content: '';
-    }
   }
 `;

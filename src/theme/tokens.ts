@@ -32,6 +32,7 @@ export const sizes = {
   350: '21.875rem',
   400: '25rem',
   450: '28.125rem',
+  600: '37.5rem',
 };
 
 export const palette = {

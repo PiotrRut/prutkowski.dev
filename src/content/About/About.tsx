@@ -5,6 +5,11 @@ import React, { FunctionComponent } from 'react';
 
 const events: TimelineEvent[] = [
   {
+    date: 'June 2022',
+    title: 'Graduated University 🎓',
+    content: 'Graduated from City, University of London with 1st class honours, BSc in Computer Science.',
+  },
+  {
     date: 'July 2020',
     title: 'Joined Equals 🏦',
     content:
